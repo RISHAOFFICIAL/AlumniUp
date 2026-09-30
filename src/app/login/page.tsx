@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { createClient } from "@/lib/supabase/client";
+import { isSupabaseConfigured } from "@/lib/supabase/config";
 
 export default function LoginPage() {
   const [mode, setMode] = useState<"signin" | "signup">("signin");
@@ -14,9 +15,7 @@ export default function LoginPage() {
   const [busy, setBusy] = useState(false);
 
   // Same guard the middleware uses: without a real URL/key, auth is off.
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL ?? "";
-  const configured =
-    supabaseUrl.startsWith("https://") && !supabaseUrl.includes("placeholder");
+  const configured = isSupabaseConfigured();
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();

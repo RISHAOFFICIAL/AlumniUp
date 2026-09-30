@@ -1,5 +1,10 @@
 import { createServerClient, type CookieOptions } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
+import {
+  SUPABASE_URL,
+  SUPABASE_ANON_KEY,
+  isSupabaseConfigured,
+} from "@/lib/supabase/config";
 
 type CookiesToSet = { name: string; value: string; options: CookieOptions }[];
 
@@ -17,21 +22,13 @@ type CookiesToSet = { name: string; value: string; options: CookieOptions }[];
  * the Supabase PostgREST query builder performs. Keep this file lightweight.
  */
 export async function updateSession(request: NextRequest) {
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL ?? "";
-  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? "";
-
-  const supabaseConfigured =
-    supabaseUrl.startsWith("https://") &&
-    !supabaseUrl.includes("placeholder") &&
-    supabaseAnonKey.length > 0;
-
-  if (!supabaseConfigured) {
+  if (!isSupabaseConfigured()) {
     return NextResponse.next({ request });
   }
 
   let supabaseResponse = NextResponse.next({ request });
 
-  const supabase = createServerClient(supabaseUrl, supabaseAnonKey, {
+  const supabase = createServerClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
     cookies: {
       getAll() {
         return request.cookies.getAll();

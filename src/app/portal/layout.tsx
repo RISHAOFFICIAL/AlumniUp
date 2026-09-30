@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
+import { isSupabaseConfigured } from "@/lib/supabase/config";
 
 /**
  * Role-based authorization for the /portal area (school staff + school admins),
@@ -52,9 +53,7 @@ export default async function PortalLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL ?? "";
-  const configured =
-    supabaseUrl.startsWith("https://") && !supabaseUrl.includes("placeholder");
+  const configured = isSupabaseConfigured();
 
   // Mock/preview mode: no Supabase configured — render the preview shell.
   if (!configured) {

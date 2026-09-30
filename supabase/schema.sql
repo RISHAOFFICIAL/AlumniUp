@@ -170,6 +170,21 @@ CREATE INDEX idx_schools_status ON schools(status);
 CREATE INDEX idx_users_school_id ON users(school_id);
 CREATE INDEX idx_users_role ON users(role);
 
+-- SECURITY DEFINER role checks. Inline `auth.uid() IN (SELECT id FROM users ...)`
+-- subqueries inside policies recurse once `users` itself has RLS enabled, so
+-- role checks go through these owner-run helpers instead (they bypass RLS).
+CREATE OR REPLACE FUNCTION public.is_platform_admin()
+RETURNS boolean
+LANGUAGE sql
+SECURITY DEFINER
+STABLE
+SET search_path = public
+AS $fn$
+  SELECT EXISTS (
+    SELECT 1 FROM public.users WHERE id = auth.uid() AND role = 'platform_admin'
+  )
+$fn$;
+
 -- ============================================
 -- ROW LEVEL SECURITY
 -- ============================================
@@ -241,9 +256,7 @@ CREATE POLICY "Users can insert own profile" ON users
 CREATE POLICY "Users can update own profile" ON users
   FOR UPDATE USING (id = auth.uid());
 CREATE POLICY "Platform admins can manage users" ON users
-  FOR ALL USING (
-    auth.uid() IN (SELECT id FROM users WHERE role = 'platform_admin')
-  );
+  FOR ALL USING (public.is_platform_admin());
 
 -- Sponsors: public read active, admin manage
 ALTER TABLE sponsors ENABLE ROW LEVEL SECURITY;
@@ -367,7 +380,7 @@ BEGIN
 END;
 $fn$ LANGUAGE plpgsql;
 
-CREATE TRIGGER trg_donations_sync_need ON donations
+CREATE TRIGGER trg_donations_sync_need
   AFTER INSERT OR UPDATE ON donations
   FOR EACH ROW EXECUTE FUNCTION sync_need_progress();
 
