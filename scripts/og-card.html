@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AlumniUp</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    background: #0F1F38;
+    color: #F8F7F5;
+    font-family: 'Instrument Sans', system-ui, -apple-system, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 64px 72px;
+  }
+  .brand {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 700;
+    font-size: 64px;
+    letter-spacing: -0.5px;
+    color: #D4A84E;
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+  }
+  .brand .mark {
+    font-size: 28px;
+    color: #B8882A;
+    letter-spacing: 4px;
+    font-family: 'Instrument Sans', system-ui, sans-serif;
+    font-weight: 600;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 900px;
+  }
+  .headline {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 1.05;
+    color: #F8F7F5;
+  }
+  .subhead {
+    font-size: 26px;
+    font-weight: 400;
+    color: #F8F7F5;
+    opacity: 0.88;
+  }
+  .subhead strong { color: #D4A84E; font-weight: 600; }
+  .footer {
+    border-top: 1px solid rgba(184, 136, 42, 0.55);
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    color: #F8F7F5;
+    opacity: 0.82;
+  }
+  .footer .fiscal { opacity: 0.9; }
+</style>
+</head>
+<body>
+  <div class="brand">AlumniUp <span class="mark">DETROIT</span></div>
+  <div class="main">
+    <div class="headline">Support Detroit public schools.</div>
+    <div class="subhead">Verified funding needs. <strong>88% of every dollar</strong> reaches the school.</div>
+  </div>
+  <div class="footer">
+    <span>Tax-deductible giving</span>
+    <span class="fiscal">Fiscal Sponsor: Childs Play Foundation, Inc. (501(c)(3))</span>
+  </div>
+</body>
+</html>

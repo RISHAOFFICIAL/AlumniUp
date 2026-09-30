@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Instrument+Sans:wght@400;500;600&display=swap');
+
+@layer base {
+  :root {
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Instrument Sans', system-ui, sans-serif;
+  }
+
+  body {
+    @apply text-navy bg-white;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+  }
+}
+
+@layer components {
+  .trust-bar {
+    @apply bg-navy text-white text-xs text-center py-2 px-4 font-sans tracking-wide;
+  }
+
+  .btn-primary {
+    @apply bg-navy text-white px-6 py-3 rounded font-sans font-medium text-sm transition-colors hover:bg-navy-light;
+  }
+
+  .btn-gold {
+    @apply bg-gold text-white px-6 py-3 rounded font-sans font-medium text-sm transition-colors hover:bg-gold-light;
+  }
+
+  .btn-ghost {
+    @apply bg-transparent text-navy border border-navy px-6 py-3 rounded font-sans font-medium text-sm transition-colors hover:bg-cream;
+  }
+
+  .card {
+    @apply bg-white border border-border rounded p-6;
+  }
+
+  .school-header {
+    @apply bg-navy text-white px-6 py-4 w-full;
+  }
+
+  .section-title {
+    @apply font-serif text-3xl md:text-4xl font-semibold text-navy;
+  }
+
+  .progress-bar {
+    @apply h-2 bg-cream rounded overflow-hidden;
+  }
+
+  .progress-fill {
+    @apply h-full bg-gold rounded transition-all duration-700 ease-out;
+  }
+}
+
+@layer utilities {
+  .max-w-page {
+    max-width: 1100px;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
