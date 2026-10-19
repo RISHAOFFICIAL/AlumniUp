@@ -503,9 +503,9 @@ export default function HomePage() {
     <>
       <SiteHeader />
       <Hero />
+      <NeedsFeed />
       <HowItWorks />
       <FounderStory />
-      <NeedsFeed />
       <section className="bg-cream py-14">
         <div className="max-w-page mx-auto px-4 grid md:grid-cols-3 gap-6">
           <TrustBlock />
