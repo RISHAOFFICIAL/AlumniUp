@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SiteHeader, SiteFooter } from "@/components/SiteChrome";
 
 const title = "Submit a Funding Need | AlumniUp for Detroit School Staff";
 const description =
@@ -23,5 +24,11 @@ export default function SubmitNeedLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return (
+    <>
+      <SiteHeader />
+      {children}
+      <SiteFooter />
+    </>
+  );
 }

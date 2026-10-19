@@ -63,12 +63,7 @@ export default function LoginPage() {
 
   return (
     <main className="min-h-screen bg-cream flex flex-col">
-      <header className="bg-navy text-white">
-        <div className="max-w-page mx-auto px-4 py-3 flex items-center justify-between">
-          <a href="/" className="font-serif text-2xl font-bold">AlumniUp</a>
-          <a href="/" className="btn-ghost text-xs px-4 py-2">Back to Home</a>
-        </div>
-      </header>
+      
 
       <div className="flex-1 flex items-center justify-center px-4 py-12">
         <div className="w-full max-w-sm">

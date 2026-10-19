@@ -6,10 +6,8 @@ import { CATEGORIES, CONTACT, CPF_INFO, URGENCY_LABELS } from "@/types";
 import { FOUNDER } from "@/lib/content/founder";
 import BragModal from "@/components/BragModal";
 import DonationModal from "@/components/DonationModal";
+import { SiteHeader, SiteFooter } from "@/components/SiteChrome";
 import { useState } from "react";
-
-// Mock mode is the default until real Supabase credentials are wired up.
-const IS_MOCK = (process.env.NEXT_PUBLIC_DATA_SOURCE ?? "mock") === "mock";
 
 // Utility
 function formatCurrency(amount: number): string {
@@ -21,81 +19,6 @@ function formatCurrency(amount: number): string {
   }).format(amount);
 }
 
-// ─── Trust Bar ─────────────────────────────────────────
-function TrustBar() {
-  return (
-    <div className="trust-bar">
-      Fiscal Sponsor: {CPF_INFO.name} | {CPF_INFO.classification} EIN {CPF_INFO.ein} | All Donations Tax-Deductible | 88% to Schools | Detroit, MI
-    </div>
-  );
-}
-
-// Slim, unobtrusive label so mock/demo data is never mistaken for real activity.
-function PreviewBanner() {
-  if (!IS_MOCK) return null;
-  return (
-    <div className="bg-gold text-navy text-xs text-center py-1.5 px-4 font-sans">
-      Preview — sample data for demonstration. No real donations have occurred.
-    </div>
-  );
-}
-
-// ─── Header ────────────────────────────────────────────
-function Header() {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  return (
-    <header className="sticky top-0 z-50 bg-white border-b border-border">
-      <div className="max-w-page mx-auto px-4 py-3 flex items-center justify-between">
-        <a href="/" className="flex items-center gap-2">
-          <span className="font-serif text-2xl font-bold text-navy">AlumniUp</span>
-        </a>
-
-        <nav className="hidden md:flex items-center gap-6 font-sans text-sm">
-          <a href="#how-it-works" className="hover:text-gold transition-colors">How It Works</a>
-          <a href="/for-schools" className="hover:text-gold transition-colors">For Schools</a>
-          <a href="#" className="hover:text-gold transition-colors">My Donations</a>
-          <a href="/press" className="hover:text-gold transition-colors">Press</a>
-          <a href="/wall-of-honor" className="hover:text-gold transition-colors">Wall of Honor</a>
-          <a href="#" className="hover:text-gold transition-colors">Contact</a>
-        </nav>
-
-        <div className="flex items-center gap-3">
-          <a href="/corporate-giving" className="btn-ghost text-xs px-4 py-2 hidden md:inline-block">
-            Corporate Giving
-          </a>
-          <a href="/submit-need" className="btn-gold text-xs px-4 py-2">
-            Submit a Need
-          </a>
-          <button
-            className="md:hidden p-2"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle menu"
-          >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M3 12h18M3 6h18M3 18h18" />
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      {menuOpen && (
-        <div className="md:hidden border-t border-border px-4 py-4 bg-white">
-          <nav className="flex flex-col gap-3 font-sans text-sm">
-            <a href="#how-it-works" className="py-2">How It Works</a>
-            <a href="/for-schools" className="py-2">For Schools</a>
-            <a href="#" className="py-2">My Donations</a>
-            <a href="/press" className="py-2">Press</a>
-            <a href="/wall-of-honor" className="py-2">Wall of Honor</a>
-            <a href="#" className="py-2">Contact</a>
-            <a href="/corporate-giving" className="py-2">Corporate Giving</a>
-          </nav>
-        </div>
-      )}
-    </header>
-  );
-}
-
 // ─── Hero ──────────────────────────────────────────────
 function Hero() {
   const stats = useDonationStats();
@@ -103,52 +26,61 @@ function Hero() {
   const featured = needs[0];
 
   return (
-    <section className="bg-cream py-16 md:py-24">
-      <div className="max-w-page mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
-          {/* Left column: headline, stats, calls-to-action */}
+    <section className="bg-navy text-cream overflow-hidden">
+      <div className="max-w-page mx-auto px-4 py-14 md:py-20">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* Left column: headline, copy, calls-to-action, stats */}
           <div>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-navy leading-tight text-balance">
-              Your alma mater needs you. Again.
+            <p className="font-sans text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+              Detroit Public Schools · Alumni Giving
+            </p>
+            <h1 className="font-serif text-5xl lg:text-6xl font-semibold text-white leading-[1.05] mt-4 text-balance">
+              Your alma mater needs you. <span className="italic text-gold">Again.</span>
             </h1>
-            <p className="font-sans text-lg md:text-xl text-navy/80 mt-6 max-w-2xl leading-relaxed">
-              AlumniUp connects Detroit public school alumni with verified funding needs posted by coaches,
-              teachers, and administrators. Every donation is tax-deductible through our fiscal sponsor,
-              Childs Play Foundation, Inc.
+            <p className="font-sans text-lg text-cream/75 mt-6 leading-relaxed max-w-xl">
+              AlumniUp connects Detroit public school alumni with verified funding needs posted by the coaches,
+              teachers, and administrators shaping the next generation, right in the halls you walked.
             </p>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-10">
-              <StatCard label="Total Raised" value={formatCurrency(stats.totalRaised)} />
-              <StatCard label="Needs Funded" value={String(stats.needsFunded)} />
-              <StatCard label="Alumni Donors" value={String(stats.donorCount)} />
-              <StatCard label="Schools" value={String(stats.schoolCount)} />
-            </div>
-
-            <div className="flex flex-wrap gap-4 mt-10">
+            <div className="flex flex-wrap gap-4 mt-8">
               <a href="#needs" className="btn-gold text-base px-8 py-4">
                 Fund a Need
               </a>
-              <a href="/for-schools" className="btn-ghost text-base px-8 py-4">
+              <a href="/for-schools" className="text-base px-8 py-4 rounded-lg border border-cream/50 text-cream font-sans font-medium transition-colors hover:bg-white/10">
                 Register Your School
               </a>
             </div>
 
-            <p className="text-xs text-navy/60 mt-4 font-sans">
-              All donations tax-deductible. Fiscal Sponsor: {CPF_INFO.name} ({CPF_INFO.classification} EIN {CPF_INFO.ein}).
-              Contributions are subject to AlumniUp's fee structure: 88% to school, 7% platform fee, 5% fiscal sponsorship fee.
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-12 border-t border-white/15 pt-7">
+              <StatCard label="Raised So Far" value={formatCurrency(stats.totalRaised)} />
+              <StatCard label="Alumni Donors" value={String(stats.donorCount)} />
+              <StatCard label="Schools Live" value={String(stats.schoolCount)} />
+              <StatCard label="Goes to Schools" value="88%" />
+            </div>
+
+            <p className="text-xs text-cream/45 mt-6 font-sans">
+              All donations tax-deductible through {CPF_INFO.name} ({CPF_INFO.classification} EIN {CPF_INFO.ein}).
             </p>
           </div>
 
-          {/* Right column: featured need (desktop only) */}
-          <div className="hidden md:block">
-            {featured ? (
-              <FeaturedNeedCard need={featured} />
-            ) : (
-              <HeroAsideFallback />
-            )}
+          {/* Right column: photo with the featured need overlapping */}
+          <div className="relative">
+            <img
+              src="/images/hero-students.webp"
+              alt="Detroit public school students"
+              className="w-full h-64 md:h-[400px] object-cover rounded-2xl"
+            />
+            <div className="relative md:absolute md:left-5 md:right-5 md:-bottom-8 mt-4 md:mt-0">
+              {featured ? (
+                <FeaturedNeedCard need={featured} />
+              ) : (
+                <HeroAsideFallback />
+              )}
+            </div>
           </div>
         </div>
       </div>
+      <div className="h-2 md:h-10" />
     </section>
   );
 }
@@ -156,56 +88,56 @@ function Hero() {
 function StatCard({ label, value }: { label: string; value: string }) {
   return (
     <div>
-      <p className="font-serif text-3xl md:text-4xl font-bold text-navy">{value}</p>
-      <p className="font-sans text-sm text-navy/60 mt-1">{label}</p>
+      <p className="font-serif text-3xl md:text-4xl font-bold text-white">{value}</p>
+      <p className="font-sans text-[11px] uppercase tracking-wider text-cream/50 mt-1">{label}</p>
     </div>
   );
 }
 
-// Restrained editorial card highlighting one featured need.
 function FeaturedNeedCard({ need }: { need: Need }) {
   const percentFunded = Math.min(Math.round((need.raised_amount / need.goal_amount) * 100), 100);
 
   return (
-    <div className="bg-white border border-gold/40 rounded-lg p-6 lg:p-8 shadow-sm">
-      <p className="font-sans text-xs font-medium uppercase tracking-wider text-gold">
-        Featured Need
-      </p>
-      <h3 className="font-serif text-2xl lg:text-3xl font-semibold text-navy mt-2">
+    <div className="bg-white rounded-2xl p-6 shadow-xl text-navy">
+      <div className="flex items-center justify-between gap-3">
+        <span className="inline-block px-2.5 py-1 text-[11px] font-sans font-semibold uppercase tracking-wider bg-gold/15 text-[#7A5C14] rounded-full">
+          Featured Need
+        </span>
+        <span className="font-sans text-[11px] font-semibold uppercase tracking-wider text-green">
+          ✓ Verified by AlumniUp
+        </span>
+      </div>
+      <h3 className="font-serif text-2xl font-semibold text-navy mt-3">
         {need.title}
       </h3>
       <p className="font-sans text-sm text-navy/60 mt-1">
-        {need.school?.name}
+        {need.school?.name} · {need.category}
       </p>
 
-      <div className="mt-6">
-        <div className="flex justify-between text-sm font-sans mb-1">
-          <span className="font-semibold text-navy">{formatCurrency(need.raised_amount)}</span>
-          <span className="text-navy/60">of {formatCurrency(need.goal_amount)}</span>
+      <div className="mt-5">
+        <div className="flex justify-between items-baseline text-sm font-sans mb-1.5">
+          <span className="font-serif text-xl font-bold text-navy">{formatCurrency(need.raised_amount)} <span className="font-sans text-xs font-normal text-navy/50">raised</span></span>
+          <span className="text-navy/60 text-xs">of {formatCurrency(need.goal_amount)} · {need.backer_count} donor{need.backer_count !== 1 ? "s" : ""}</span>
         </div>
         <div className="progress-bar">
           <div className="progress-fill" style={{ width: `${percentFunded}%` }} />
         </div>
-        <p className="text-xs font-sans text-navy/50 mt-2">
-          {percentFunded}% funded · {need.backer_count} donor{need.backer_count !== 1 ? "s" : ""}
-        </p>
       </div>
 
-      <a href="#needs" className="btn-gold w-full text-center text-sm mt-6 inline-block">
+      <a href="#needs" className="btn-gold w-full text-center text-sm mt-5 inline-block">
         Fund This Need
       </a>
     </div>
   );
 }
 
-// Fallback for the hero right column when no featured need is available.
 function HeroAsideFallback() {
   return (
-    <div className="bg-navy text-cream rounded-lg p-8 lg:p-10">
-      <p className="font-serif text-2xl lg:text-3xl font-semibold leading-snug">
+    <div className="bg-white rounded-2xl p-6 shadow-xl text-navy">
+      <p className="font-serif text-2xl font-semibold leading-snug">
         “Your alma mater needs you. Again.”
       </p>
-      <p className="font-sans text-sm text-cream/70 mt-4 leading-relaxed">
+      <p className="font-sans text-sm text-navy/60 mt-3 leading-relaxed">
         Connecting Detroit alumni with verified funding needs posted by the coaches,
         teachers, and administrators who know them best.
       </p>
@@ -289,6 +221,21 @@ function FounderStory() {
 }
 
 // ─── Need Card ─────────────────────────────────────────
+const NEED_PHOTOS: Record<string, string> = {
+  baseball: "/images/need-baseball.jpg",
+  stage: "/images/need-stage.jpg",
+  debate: "/images/need-debate.jpg",
+  students: "/images/hero-students.webp",
+};
+
+function photoForNeed(need: Need): string {
+  const hay = `${need.title} ${need.category}`.toLowerCase();
+  if (hay.includes("baseball") || hay.includes("field")) return NEED_PHOTOS.baseball;
+  if (hay.includes("stage") || hay.includes("lighting") || hay.includes("arts")) return NEED_PHOTOS.stage;
+  if (hay.includes("debate")) return NEED_PHOTOS.debate;
+  return NEED_PHOTOS.students;
+}
+
 function NeedCard({ need }: { need: Need }) {
   const percentFunded = Math.min(Math.round((need.raised_amount / need.goal_amount) * 100), 100);
   const isFunded = need.status === "funded" || percentFunded >= 100;
@@ -296,68 +243,68 @@ function NeedCard({ need }: { need: Need }) {
   const [donateOpen, setDonateOpen] = useState(false);
 
   return (
-    <div className="card">
-      <div className="flex items-start justify-between mb-3">
-        <div className="flex gap-2">
-          <span className="inline-block px-2 py-1 text-xs font-sans font-medium bg-cream text-navy rounded">
-            {need.category}
-          </span>
-          <span className={`inline-block px-2 py-1 text-xs font-sans font-medium rounded border ${
-            need.urgency === "high"
-              ? "bg-gold/20 text-navy border-gold/60"
-              : need.urgency === "med"
-              ? "bg-gold/10 text-navy border-gold/40"
-              : "bg-cream text-navy/70 border-border"
-          }`}>
-            {URGENCY_LABELS[need.urgency]}
-          </span>
-        </div>
-        {need.minimum_amount && (
-          <span className="text-xs font-sans text-navy/50">
-            Min: {formatCurrency(need.minimum_amount)} to begin
-          </span>
-        )}
+    <div className="bg-white border border-border rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow flex flex-col">
+      <div className="relative h-44 shrink-0">
+        <img src={photoForNeed(need)} alt="" className="w-full h-full object-cover" />
+        <span className="absolute top-3 left-3 bg-white/95 text-navy text-[11px] font-sans font-semibold px-2.5 py-1 rounded-full shadow-sm">
+          ✓ Verified
+        </span>
+        <span className="absolute bottom-3 left-3 bg-navy/85 text-white text-[11px] font-sans font-semibold px-2.5 py-1 rounded-full uppercase tracking-wide">
+          {need.category}
+        </span>
       </div>
 
-      <h3 className="font-serif text-xl font-semibold text-navy">{need.title}</h3>
-      {need.submitted_by_name && (
-        <p className="font-sans text-sm text-navy/50 mt-1">Posted by {need.submitted_by_name}</p>
-      )}
-      <p className="font-sans text-sm text-navy/70 mt-3 leading-relaxed line-clamp-3">
-        {need.description}
-      </p>
+      <div className="p-5 flex flex-col flex-1">
+        <h3 className="font-serif text-xl font-semibold text-navy leading-snug">{need.title}</h3>
+        <p className="font-sans text-xs text-navy/50 mt-1.5">
+          {need.school?.name}
+          {need.submitted_by_name ? ` · Posted by ${need.submitted_by_name}` : ""}
+        </p>
+        <p className="font-sans text-sm text-navy/70 mt-3 leading-relaxed line-clamp-3">
+          {need.description}
+        </p>
 
-      <div className="mt-5">
-        <div className="flex justify-between text-sm font-sans mb-1">
-          <span className="font-semibold text-navy">{formatCurrency(need.raised_amount)}</span>
-          <span className="text-navy/60">of {formatCurrency(need.goal_amount)}</span>
-        </div>
-        <div className="progress-bar">
-          <div className="progress-fill" style={{ width: `${percentFunded}%` }} />
-        </div>
-        <div className="flex justify-between items-center mt-2">
-          <span className="text-xs font-sans text-navy/50">{percentFunded}% funded</span>
-          <span className="text-xs font-sans text-navy/50">{need.backer_count} donor{need.backer_count !== 1 ? "s" : ""}</span>
-        </div>
-      </div>
+        <div className="mt-auto pt-5">
+          <div className="flex justify-between items-baseline font-sans mb-1.5">
+            <span className="font-serif text-2xl font-bold text-navy">{formatCurrency(need.raised_amount)}</span>
+            <span className="text-xs text-navy/60">of {formatCurrency(need.goal_amount)} goal</span>
+          </div>
+          <div className="progress-bar">
+            <div className="progress-fill" style={{ width: `${percentFunded}%` }} />
+          </div>
+          {need.minimum_amount && !isFunded && (
+            <p className="text-xs font-sans text-[#7A5C14] mt-2">
+              Can begin at {formatCurrency(need.minimum_amount)} funded
+            </p>
+          )}
 
-      <div className="flex gap-3 mt-5">
-        <button
-          className="btn-gold flex-1 text-sm"
-          onClick={() => setDonateOpen(true)}
-          disabled={isFunded}
-        >
-          {isFunded ? "Fully Funded" : "Contribute"}
-        </button>
-        <button
-          className="btn-ghost text-sm px-4"
-          aria-label="Share"
-          onClick={() => setShareOpen(true)}
-        >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8M16 6l-4-4-4 4M12 2v13" />
-          </svg>
-        </button>
+          <div className="flex items-center gap-3 mt-4">
+            <div className="flex items-center shrink-0">
+              <span className="w-6 h-6 rounded-full bg-navy border-2 border-white inline-block" />
+              <span className="w-6 h-6 rounded-full bg-gold border-2 border-white inline-block -ml-2" />
+              <span className="w-6 h-6 rounded-full bg-green border-2 border-white inline-block -ml-2" />
+            </div>
+            <span className="text-xs font-sans text-navy/50 whitespace-nowrap">
+              {need.backer_count} donor{need.backer_count !== 1 ? "s" : ""}
+            </span>
+            <button
+              className="btn-gold flex-1 text-sm py-2.5"
+              onClick={() => setDonateOpen(true)}
+              disabled={isFunded}
+            >
+              {isFunded ? "Fully Funded" : "Contribute"}
+            </button>
+            <button
+              className="btn-ghost text-sm px-3 py-2.5"
+              aria-label="Share"
+              onClick={() => setShareOpen(true)}
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8M16 6l-4-4-4 4M12 2v13" />
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
 
       <BragModal
@@ -384,17 +331,10 @@ function NeedsFeed() {
   const [selectedCategory, setSelectedCategory] = useState<string>("");
   const [searchQuery, setSearchQuery] = useState("");
 
-  // Group needs by school
-  const groupedNeeds: Record<string, { school: School; needs: Need[] }> = {};
-  needs.forEach((need) => {
-    if (selectedCategory && need.category !== selectedCategory) return;
-    if (searchQuery && !need.school?.name.toLowerCase().includes(searchQuery.toLowerCase())) return;
-
-    const schoolId = need.school_id;
-    if (!groupedNeeds[schoolId]) {
-      groupedNeeds[schoolId] = { school: need.school!, needs: [] };
-    }
-    groupedNeeds[schoolId].needs.push(need);
+  const filteredNeeds = needs.filter((need) => {
+    if (selectedCategory && need.category !== selectedCategory) return false;
+    if (searchQuery && !need.school?.name.toLowerCase().includes(searchQuery.toLowerCase())) return false;
+    return true;
   });
 
   if (loading) {
@@ -410,24 +350,31 @@ function NeedsFeed() {
   return (
     <section id="needs" className="py-16 md:py-24 bg-white">
       <div className="max-w-page mx-auto px-4">
-        <h2 className="section-title">School Needs</h2>
-        <p className="font-sans text-navy/60 mt-3">
-          Browse verified funding needs from Detroit public schools.
-        </p>
+        <p className="font-sans text-xs font-semibold uppercase tracking-[0.2em] text-gold">Open Needs</p>
+        <div className="flex flex-wrap items-end justify-between gap-4 mt-3">
+          <div>
+            <h2 className="section-title">Fund a need. Change a season.</h2>
+            <p className="font-sans text-navy/60 mt-3 max-w-2xl leading-relaxed">
+              Every need is posted by verified school staff and reviewed before it goes live.
+              When a need funds, the money moves through our fiscal sponsor directly to the school.
+            </p>
+          </div>
+          <a href="#needs" className="btn-ghost text-sm hidden md:inline-block">Browse all needs</a>
+        </div>
 
         {/* Filters */}
-        <div className="flex flex-wrap gap-3 mt-6 mb-8">
+        <div className="flex flex-wrap gap-3 mt-8 mb-8">
           <input
             type="text"
             placeholder="Search by school name..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="border border-border rounded px-4 py-2 font-sans text-sm w-full md:w-64 focus:outline-none focus:border-navy"
+            className="border border-border rounded-lg px-4 py-2 font-sans text-sm w-full md:w-64 focus:outline-none focus:border-navy"
           />
           <select
             value={selectedCategory}
             onChange={(e) => setSelectedCategory(e.target.value)}
-            className="border border-border rounded px-4 py-2 font-sans text-sm focus:outline-none focus:border-navy"
+            className="border border-border rounded-lg px-4 py-2 font-sans text-sm focus:outline-none focus:border-navy"
           >
             <option value="">All Categories</option>
             {CATEGORIES.map((cat) => (
@@ -436,35 +383,13 @@ function NeedsFeed() {
           </select>
         </div>
 
-        {/* School Groups */}
-        {Object.entries(groupedNeeds).map(([schoolId, group]) => {
-          const schoolTotalRaised = group.needs.reduce((sum, n) => sum + n.raised_amount, 0);
-          const schoolTotalGoal = group.needs.reduce((sum, n) => sum + n.goal_amount, 0);
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filteredNeeds.map((need) => (
+            <NeedCard key={need.id} need={need} />
+          ))}
+        </div>
 
-          return (
-            <div key={schoolId} className="mb-10">
-              <div className="school-header flex items-center justify-between">
-                <div>
-                  <h3 className="font-serif text-xl md:text-2xl font-semibold">{group.school.name}</h3>
-                  <p className="font-sans text-xs text-white/60 mt-1">
-                    {group.needs.length} active need{group.needs.length !== 1 ? "s" : ""}
-                  </p>
-                </div>
-                <div className="text-right">
-                  <p className="font-serif text-lg text-gold font-semibold">{formatCurrency(schoolTotalRaised)}</p>
-                  <p className="font-sans text-xs text-white/60">raised of {formatCurrency(schoolTotalGoal)}</p>
-                </div>
-              </div>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
-                {group.needs.map((need) => (
-                  <NeedCard key={need.id} need={need} />
-                ))}
-              </div>
-            </div>
-          );
-        })}
-
-        {Object.keys(groupedNeeds).length === 0 && (
+        {filteredNeeds.length === 0 && (
           <p className="text-center font-sans text-navy/60 py-12">No needs found matching your filters.</p>
         )}
       </div>
@@ -553,82 +478,23 @@ function RecentDonorsWidget() {
   );
 }
 
-// ─── Footer ────────────────────────────────────────────
-function Footer() {
-  return (
-    <footer className="bg-navy text-white py-12">
-      <div className="max-w-page mx-auto px-4">
-        <div className="grid md:grid-cols-4 gap-8">
-          <div>
-            <p className="font-serif text-xl font-bold">AlumniUp</p>
-            <p className="font-sans text-xs text-white/50 mt-2">
-              Connecting Detroit alumni with school needs.
-            </p>
-          </div>
-          <div>
-            <h4 className="font-sans text-sm font-semibold mb-3">Quick Links</h4>
-            <ul className="font-sans text-xs text-white/60 space-y-2">
-              <li><a href="#how-it-works" className="hover:text-gold">How It Works</a></li>
-              <li><a href="/for-schools" className="hover:text-gold">For Schools</a></li>
-              <li><a href="/corporate-giving" className="hover:text-gold">Corporate Giving</a></li>
-              <li><a href="/press" className="hover:text-gold">Press</a></li>
-              <li><a href="/wall-of-honor" className="hover:text-gold">Wall of Honor</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-sans text-sm font-semibold mb-3">Contact</h4>
-            <ul className="font-sans text-xs text-white/60 space-y-2">
-              <li><a href={`mailto:${CONTACT.hello}`} className="hover:text-gold">{CONTACT.hello}</a></li>
-              <li><a href={`mailto:${CONTACT.schools}`} className="hover:text-gold">{CONTACT.schools}</a></li>
-              <li><a href={`mailto:${CONTACT.sponsors}`} className="hover:text-gold">{CONTACT.sponsors}</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-sans text-sm font-semibold mb-3">Legal</h4>
-            <ul className="font-sans text-xs text-white/60 space-y-2">
-              <li>Terms of Service</li>
-              <li>Privacy Policy</li>
-              <li>
-                <a href="/admin/pending" className="text-white/30 hover:text-white/60">Admin</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="border-t border-white/10 mt-8 pt-6 text-center">
-          <p className="font-sans text-xs text-white/40">
-            Powered by{" "}
-            <a href="https://lexsapphirestudio.com" target="_blank" rel="noopener noreferrer" className="hover:text-gold">
-              Lexis Sapphire Studio
-            </a>{" "}
-            | © {new Date().getFullYear()} AlumniUp. All rights reserved.
-          </p>
-        </div>
-      </div>
-    </footer>
-  );
-}
-
 // ─── Page ──────────────────────────────────────────────
 export default function HomePage() {
   return (
     <>
-      <TrustBar />
-      <PreviewBanner />
-      <Header />
+      <SiteHeader />
       <Hero />
       <HowItWorks />
       <FounderStory />
-      <div className="max-w-page mx-auto px-4 py-16 md:py-24 flex flex-col md:flex-row gap-8">
-        <div className="flex-1">
-          <NeedsFeed />
-        </div>
-        <aside className="w-full md:w-80 space-y-6">
+      <NeedsFeed />
+      <section className="bg-cream py-14">
+        <div className="max-w-page mx-auto px-4 grid md:grid-cols-3 gap-6">
           <TrustBlock />
           <TopSchoolsWidget />
           <RecentDonorsWidget />
-        </aside>
-      </div>
-      <Footer />
+        </div>
+      </section>
+      <SiteFooter />
     </>
   );
 }

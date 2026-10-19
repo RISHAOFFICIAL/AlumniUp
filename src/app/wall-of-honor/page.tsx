@@ -15,24 +15,6 @@ export default function WallOfHonorPage() {
 
   return (
     <main className="min-h-screen bg-white">
-      {/* Trust bar */}
-      <div className="bg-navy text-white text-xs text-center py-2 px-4 font-sans tracking-wide">
-        Fiscal Sponsor: {CPF_INFO.name} | {CPF_INFO.classification} EIN {CPF_INFO.ein} | All Donations Tax-Deductible | Detroit, MI
-      </div>
-
-      {IS_MOCK && (
-        <div className="bg-gold text-navy text-xs text-center py-1.5 px-4 font-sans">
-          Preview — sample data for demonstration. No real donations have occurred.
-        </div>
-      )}
-
-      <header className="border-b border-border">
-        <div className="max-w-page mx-auto px-4 py-3 flex items-center justify-between">
-          <a href="/" className="font-serif text-2xl font-bold text-navy">AlumniUp</a>
-          <a href="/" className="btn-ghost text-xs px-4 py-2">Back to Home</a>
-        </div>
-      </header>
-
       <div className="max-w-page mx-auto px-4 py-12 md:py-16">
         <h1 className="font-serif text-4xl md:text-5xl font-semibold text-navy">Wall of Honor</h1>
         <p className="font-sans text-navy/60 mt-3 max-w-2xl">

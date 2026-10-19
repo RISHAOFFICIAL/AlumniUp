@@ -2,10 +2,18 @@
 
 import { useEffect, useState } from "react";
 import type { Need } from "@/types";
-import { DONATION_PRESETS, FEE_SPLIT } from "@/types";
+import { DONATION_PRESETS } from "@/types";
 import { submitDonation, type DonationResult } from "@/lib/donations";
 
 type Frequency = "once" | "monthly";
+
+function photoForNeedTitle(title: string, category: string): string {
+  const hay = `${title} ${category}`.toLowerCase();
+  if (hay.includes("baseball") || hay.includes("field")) return "/images/need-baseball.jpg";
+  if (hay.includes("stage") || hay.includes("lighting") || hay.includes("arts")) return "/images/need-stage.jpg";
+  if (hay.includes("debate")) return "/images/need-debate.jpg";
+  return "/images/hero-students.webp";
+}
 
 function formatCurrency(amount: number): string {
   return new Intl.NumberFormat("en-US", {
@@ -75,7 +83,6 @@ export default function DonationModal({
   const finalAmount = usingCustom ? Number(customAmount) : amount;
   const emailValid = /.+@.+\..+/.test(email.trim());
   const isValid = Number.isFinite(finalAmount) && finalAmount > 0 && emailValid;
-  const schoolAmount = isValid ? Math.round(finalAmount * FEE_SPLIT.school * 100) / 100 : 0;
   const schoolName = need.school?.name ?? "this school";
   const isMock = (process.env.NEXT_PUBLIC_DATA_SOURCE ?? "mock") === "mock";
 
@@ -116,13 +123,13 @@ export default function DonationModal({
         aria-hidden="true"
       />
 
-      <div className="relative bg-white rounded-lg shadow-xl max-w-md w-full p-6 md:p-8 max-h-[90vh] overflow-y-auto">
+      <div className="relative bg-white rounded-2xl shadow-xl max-w-md w-full p-6 md:p-8 max-h-[90vh] overflow-y-auto">
         <button
           type="button"
           onClick={onClose}
           disabled={status === "processing"}
           aria-label="Close"
-          className="absolute top-3 right-3 p-2 text-navy/50 hover:text-navy disabled:opacity-40"
+          className="absolute top-3 right-3 z-10 p-2 rounded-full bg-white/90 shadow text-navy/60 hover:text-navy disabled:opacity-40"
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M18 6L6 18M6 6l12 12" />
@@ -143,6 +150,13 @@ export default function DonationModal({
           />
         ) : (
           <>
+            <div className="relative h-32 -mx-6 -mt-6 md:-mx-8 md:-mt-8 mb-5 overflow-hidden rounded-t-2xl">
+              <img
+                src={photoForNeedTitle(need.title, need.category)}
+                alt=""
+                className="w-full h-full object-cover"
+              />
+            </div>
             <p className="font-sans text-xs font-medium uppercase tracking-wider text-gold">
               Support this need
             </p>
@@ -257,16 +271,13 @@ export default function DonationModal({
               />
             )}
 
-            {/* Fee transparency */}
+            {/* Tax note: total given and tax treatment only, per the
+                public transparency rule (no internal fee split shown). */}
             <div className="bg-cream rounded-md p-4 mt-5 font-sans text-xs text-navy/70 leading-relaxed">
-              <p className="font-medium text-navy mb-1">
-                {isValid
-                  ? `School receives ${formatCurrency(schoolAmount)} (88%)`
-                  : "88% of every donation goes to the school"}
-              </p>
               <p>
-                7% platform fee · 5% fiscal-sponsor fee · Stripe processing separate.
-                Donations are tax-deductible via Childs Play Foundation, Inc. (501(c)(3)).
+                Tax-deductible through Childs Play Foundation, Inc., 501(c)(3) EIN 86-2707543.
+                Your total is the amount on the button below, and your receipt is emailed instantly.
+                You can follow this gift publicly until the school confirms it arrived.
               </p>
             </div>
 
@@ -278,12 +289,17 @@ export default function DonationModal({
               type="button"
               onClick={handleSubmit}
               disabled={!isValid || status === "processing"}
-              className="btn-gold w-full py-3 text-sm mt-5 disabled:opacity-50"
+              className="btn-gold w-full py-3.5 text-base mt-5"
             >
               {status === "processing"
                 ? "Processing…"
                 : `Donate ${isValid ? formatCurrency(finalAmount) : ""}`}
             </button>
+            {!isValid && status === "form" && (
+              <p className="font-sans text-xs text-navy/50 text-center mt-2">
+                Choose an amount and add your email to complete your donation.
+              </p>
+            )}
           </>
         )}
       </div>

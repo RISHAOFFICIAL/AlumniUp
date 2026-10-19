@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SiteHeader, SiteFooter } from "@/components/SiteChrome";
 
 const title = "AlumniUp for Schools | Bridging Detroit's Funding Gaps";
 const description =
@@ -23,5 +24,11 @@ export default function ForSchoolsLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return (
+    <>
+      <SiteHeader />
+      {children}
+      <SiteFooter />
+    </>
+  );
 }

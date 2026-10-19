@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SiteHeader, SiteFooter } from "@/components/SiteChrome";
 
 export const metadata: Metadata = {
   title: "Sign In | AlumniUp",
@@ -26,5 +27,11 @@ export default function LoginLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return (
+    <>
+      <SiteHeader />
+      {children}
+      <SiteFooter />
+    </>
+  );
 }

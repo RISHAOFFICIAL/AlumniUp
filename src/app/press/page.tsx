@@ -21,16 +21,7 @@ export const metadata: Metadata = {
 export default function PressPage() {
   return (
     <main className="min-h-screen bg-white">
-      <div className="bg-navy text-white text-xs text-center py-2 px-4 font-sans tracking-wide">
-        Fiscal Sponsor: Childs Play Foundation, Inc. | 501(c)(3) EIN 86-2707543 | All Donations Tax-Deductible | Detroit, MI
-      </div>
-
-      <header className="border-b border-border">
-        <div className="max-w-page mx-auto px-4 py-3 flex items-center justify-between">
-          <a href="/" className="font-serif text-2xl font-bold text-navy">AlumniUp</a>
-          <a href="/" className="btn-ghost text-xs px-4 py-2">Back to Home</a>
-        </div>
-      </header>
+      
 
       <div className="max-w-page mx-auto px-4 py-16 md:py-24">
         <h1 className="font-serif text-4xl md:text-5xl font-semibold text-navy">Press</h1>
