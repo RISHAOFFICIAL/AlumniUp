@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="684" viewBox="0 0 390 684">
+<rect x="0" y="0" width="390" height="684" fill="#F8F7F5"/>
+<rect x="0.75" y="0.75" width="388.5" height="682.5" fill="none" stroke="#BDBDBD" stroke-width="1.5"/>
+<rect x="0" y="0" width="390" height="46" rx="0" fill="#0F1F38"/>
+<rect x="0" y="45" width="390" height="1" rx="0" fill="#D8D2C0"/>
+<text x="16" y="26" font-family="Cormorant Garamond, Georgia, serif" font-size="17" font-weight="700" fill="#F8F7F5" text-anchor="start">AlumniUp Portal</text>
+<rect x="308" y="11" width="24" height="24" rx="6" fill="#33507E"/>
+<rect x="340" y="11" width="24" height="24" rx="6" fill="#33507E"/>
+<text x="16" y="67" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">Administrator view · Printable for district records</text>
+<text x="16" y="107" font-family="Cormorant Garamond, Georgia, serif" font-size="26" font-weight="700" fill="#0F1F38" text-anchor="start">School Money View</text>
+<text x="16" y="135" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">King Jr. Senior High School · All needs, totals, and dates</text>
+<rect x="16" y="149" width="358" height="131" rx="16" fill="#FFFFFF" stroke="#E3DCCB" stroke-width="1.5"/>
+<text x="28" y="174" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1F2733" text-anchor="start">Debate Coach Stipend</text>
+<text x="28" y="189" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">Funded Oct 10 · Sent Oct 15 · Received Oct 17</text>
+<text x="362" y="176" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1F2733" text-anchor="end">$4,000</text>
+<rect x="28" y="203" width="334" height="1" rx="0" fill="#E4E4E4"/>
+<rect x="28" y="214" width="88" height="22" rx="11" fill="#F0E7D3"/>
+<text x="72" y="228" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#7A5C14" text-anchor="middle">RECEIVED ✓</text>
+<rect x="28" y="246" width="116" height="22" rx="11" fill="#F0E7D3"/>
+<text x="86" y="260" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#7A5C14" text-anchor="middle">USE VERIFIED ✓</text>
+<rect x="16" y="290" width="358" height="99" rx="16" fill="#FFFFFF" stroke="#E3DCCB" stroke-width="1.5"/>
+<text x="28" y="315" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1F2733" text-anchor="start">Baseball Field Flood Repair</text>
+<text x="28" y="330" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">Live since Oct 12 · 12 donors</text>
+<text x="362" y="317" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1F2733" text-anchor="end">$3,200</text>
+<rect x="28" y="344" width="334" height="1" rx="0" fill="#E4E4E4"/>
+<rect x="28" y="355" width="137" height="22" rx="11" fill="#F0E7D3"/>
+<text x="96.5" y="369" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#7A5C14" text-anchor="middle">LIVE · OF $18,000</text>
+<rect x="16" y="399" width="358" height="110" rx="16" fill="#FFFFFF" stroke="#E3DCCB" stroke-width="1.5"/>
+<text x="28" y="424" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1F2733" text-anchor="start">Robotics Club Kits</text>
+<text x="28" y="439" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">Funded Aug 30 · Sent Sep 3 · Awaiting</text>
+<text x="28" y="453" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">confirmation</text>
+<text x="362" y="426" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1F2733" text-anchor="end">$2,750</text>
+<rect x="28" y="464" width="334" height="1" rx="0" fill="#E4E4E4"/>
+<rect x="28" y="475" width="116" height="22" rx="11" fill="#F0E7D3"/>
+<text x="86" y="489" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#7A5C14" text-anchor="middle">SENT · 46 DAYS</text>
+<rect x="16" y="519" width="358" height="91" rx="8" fill="#F1EAD9"/>
+<text x="26" y="538" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">A SENT need aging past the expected window is highlighted</text>
+<text x="26" y="553" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">here and can be marked DELAYED with a public reason by the</text>
+<text x="26" y="568" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">operator. The administrator can confirm receipt at school</text>
+<text x="26" y="583" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">level if the poster is unavailable; the record shows who</text>
+<text x="26" y="598" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">confirmed.</text>
+<rect x="16" y="620" width="358" height="48" rx="12" fill="#FFFFFF" stroke="#0F1F38" stroke-width="1.5"/>
+<text x="195" y="649" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#0F1F38" text-anchor="middle">Print / Save PDF</text>
+</svg>

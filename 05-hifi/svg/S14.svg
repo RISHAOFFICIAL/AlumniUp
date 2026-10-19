@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="729" viewBox="0 0 390 729">
+<rect x="0" y="0" width="390" height="729" fill="#F8F7F5"/>
+<rect x="0.75" y="0.75" width="388.5" height="727.5" fill="none" stroke="#BDBDBD" stroke-width="1.5"/>
+<rect x="0" y="0" width="390" height="46" rx="0" fill="#0F1F38"/>
+<rect x="0" y="45" width="390" height="1" rx="0" fill="#D8D2C0"/>
+<text x="16" y="26" font-family="Cormorant Garamond, Georgia, serif" font-size="17" font-weight="700" fill="#F8F7F5" text-anchor="start">AlumniUp Admin</text>
+<rect x="308" y="11" width="24" height="24" rx="6" fill="#33507E"/>
+<rect x="340" y="11" width="24" height="24" rx="6" fill="#33507E"/>
+<text x="16" y="67" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">Operator view · Risha (AlumniUp)</text>
+<text x="16" y="107" font-family="Cormorant Garamond, Georgia, serif" font-size="26" font-weight="700" fill="#0F1F38" text-anchor="start">Platform Admin</text>
+<rect x="16" y="124" width="115.33333333333333" height="40" rx="8" fill="#0F1F38"/>
+<text x="73.66666666666666" y="147" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">Verify</text>
+<rect x="135.33333333333331" y="124" width="115.33333333333333" height="40" rx="8" fill="#FFFFFF" stroke="#D8D2C0" stroke-width="1.5"/>
+<text x="192.99999999999997" y="147" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#5B6472" text-anchor="middle">Disburse</text>
+<rect x="254.66666666666666" y="124" width="115.33333333333333" height="40" rx="8" fill="#FFFFFF" stroke="#D8D2C0" stroke-width="1.5"/>
+<text x="312.3333333333333" y="147" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#5B6472" text-anchor="middle">Sponsors</text>
+<text x="16" y="184" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#8C6D1F" text-anchor="start">STAFF VERIFICATION QUEUE</text>
+<rect x="16" y="197" width="358" height="136" rx="16" fill="#FFFFFF" stroke="#E3DCCB" stroke-width="1.5"/>
+<circle cx="44" cy="225" r="16" fill="#EFE9DA"/>
+<text x="70" y="222" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1F2733" text-anchor="start">Coach · King Jr. Senior High</text>
+<text x="70" y="237" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">Work email matches school domain ·</text>
+<text x="70" y="251" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">Applied Oct 19</text>
+<text x="362" y="224" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1F2733" text-anchor="end">NEW</text>
+<rect x="28" y="262" width="334" height="1" rx="0" fill="#E4E4E4"/>
+<rect x="28" y="273" width="163" height="48" rx="12" fill="#0F1F38"/>
+<text x="109.5" y="302" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Verify</text>
+<rect x="199" y="273" width="163" height="48" rx="12" fill="#FFFFFF" stroke="#0F1F38" stroke-width="1.5"/>
+<text x="280.5" y="302" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#0F1F38" text-anchor="middle">Ask for Info</text>
+<rect x="16" y="343" width="358" height="136" rx="16" fill="#FFFFFF" stroke="#E3DCCB" stroke-width="1.5"/>
+<circle cx="44" cy="371" r="16" fill="#EFE9DA"/>
+<text x="70" y="368" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1F2733" text-anchor="start">Teacher · Cass Technical HS</text>
+<text x="70" y="383" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">Confirmation call pending · Applied</text>
+<text x="70" y="397" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">Oct 18</text>
+<text x="362" y="370" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1F2733" text-anchor="end">HELD</text>
+<rect x="28" y="408" width="334" height="1" rx="0" fill="#E4E4E4"/>
+<rect x="28" y="419" width="163" height="48" rx="12" fill="#0F1F38"/>
+<text x="109.5" y="448" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Verify</text>
+<rect x="199" y="419" width="163" height="48" rx="12" fill="#FFFFFF" stroke="#0F1F38" stroke-width="1.5"/>
+<text x="280.5" y="448" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#0F1F38" text-anchor="middle">Ask for Info</text>
+<text x="16" y="499" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#8C6D1F" text-anchor="start">DISBURSEMENTS (DISBURSE TAB)</text>
+<text x="16" y="525" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1F2733" text-anchor="start">Debate Coach Stipend · King High</text>
+<text x="16" y="540" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">Funded Oct 10 · Record disbursement to move to</text>
+<text x="16" y="554" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">SENT</text>
+<text x="374" y="527" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1F2733" text-anchor="end">$4,000</text>
+<rect x="16" y="565" width="358" height="1" rx="0" fill="#E4E4E4"/>
+<text x="16" y="586" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#8C6D1F" text-anchor="start">SPONSOR INQUIRIES (SPONSORS TAB)</text>
+<text x="16" y="612" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1F2733" text-anchor="start">Company inquiry · Gold tier</text>
+<text x="16" y="627" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">Received Oct 19 · Acknowledged by email</text>
+<text x="374" y="614" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1F2733" text-anchor="end">NEW</text>
+<rect x="16" y="641" width="358" height="1" rx="0" fill="#E4E4E4"/>
+<rect x="16" y="652" width="358" height="61" rx="8" fill="#F1EAD9"/>
+<text x="26" y="671" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">Every verification decision, disbursement, and DELAYED</text>
+<text x="26" y="686" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">marking is logged with date and operator. The trail may be</text>
+<text x="26" y="701" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">late; it may never be silent.</text>
+</svg>

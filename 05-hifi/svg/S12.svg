@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="822" viewBox="0 0 390 822">
+<rect x="0" y="0" width="390" height="822" fill="#F8F7F5"/>
+<rect x="0.75" y="0.75" width="388.5" height="820.5" fill="none" stroke="#BDBDBD" stroke-width="1.5"/>
+<rect x="0" y="0" width="390" height="46" rx="0" fill="#0F1F38"/>
+<rect x="0" y="45" width="390" height="1" rx="0" fill="#D8D2C0"/>
+<text x="16" y="26" font-family="Cormorant Garamond, Georgia, serif" font-size="17" font-weight="700" fill="#F8F7F5" text-anchor="start">AlumniUp Portal</text>
+<rect x="308" y="11" width="24" height="24" rx="6" fill="#33507E"/>
+<rect x="340" y="11" width="24" height="24" rx="6" fill="#33507E"/>
+<text x="16" y="67" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">Signed in as Principal · King Jr. Senior High</text>
+<text x="16" y="107" font-family="Cormorant Garamond, Georgia, serif" font-size="26" font-weight="700" fill="#0F1F38" text-anchor="start">Review Queue</text>
+<text x="16" y="137" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#1F2733" text-anchor="start">Needs from your staff wait here. Nothing goes public</text>
+<text x="16" y="155" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#1F2733" text-anchor="start">in your school's name without your approval.</text>
+<rect x="16" y="170" width="358" height="313" rx="16" fill="#FFFFFF" stroke="#E3DCCB" stroke-width="1.5"/>
+<clipPath id="clip10"><rect x="28" y="182" width="334" height="100" rx="10"/></clipPath><g clip-path="url(#clip10)"><image href="../img/need-stage.jpg" x="28" y="182" width="334" height="100" preserveAspectRatio="xMidYMid slice"/></g>
+<text x="28" y="311" font-family="Cormorant Garamond, Georgia, serif" font-size="19" font-weight="700" fill="#0F1F38" text-anchor="start">Performing Arts Stage Lighting</text>
+<text x="28" y="336" font-family="Cormorant Garamond, Georgia, serif" font-size="19" font-weight="700" fill="#0F1F38" text-anchor="start">Upgrade</text>
+<text x="28" y="363" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">Posted by Teacher · Goal $5,500 · Submitted Oct 18</text>
+<text x="28" y="390" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#1F2733" text-anchor="start">Story preview: Our auditorium lighting system was</text>
+<text x="28" y="408" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#1F2733" text-anchor="start">installed in 1998 and is now failing...</text>
+<rect x="28" y="423" width="163" height="48" rx="12" fill="#0F1F38"/>
+<text x="109.5" y="452" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Approve</text>
+<rect x="199" y="423" width="163" height="48" rx="12" fill="#FFFFFF" stroke="#0F1F38" stroke-width="1.5"/>
+<text x="280.5" y="452" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#0F1F38" text-anchor="middle">Reject</text>
+<rect x="16" y="493" width="358" height="242" rx="16" fill="#FFFFFF" stroke="#E3DCCB" stroke-width="1.5"/>
+<rect x="28" y="505" width="334" height="100" rx="10" fill="#DCDCDC"/>
+<text x="195" y="558" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#5B6472" text-anchor="middle">PHOTO: GYM</text>
+<text x="28" y="634" font-family="Cormorant Garamond, Georgia, serif" font-size="19" font-weight="700" fill="#0F1F38" text-anchor="start">Girls Basketball Uniforms</text>
+<text x="28" y="661" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">Posted by Coach · Goal $2,400 · Submitted Oct 19</text>
+<rect x="28" y="675" width="163" height="48" rx="12" fill="#0F1F38"/>
+<text x="109.5" y="704" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Approve</text>
+<rect x="199" y="675" width="163" height="48" rx="12" fill="#FFFFFF" stroke="#0F1F38" stroke-width="1.5"/>
+<text x="280.5" y="704" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#0F1F38" text-anchor="middle">Reject</text>
+<rect x="16" y="745" width="358" height="61" rx="8" fill="#F1EAD9"/>
+<text x="26" y="764" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">Rejecting requires a reason, which the poster sees.</text>
+<text x="26" y="779" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">Rejected needs return to Draft and are never public. Empty</text>
+<text x="26" y="794" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">queue state: "All caught up. Nothing is waiting on you."</text>
+</svg>

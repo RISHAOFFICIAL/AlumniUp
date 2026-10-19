@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="658" viewBox="0 0 390 658">
+<rect x="0" y="0" width="390" height="658" fill="#F8F7F5"/>
+<rect x="0.75" y="0.75" width="388.5" height="656.5" fill="none" stroke="#BDBDBD" stroke-width="1.5"/>
+<rect x="0" y="0" width="390" height="46" rx="0" fill="#0F1F38"/>
+<rect x="0" y="45" width="390" height="1" rx="0" fill="#D8D2C0"/>
+<text x="16" y="26" font-family="Cormorant Garamond, Georgia, serif" font-size="17" font-weight="700" fill="#F8F7F5" text-anchor="start">AlumniUp</text>
+<rect x="308" y="11" width="24" height="24" rx="6" fill="#33507E"/>
+<rect x="340" y="11" width="24" height="24" rx="6" fill="#33507E"/>
+<text x="16" y="68" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#8C6D1F" text-anchor="start">HOSTED BY STRIPE · ALUMNIUP NEVER SEES CARD NUMBERS</text>
+<text x="16" y="107" font-family="Cormorant Garamond, Georgia, serif" font-size="26" font-weight="700" fill="#0F1F38" text-anchor="start">Complete your donation</text>
+<rect x="16" y="124" width="358" height="173" rx="16" fill="#FFFFFF" stroke="#E3DCCB" stroke-width="1.5"/>
+<text x="28" y="149" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1F2733" text-anchor="start">Varsity Baseball Field Flood Repair</text>
+<text x="28" y="164" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">King Jr. Senior High School</text>
+<text x="362" y="151" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1F2733" text-anchor="end">$50</text>
+<rect x="28" y="178" width="334" height="1" rx="0" fill="#E4E4E4"/>
+<text x="28" y="202" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1F2733" text-anchor="start">Frequency</text>
+<text x="28" y="217" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">One-time</text>
+<rect x="28" y="231" width="334" height="1" rx="0" fill="#E4E4E4"/>
+<text x="28" y="255" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1F2733" text-anchor="start">Total</text>
+<text x="28" y="270" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">Tax-deductible gift</text>
+<text x="362" y="257" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1F2733" text-anchor="end">$50</text>
+<rect x="28" y="284" width="334" height="1" rx="0" fill="#E4E4E4"/>
+<text x="16" y="318" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#5B6472" text-anchor="start">Card number</text>
+<rect x="16" y="325" width="358" height="44" rx="8" fill="#FFFFFF" stroke="#CFC7B2" stroke-width="1.5"/>
+<text x="28" y="351" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#8A8A8A" text-anchor="start">1234 1234 1234 1234</text>
+<text x="16" y="390" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#5B6472" text-anchor="start">Expiry</text>
+<rect x="16" y="397" width="175" height="44" rx="8" fill="#FFFFFF" stroke="#CFC7B2" stroke-width="1.5"/>
+<text x="28" y="423" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#8A8A8A" text-anchor="start">MM / YY</text>
+<text x="199" y="390" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#5B6472" text-anchor="start">CVC</text>
+<rect x="199" y="397" width="175" height="44" rx="8" fill="#FFFFFF" stroke="#CFC7B2" stroke-width="1.5"/>
+<text x="211" y="423" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#8A8A8A" text-anchor="start">CVC</text>
+<text x="16" y="462" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#5B6472" text-anchor="start">Name on card</text>
+<rect x="16" y="469" width="358" height="44" rx="8" fill="#FFFFFF" stroke="#CFC7B2" stroke-width="1.5"/>
+<text x="28" y="495" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#8A8A8A" text-anchor="start">Full name</text>
+<rect x="16" y="523" width="358" height="48" rx="12" fill="#0F1F38"/>
+<text x="195" y="552" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Pay $50</text>
+<rect x="16" y="581" width="358" height="61" rx="8" fill="#F1EAD9"/>
+<text x="26" y="600" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">Error state: card declined shows a clear message, nothing</text>
+<text x="26" y="615" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">is charged, entries stay filled so retry is one tap. The</text>
+<text x="26" y="630" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">public total never counts unpaid gifts.</text>
+</svg>

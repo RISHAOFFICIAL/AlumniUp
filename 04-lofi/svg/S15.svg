@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="1002" viewBox="0 0 390 1002">
+<rect x="0" y="0" width="390" height="1002" fill="#FFFFFF"/>
+<rect x="0.75" y="0.75" width="388.5" height="1000.5" fill="none" stroke="#BDBDBD" stroke-width="1.5"/>
+<rect x="0" y="0" width="390" height="46" rx="0" fill="#FFFFFF"/>
+<rect x="0" y="45" width="390" height="1" rx="0" fill="#BDBDBD"/>
+<text x="16" y="26" font-family="Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#333333" text-anchor="start">AlumniUp</text>
+<rect x="308" y="11" width="24" height="24" rx="6" fill="#E7E7E7"/>
+<rect x="340" y="11" width="24" height="24" rx="6" fill="#E7E7E7"/>
+<text x="16" y="68" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#9A9A9A" text-anchor="start">FOR COMPANIES</text>
+<text x="16" y="104" font-family="Helvetica, Arial, sans-serif" font-size="23" font-weight="700" fill="#333333" text-anchor="start">Corporate Giving</text>
+<text x="16" y="133" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#333333" text-anchor="start">Partner with AlumniUp to support Detroit public</text>
+<text x="16" y="151" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#333333" text-anchor="start">schools. Every tier is backed by the same public</text>
+<text x="16" y="169" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#333333" text-anchor="start">money trail your CFO can check.</text>
+<rect x="16" y="184" width="358" height="115" rx="12" fill="#FFFFFF" stroke="#BDBDBD" stroke-width="1.5"/>
+<text x="28" y="206" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#9A9A9A" text-anchor="start">GOLD</text>
+<text x="28" y="236" font-family="Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#333333" text-anchor="start">$2,500+</text>
+<text x="28" y="264" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#333333" text-anchor="start">Logo on homepage · Wall of Honor recognition ·</text>
+<text x="28" y="282" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#333333" text-anchor="start">Quarterly impact summary</text>
+<rect x="16" y="309" width="358" height="115" rx="12" fill="#FFFFFF" stroke="#BDBDBD" stroke-width="1.5"/>
+<text x="28" y="331" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#9A9A9A" text-anchor="start">SILVER</text>
+<text x="28" y="361" font-family="Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#333333" text-anchor="start">$1,000+</text>
+<text x="28" y="389" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#333333" text-anchor="start">Logo on school pages · Wall of Honor recognition</text>
+<text x="28" y="407" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#333333" text-anchor="start">· Quarterly impact summary</text>
+<rect x="16" y="434" width="358" height="97" rx="12" fill="#FFFFFF" stroke="#BDBDBD" stroke-width="1.5"/>
+<text x="28" y="456" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#9A9A9A" text-anchor="start">BRONZE</text>
+<text x="28" y="486" font-family="Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#333333" text-anchor="start">$250+</text>
+<text x="28" y="514" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#333333" text-anchor="start">Wall of Honor recognition · Impact summary</text>
+<text x="16" y="551" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#9A9A9A" text-anchor="start">INQUIRE ABOUT CORPORATE GIVING</text>
+<text x="16" y="575" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#6E6E6E" text-anchor="start">Company</text>
+<rect x="16" y="582" width="358" height="44" rx="8" fill="#FFFFFF" stroke="#BDBDBD" stroke-width="1.5"/>
+<text x="28" y="608" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#9A9A9A" text-anchor="start">Company name</text>
+<text x="16" y="647" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#6E6E6E" text-anchor="start">Contact Name</text>
+<rect x="16" y="654" width="358" height="44" rx="8" fill="#FFFFFF" stroke="#BDBDBD" stroke-width="1.5"/>
+<text x="28" y="680" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#9A9A9A" text-anchor="start">Full name</text>
+<text x="16" y="719" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#6E6E6E" text-anchor="start">Email</text>
+<rect x="16" y="726" width="358" height="44" rx="8" fill="#FFFFFF" stroke="#BDBDBD" stroke-width="1.5"/>
+<text x="28" y="752" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#9A9A9A" text-anchor="start">you@company.com</text>
+<text x="16" y="791" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#6E6E6E" text-anchor="start">Interest Tier</text>
+<rect x="16" y="798" width="358" height="44" rx="8" fill="#FFFFFF" stroke="#BDBDBD" stroke-width="1.5"/>
+<text x="28" y="824" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#9A9A9A" text-anchor="start">Gold ($2,500+) ▾</text>
+<rect x="16" y="852" width="358" height="48" rx="10" fill="#4A4A4A"/>
+<text x="195" y="881" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Submit Inquiry</text>
+<rect x="16" y="910" width="358" height="76" rx="8" fill="#F2F2F2"/>
+<text x="26" y="929" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6E6E6E" text-anchor="start">Sponsorships can be structured as a tax-deductible donation</text>
+<text x="26" y="944" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6E6E6E" text-anchor="start">through Childs Play Foundation, Inc. (501(c)(3)).</text>
+<text x="26" y="959" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6E6E6E" text-anchor="start">Acknowledged by email immediately; the operator follows up</text>
+<text x="26" y="974" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6E6E6E" text-anchor="start">personally.</text>
+</svg>

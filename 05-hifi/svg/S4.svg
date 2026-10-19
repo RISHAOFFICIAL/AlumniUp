@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="935" viewBox="0 0 390 935">
+<rect x="0" y="0" width="390" height="935" fill="#F8F7F5"/>
+<rect x="0.75" y="0.75" width="388.5" height="933.5" fill="none" stroke="#BDBDBD" stroke-width="1.5"/>
+<text x="16" y="11" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">‹ Backdrop: need detail, dimmed (this is a sheet)</text>
+<clipPath id="clip1"><rect x="16" y="25" width="358" height="110" rx="10"/></clipPath><g clip-path="url(#clip1)"><image href="../img/need-baseball.jpg" x="16" y="25" width="358" height="110" preserveAspectRatio="xMidYMid slice"/></g>
+<text x="16" y="164" font-family="Cormorant Garamond, Georgia, serif" font-size="19" font-weight="700" fill="#0F1F38" text-anchor="start">Varsity Baseball Field Flood</text>
+<text x="16" y="189" font-family="Cormorant Garamond, Georgia, serif" font-size="19" font-weight="700" fill="#0F1F38" text-anchor="start">Repair</text>
+<text x="16" y="216" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">King Jr. Senior High School · $3,200 of $18,000 raised</text>
+<text x="16" y="242" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#8C6D1F" text-anchor="start">AMOUNT</text>
+<rect x="16" y="255" width="114" height="48" rx="12" fill="#FFFFFF" stroke="#0F1F38" stroke-width="1.5"/>
+<text x="73" y="284" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#0F1F38" text-anchor="middle">$25</text>
+<rect x="138" y="255" width="114" height="48" rx="12" fill="#0F1F38"/>
+<text x="195" y="284" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">$50</text>
+<rect x="260" y="255" width="114" height="48" rx="12" fill="#FFFFFF" stroke="#0F1F38" stroke-width="1.5"/>
+<text x="317" y="284" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#0F1F38" text-anchor="middle">$100</text>
+<rect x="16" y="313" width="114" height="48" rx="12" fill="#FFFFFF" stroke="#0F1F38" stroke-width="1.5"/>
+<text x="73" y="342" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#0F1F38" text-anchor="middle">$250</text>
+<rect x="138" y="313" width="114" height="48" rx="12" fill="#FFFFFF" stroke="#0F1F38" stroke-width="1.5"/>
+<text x="195" y="342" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#0F1F38" text-anchor="middle">$500</text>
+<rect x="260" y="313" width="114" height="48" rx="12" fill="#FFFFFF" stroke="#0F1F38" stroke-width="1.5"/>
+<text x="317" y="342" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#0F1F38" text-anchor="middle">$1,000</text>
+<rect x="16" y="371" width="358" height="44" rx="8" fill="#FFFFFF" stroke="#CFC7B2" stroke-width="1.5"/>
+<text x="28" y="397" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#8A8A8A" text-anchor="start">Custom amount</text>
+<text x="16" y="435" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#8C6D1F" text-anchor="start">FREQUENCY</text>
+<rect x="16" y="448" width="175" height="40" rx="8" fill="#0F1F38"/>
+<text x="103.5" y="471" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">One-time</text>
+<rect x="195" y="448" width="175" height="40" rx="8" fill="#FFFFFF" stroke="#D8D2C0" stroke-width="1.5"/>
+<text x="282.5" y="471" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#5B6472" text-anchor="middle">Monthly</text>
+<text x="16" y="508" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#8C6D1F" text-anchor="start">YOUR DETAILS</text>
+<rect x="16" y="521" width="358" height="44" rx="8" fill="#FFFFFF" stroke="#CFC7B2" stroke-width="1.5"/>
+<text x="28" y="547" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#8A8A8A" text-anchor="start">Name (optional)</text>
+<rect x="16" y="575" width="358" height="44" rx="8" fill="#FFFFFF" stroke="#CFC7B2" stroke-width="1.5"/>
+<text x="28" y="601" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#8A8A8A" text-anchor="start">Email (for your tax receipt)</text>
+<rect x="16" y="629" width="358" height="44" rx="8" fill="#FFFFFF" stroke="#CFC7B2" stroke-width="1.5"/>
+<text x="28" y="655" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#8A8A8A" text-anchor="start">Class year (e.g. 1998)</text>
+<text x="16" y="699" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#1F2733" text-anchor="start">Give anonymously</text>
+<rect x="324" y="683" width="50" height="28" rx="14" fill="#EFE9DA"/>
+<circle cx="338" cy="697" r="10" fill="#FFFFFF" stroke="#D8D2C0" stroke-width="1.5"/>
+<rect x="16" y="721" width="358" height="44" rx="8" fill="#FFFFFF" stroke="#CFC7B2" stroke-width="1.5"/>
+<text x="28" y="747" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#8A8A8A" text-anchor="start">Message for the Wall of Honor (optional)</text>
+<rect x="16" y="775" width="358" height="61" rx="8" fill="#F1EAD9"/>
+<text x="26" y="794" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">Tax-deductible through Childs Play Foundation, Inc.</text>
+<text x="26" y="809" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">501(c)(3). Your total is the one number shown on the button</text>
+<text x="26" y="824" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">below.</text>
+<rect x="16" y="846" width="358" height="48" rx="12" fill="#0F1F38"/>
+<text x="195" y="875" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Donate $50</text>
+<text x="16" y="915" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">Secure checkout · Receipt emailed instantly</text>
+</svg>

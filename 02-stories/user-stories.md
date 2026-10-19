@@ -163,3 +163,23 @@ approval queue (story 12), and disbursement recording (story 15).
 
 Risha approves the stories and the Must Have list before Stage 3
 turns them into screen-by-screen flows.
+
+## Addendum stories (October 19, 2026): verification of use — Must Have
+
+- A17. As a poster, after my school confirms receipt I am prompted
+  to upload proof of use (invoices or receipts, a completion photo,
+  and the final amount spent) within 30 days, so my need can reach
+  its final state.
+- A18. As an administrator, I can review my school's proof packet
+  and attest by name and date that funds were spent as stated,
+  before it goes to the sponsor.
+- A19. As the sponsor (or operator acting for the sponsor), I can
+  review a proof packet and mark the need USE VERIFIED, request
+  specific missing items, and export the full evidence packet as a
+  PDF for audit records.
+- A20. As a donor, I can see on the public trail whether proof of
+  use is awaiting, overdue, or verified, and I receive the
+  completion photo when my funded need is verified.
+- A21. As the operator, I can set a per-need disbursement structure
+  (single, tranches, or direct vendor payment) above the sponsor's
+  threshold, and the trail records the structure used.

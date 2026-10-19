@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="757" viewBox="0 0 390 757">
+<rect x="0" y="0" width="390" height="757" fill="#F8F7F5"/>
+<rect x="0.75" y="0.75" width="388.5" height="755.5" fill="none" stroke="#BDBDBD" stroke-width="1.5"/>
+<rect x="0" y="0" width="390" height="46" rx="0" fill="#0F1F38"/>
+<rect x="0" y="45" width="390" height="1" rx="0" fill="#D8D2C0"/>
+<text x="16" y="26" font-family="Cormorant Garamond, Georgia, serif" font-size="17" font-weight="700" fill="#F8F7F5" text-anchor="start">AlumniUp Portal</text>
+<rect x="308" y="11" width="24" height="24" rx="6" fill="#33507E"/>
+<rect x="340" y="11" width="24" height="24" rx="6" fill="#33507E"/>
+<text x="16" y="66" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#8C6D1F" text-anchor="start">SCHOOL PORTAL · NEW NEED</text>
+<text x="16" y="105" font-family="Cormorant Garamond, Georgia, serif" font-size="26" font-weight="700" fill="#0F1F38" text-anchor="start">Submit a Need</text>
+<rect x="16" y="122" width="358" height="130" rx="10" fill="#DCDCDC"/>
+<text x="195" y="190" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#5B6472" text-anchor="middle">TAP TO ADD PHOTO (REQUIRED)</text>
+<text x="16" y="273" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#5B6472" text-anchor="start">Title</text>
+<rect x="16" y="280" width="358" height="44" rx="8" fill="#FFFFFF" stroke="#CFC7B2" stroke-width="1.5"/>
+<text x="28" y="306" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#8A8A8A" text-anchor="start">e.g. Varsity Baseball Field Flood Repair</text>
+<text x="16" y="345" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#5B6472" text-anchor="start">Category</text>
+<rect x="16" y="352" width="358" height="44" rx="8" fill="#FFFFFF" stroke="#CFC7B2" stroke-width="1.5"/>
+<text x="28" y="378" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#8A8A8A" text-anchor="start">Sports ▾</text>
+<text x="16" y="417" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#5B6472" text-anchor="start">Goal Amount</text>
+<rect x="16" y="424" width="358" height="44" rx="8" fill="#FFFFFF" stroke="#CFC7B2" stroke-width="1.5"/>
+<text x="28" y="450" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#8A8A8A" text-anchor="start">$ 18,000</text>
+<text x="16" y="489" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#5B6472" text-anchor="start">Minimum to Begin (optional)</text>
+<rect x="16" y="496" width="358" height="44" rx="8" fill="#FFFFFF" stroke="#CFC7B2" stroke-width="1.5"/>
+<text x="28" y="522" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#8A8A8A" text-anchor="start">$ 8,500</text>
+<text x="16" y="561" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#5B6472" text-anchor="start">Your Story</text>
+<rect x="16" y="568" width="358" height="44" rx="8" fill="#FFFFFF" stroke="#CFC7B2" stroke-width="1.5"/>
+<text x="28" y="594" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#8A8A8A" text-anchor="start">What is needed, why it matters, what changes when</text>
+<text x="28" y="611" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#8A8A8A" text-anchor="start">it is funded...</text>
+<rect x="16" y="622" width="358" height="61" rx="8" fill="#F1EAD9"/>
+<text x="26" y="641" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">Autosaves as you type (school Wi-Fi drops happen). A need</text>
+<text x="26" y="656" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">cannot go live without a photo. Submitting sends it to your</text>
+<text x="26" y="671" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">administrator for review, not straight to public.</text>
+<rect x="16" y="693" width="175" height="48" rx="12" fill="#FFFFFF" stroke="#0F1F38" stroke-width="1.5"/>
+<text x="103.5" y="722" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#0F1F38" text-anchor="middle">Save Draft</text>
+<rect x="199" y="693" width="175" height="48" rx="12" fill="#0F1F38"/>
+<text x="286.5" y="722" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Submit for Review</text>
+</svg>

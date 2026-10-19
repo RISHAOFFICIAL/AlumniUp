@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="920" viewBox="0 0 390 920">
+<rect x="0" y="0" width="390" height="920" fill="#F8F7F5"/>
+<rect x="0.75" y="0.75" width="388.5" height="918.5" fill="none" stroke="#BDBDBD" stroke-width="1.5"/>
+<rect x="0" y="0" width="390" height="46" rx="0" fill="#0F1F38"/>
+<rect x="0" y="45" width="390" height="1" rx="0" fill="#D8D2C0"/>
+<text x="16" y="26" font-family="Cormorant Garamond, Georgia, serif" font-size="17" font-weight="700" fill="#F8F7F5" text-anchor="start">AlumniUp</text>
+<rect x="308" y="11" width="24" height="24" rx="6" fill="#33507E"/>
+<rect x="340" y="11" width="24" height="24" rx="6" fill="#33507E"/>
+<text x="16" y="68" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#8C6D1F" text-anchor="start">PUBLIC RECORD</text>
+<text x="16" y="107" font-family="Cormorant Garamond, Georgia, serif" font-size="26" font-weight="700" fill="#0F1F38" text-anchor="start">Wall of Honor</text>
+<text x="16" y="137" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#1F2733" text-anchor="start">The alumni and supporters helping Detroit schools.</text>
+<text x="16" y="155" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#1F2733" text-anchor="start">Anonymous donors appear simply as Anonymous.</text>
+<text x="16" y="180" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#8C6D1F" text-anchor="start">CLASS YEAR LEADERBOARD</text>
+<rect x="16" y="193" width="358" height="314" rx="16" fill="#FFFFFF" stroke="#E3DCCB" stroke-width="1.5"/>
+<text x="28" y="218" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1F2733" text-anchor="start">1 · Class of 1994</text>
+<text x="28" y="233" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">1 donor</text>
+<text x="362" y="220" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1F2733" text-anchor="end">$500</text>
+<rect x="28" y="247" width="334" height="1" rx="0" fill="#E4E4E4"/>
+<rect x="28" y="260" width="334" height="8" rx="4" fill="#E9E2D2"/>
+<rect x="28" y="260" width="334" height="8" rx="4" fill="#B8882A"/>
+<text x="28" y="293" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1F2733" text-anchor="start">2 · Class of 1992</text>
+<text x="28" y="308" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">1 donor</text>
+<text x="362" y="295" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1F2733" text-anchor="end">$250</text>
+<rect x="28" y="322" width="334" height="1" rx="0" fill="#E4E4E4"/>
+<rect x="28" y="335" width="334" height="8" rx="4" fill="#E9E2D2"/>
+<rect x="28" y="335" width="167" height="8" rx="4" fill="#B8882A"/>
+<text x="28" y="368" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1F2733" text-anchor="start">3 · Class of 1987</text>
+<text x="28" y="383" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">1 donor</text>
+<text x="362" y="370" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1F2733" text-anchor="end">$200</text>
+<rect x="28" y="397" width="334" height="1" rx="0" fill="#E4E4E4"/>
+<rect x="28" y="410" width="334" height="8" rx="4" fill="#E9E2D2"/>
+<rect x="28" y="410" width="133.6" height="8" rx="4" fill="#B8882A"/>
+<text x="28" y="443" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1F2733" text-anchor="start">4 · Class of 2011</text>
+<text x="28" y="458" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">1 donor</text>
+<text x="362" y="445" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1F2733" text-anchor="end">$150</text>
+<rect x="28" y="472" width="334" height="1" rx="0" fill="#E4E4E4"/>
+<rect x="28" y="485" width="334" height="8" rx="4" fill="#E9E2D2"/>
+<rect x="28" y="485" width="100.2" height="8" rx="4" fill="#B8882A"/>
+<text x="16" y="527" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#8C6D1F" text-anchor="start">RECOGNIZED SUPPORTERS</text>
+<rect x="16" y="540" width="175" height="102" rx="16" fill="#FFFFFF" stroke="#E3DCCB" stroke-width="1.5"/>
+<text x="28" y="571" font-family="Cormorant Garamond, Georgia, serif" font-size="19" font-weight="700" fill="#0F1F38" text-anchor="start">Anonymous</text>
+<text x="28" y="598" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">Class year not shared</text>
+<text x="28" y="625" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#1F2733" text-anchor="start">$1,000</text>
+<rect x="199" y="540" width="175" height="145" rx="16" fill="#FFFFFF" stroke="#E3DCCB" stroke-width="1.5"/>
+<text x="211" y="571" font-family="Cormorant Garamond, Georgia, serif" font-size="19" font-weight="700" fill="#0F1F38" text-anchor="start">Marcus Reed</text>
+<text x="211" y="596" font-family="Cormorant Garamond, Georgia, serif" font-size="19" font-weight="700" fill="#0F1F38" text-anchor="start">'94</text>
+<text x="211" y="623" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">Class of 1994</text>
+<text x="211" y="650" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#1F2733" text-anchor="start">"Every contribution</text>
+<text x="211" y="668" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#1F2733" text-anchor="start">counts."</text>
+<rect x="16" y="695" width="175" height="127" rx="16" fill="#FFFFFF" stroke="#E3DCCB" stroke-width="1.5"/>
+<text x="28" y="726" font-family="Cormorant Garamond, Georgia, serif" font-size="19" font-weight="700" fill="#0F1F38" text-anchor="start">James Carter</text>
+<text x="28" y="751" font-family="Cormorant Garamond, Georgia, serif" font-size="19" font-weight="700" fill="#0F1F38" text-anchor="start">'92</text>
+<text x="28" y="778" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">Class of 1992</text>
+<text x="28" y="805" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#1F2733" text-anchor="start">"Go Crusaders!"</text>
+<rect x="199" y="695" width="175" height="145" rx="16" fill="#FFFFFF" stroke="#E3DCCB" stroke-width="1.5"/>
+<text x="211" y="726" font-family="Cormorant Garamond, Georgia, serif" font-size="19" font-weight="700" fill="#0F1F38" text-anchor="start">Alicia Bennett</text>
+<text x="211" y="751" font-family="Cormorant Garamond, Georgia, serif" font-size="19" font-weight="700" fill="#0F1F38" text-anchor="start">'08</text>
+<text x="211" y="778" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">Class of 2008</text>
+<text x="211" y="805" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#1F2733" text-anchor="start">"Proud to support</text>
+<text x="211" y="823" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#1F2733" text-anchor="start">Detroit students."</text>
+<rect x="0" y="850" width="390" height="54" rx="0" fill="#FFFFFF"/>
+<rect x="0" y="850" width="390" height="1" rx="0" fill="#D8D2C0"/>
+<circle cx="65" cy="866" r="8" fill="#EFE9DA"/>
+<text x="65" y="887" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="9" font-weight="400" fill="#8A8A8A" text-anchor="middle">Home</text>
+<circle cx="195" cy="866" r="8" fill="#0F1F38"/>
+<text x="195" y="887" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="9" font-weight="700" fill="#1F2733" text-anchor="middle">Honor</text>
+<circle cx="325" cy="866" r="8" fill="#EFE9DA"/>
+<text x="325" y="887" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="9" font-weight="400" fill="#8A8A8A" text-anchor="middle">Schools</text>
+</svg>

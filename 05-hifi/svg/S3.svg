@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="1191" viewBox="0 0 390 1191">
+<rect x="0" y="0" width="390" height="1191" fill="#F8F7F5"/>
+<rect x="0.75" y="0.75" width="388.5" height="1189.5" fill="none" stroke="#BDBDBD" stroke-width="1.5"/>
+<rect x="0" y="0" width="390" height="46" rx="0" fill="#0F1F38"/>
+<rect x="0" y="45" width="390" height="1" rx="0" fill="#D8D2C0"/>
+<text x="16" y="26" font-family="Cormorant Garamond, Georgia, serif" font-size="17" font-weight="700" fill="#F8F7F5" text-anchor="start">AlumniUp</text>
+<rect x="308" y="11" width="24" height="24" rx="6" fill="#33507E"/>
+<rect x="340" y="11" width="24" height="24" rx="6" fill="#33507E"/>
+<clipPath id="clip5"><rect x="16" y="56" width="358" height="200" rx="0"/></clipPath><g clip-path="url(#clip5)"><image href="../img/need-baseball.jpg" x="16" y="56" width="358" height="200" preserveAspectRatio="xMidYMid slice"/></g>
+<rect x="16" y="230" width="358" height="26" rx="0" fill="#0F1F38" fill-opacity="0.55"/>
+<text x="26" y="247" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#FFFFFF" text-anchor="start">[chip] Sports · [badge] Verified</text>
+<text x="16" y="294" font-family="Cormorant Garamond, Georgia, serif" font-size="26" font-weight="700" fill="#0F1F38" text-anchor="start">Varsity Baseball Field</text>
+<text x="16" y="327" font-family="Cormorant Garamond, Georgia, serif" font-size="26" font-weight="700" fill="#0F1F38" text-anchor="start">Flood Repair</text>
+<text x="16" y="355" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">King Jr. Senior High School · Posted by Coach, verified staff</text>
+<text x="16" y="388" font-family="Cormorant Garamond, Georgia, serif" font-size="19" font-weight="700" fill="#0F1F38" text-anchor="start">$3,200 raised</text>
+<text x="257.33333333333337" y="380" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">of $18,000 goal</text>
+<rect x="16" y="406" width="358" height="8" rx="4" fill="#E9E2D2"/>
+<rect x="16" y="406" width="64.44" height="8" rx="4" fill="#B8882A"/>
+<text x="16" y="437" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">12 donors · 18% funded · Status: LIVE</text>
+<rect x="16" y="451" width="358" height="48" rx="12" fill="#0F1F38"/>
+<text x="195" y="480" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Donate to This Need</text>
+<text x="16" y="523" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#8C6D1F" text-anchor="start">THE MONEY TRAIL</text>
+<rect x="16" y="536" width="358" height="374" rx="16" fill="#FFFFFF" stroke="#E3DCCB" stroke-width="1.5"/>
+<text x="28" y="561" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1F2733" text-anchor="start">LIVE · Accepting donations</text>
+<text x="28" y="576" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">Since Oct 12, 2026</text>
+<text x="362" y="563" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1F2733" text-anchor="end">$3,200</text>
+<rect x="28" y="590" width="334" height="1" rx="0" fill="#E4E4E4"/>
+<text x="28" y="614" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1F2733" text-anchor="start">FUNDED · Goal reached</text>
+<text x="28" y="629" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">Not yet</text>
+<rect x="28" y="643" width="334" height="1" rx="0" fill="#E4E4E4"/>
+<text x="28" y="667" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1F2733" text-anchor="start">SENT · To school, awaiting</text>
+<text x="28" y="684" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1F2733" text-anchor="start">confirmation</text>
+<text x="28" y="699" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">Not yet</text>
+<rect x="28" y="710" width="334" height="1" rx="0" fill="#E4E4E4"/>
+<text x="28" y="734" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1F2733" text-anchor="start">RECEIVED · Confirmed by school</text>
+<text x="28" y="749" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">Not yet</text>
+<rect x="28" y="763" width="334" height="1" rx="0" fill="#E4E4E4"/>
+<text x="28" y="787" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1F2733" text-anchor="start">AWAITING PROOF · Evidence due in 30</text>
+<text x="28" y="804" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1F2733" text-anchor="start">days</text>
+<text x="28" y="819" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">After receipt</text>
+<rect x="28" y="830" width="334" height="1" rx="0" fill="#E4E4E4"/>
+<text x="28" y="854" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1F2733" text-anchor="start">USE VERIFIED · Sponsor checked the</text>
+<text x="28" y="871" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1F2733" text-anchor="start">spend</text>
+<text x="28" y="886" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">Not yet</text>
+<rect x="28" y="897" width="334" height="1" rx="0" fill="#E4E4E4"/>
+<text x="16" y="930" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#8C6D1F" text-anchor="start">THE NEED</text>
+<text x="16" y="956" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#1F2733" text-anchor="start">The varsity field floods after every rain. Drainage</text>
+<text x="16" y="974" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#1F2733" text-anchor="start">repair gets the team back on its own diamond this</text>
+<text x="16" y="992" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#1F2733" text-anchor="start">spring. Full story text continues here.</text>
+<rect x="16" y="1007" width="358" height="46" rx="8" fill="#F1EAD9"/>
+<text x="26" y="1026" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">Note on this page: can begin at $8,500 funded. If status</text>
+<text x="26" y="1041" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">becomes DELAYED, the reason appears here in plain language.</text>
+<rect x="16" y="1063" width="175" height="48" rx="12" fill="#0F1F38"/>
+<text x="103.5" y="1092" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Donate</text>
+<rect x="199" y="1063" width="175" height="48" rx="12" fill="#FFFFFF" stroke="#0F1F38" stroke-width="1.5"/>
+<text x="286.5" y="1092" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#0F1F38" text-anchor="middle">Share</text>
+<rect x="0" y="1121" width="390" height="54" rx="0" fill="#FFFFFF"/>
+<rect x="0" y="1121" width="390" height="1" rx="0" fill="#D8D2C0"/>
+<circle cx="65" cy="1137" r="8" fill="#0F1F38"/>
+<text x="65" y="1158" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="9" font-weight="700" fill="#1F2733" text-anchor="middle">Home</text>
+<circle cx="195" cy="1137" r="8" fill="#EFE9DA"/>
+<text x="195" y="1158" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="9" font-weight="400" fill="#8A8A8A" text-anchor="middle">Honor</text>
+<circle cx="325" cy="1137" r="8" fill="#EFE9DA"/>
+<text x="325" y="1158" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="9" font-weight="400" fill="#8A8A8A" text-anchor="middle">Schools</text>
+</svg>

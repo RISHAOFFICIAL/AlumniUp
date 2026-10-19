@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="664" viewBox="0 0 390 664">
+<rect x="0" y="0" width="390" height="664" fill="#F8F7F5"/>
+<rect x="0.75" y="0.75" width="388.5" height="662.5" fill="none" stroke="#BDBDBD" stroke-width="1.5"/>
+<rect x="0" y="0" width="390" height="46" rx="0" fill="#0F1F38"/>
+<rect x="0" y="45" width="390" height="1" rx="0" fill="#D8D2C0"/>
+<text x="16" y="26" font-family="Cormorant Garamond, Georgia, serif" font-size="17" font-weight="700" fill="#F8F7F5" text-anchor="start">AlumniUp</text>
+<rect x="308" y="11" width="24" height="24" rx="6" fill="#33507E"/>
+<rect x="340" y="11" width="24" height="24" rx="6" fill="#33507E"/>
+<text x="16" y="84" font-family="Cormorant Garamond, Georgia, serif" font-size="26" font-weight="700" fill="#0F1F38" text-anchor="start">My Donations</text>
+<text x="16" y="112" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">Denise Carter · Class of 1998 · denise@example.com</text>
+<text x="16" y="145" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="19" font-weight="700" fill="#0F1F38" text-anchor="start">$175</text>
+<text x="16" y="160" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="9" font-weight="700" fill="#8A8A8A" text-anchor="start">GIVEN</text>
+<text x="138" y="145" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="19" font-weight="700" fill="#0F1F38" text-anchor="start">3</text>
+<text x="138" y="160" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="9" font-weight="700" fill="#8A8A8A" text-anchor="start">GIFTS</text>
+<text x="260" y="145" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="19" font-weight="700" fill="#0F1F38" text-anchor="start">1</text>
+<text x="260" y="160" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="9" font-weight="700" fill="#8A8A8A" text-anchor="start">RECEIVED</text>
+<text x="16" y="183" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#8C6D1F" text-anchor="start">GIFT HISTORY</text>
+<rect x="16" y="196" width="358" height="99" rx="16" fill="#FFFFFF" stroke="#E3DCCB" stroke-width="1.5"/>
+<circle cx="44" cy="224" r="16" fill="#EFE9DA"/>
+<text x="70" y="221" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1F2733" text-anchor="start">Baseball Field Flood Repair</text>
+<text x="70" y="236" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">King Jr. Senior High · Oct 19, 2026</text>
+<text x="362" y="223" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1F2733" text-anchor="end">$50</text>
+<rect x="28" y="250" width="334" height="1" rx="0" fill="#E4E4E4"/>
+<rect x="28" y="261" width="235" height="22" rx="11" fill="#F0E7D3"/>
+<text x="145.5" y="275" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#7A5C14" text-anchor="middle">STATUS: LIVE · AWAITING FUNDING</text>
+<rect x="16" y="305" width="358" height="99" rx="16" fill="#FFFFFF" stroke="#E3DCCB" stroke-width="1.5"/>
+<circle cx="44" cy="333" r="16" fill="#EFE9DA"/>
+<text x="70" y="330" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1F2733" text-anchor="start">Debate Team Coach Stipend</text>
+<text x="70" y="345" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">King Jr. Senior High · Sep 30, 2026</text>
+<text x="362" y="332" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1F2733" text-anchor="end">$100</text>
+<rect x="28" y="359" width="334" height="1" rx="0" fill="#E4E4E4"/>
+<rect x="28" y="370" width="270" height="22" rx="11" fill="#F0E7D3"/>
+<text x="163" y="384" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#7A5C14" text-anchor="middle">STATUS: SENT · AWAITING CONFIRMATION</text>
+<rect x="16" y="414" width="358" height="99" rx="16" fill="#FFFFFF" stroke="#E3DCCB" stroke-width="1.5"/>
+<circle cx="44" cy="442" r="16" fill="#EFE9DA"/>
+<text x="70" y="439" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1F2733" text-anchor="start">Stage Lighting Upgrade</text>
+<text x="70" y="454" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">King Jr. Senior High · Sep 2, 2026</text>
+<text x="362" y="441" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1F2733" text-anchor="end">$25</text>
+<rect x="28" y="468" width="334" height="1" rx="0" fill="#E4E4E4"/>
+<rect x="28" y="479" width="193" height="22" rx="11" fill="#F0E7D3"/>
+<text x="124.5" y="493" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#7A5C14" text-anchor="middle">STATUS: RECEIVED ✓ SEP 20</text>
+<rect x="16" y="523" width="358" height="61" rx="8" fill="#F1EAD9"/>
+<text x="26" y="542" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">Empty state: a new donor sees "Your gifts will appear here,</text>
+<text x="26" y="557" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">and you can follow each one to the school." Signed-out</text>
+<text x="26" y="572" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#5B6472" text-anchor="start">visitors get a magic-link sign-in, gifts matched by email.</text>
+<rect x="0" y="594" width="390" height="54" rx="0" fill="#FFFFFF"/>
+<rect x="0" y="594" width="390" height="1" rx="0" fill="#D8D2C0"/>
+<circle cx="65" cy="610" r="8" fill="#0F1F38"/>
+<text x="65" y="631" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="9" font-weight="700" fill="#1F2733" text-anchor="middle">Home</text>
+<circle cx="195" cy="610" r="8" fill="#EFE9DA"/>
+<text x="195" y="631" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="9" font-weight="400" fill="#8A8A8A" text-anchor="middle">Honor</text>
+<circle cx="325" cy="610" r="8" fill="#EFE9DA"/>
+<text x="325" y="631" font-family="Instrument Sans, Helvetica, Arial, sans-serif" font-size="9" font-weight="400" fill="#8A8A8A" text-anchor="middle">Schools</text>
+</svg>

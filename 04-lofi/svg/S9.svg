@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="797" viewBox="0 0 390 797">
+<rect x="0" y="0" width="390" height="797" fill="#FFFFFF"/>
+<rect x="0.75" y="0.75" width="388.5" height="795.5" fill="none" stroke="#BDBDBD" stroke-width="1.5"/>
+<rect x="0" y="0" width="390" height="46" rx="0" fill="#FFFFFF"/>
+<rect x="0" y="45" width="390" height="1" rx="0" fill="#BDBDBD"/>
+<text x="16" y="26" font-family="Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#333333" text-anchor="start">AlumniUp</text>
+<rect x="308" y="11" width="24" height="24" rx="6" fill="#E7E7E7"/>
+<rect x="340" y="11" width="24" height="24" rx="6" fill="#E7E7E7"/>
+<text x="16" y="68" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#9A9A9A" text-anchor="start">FOR SCHOOLS</text>
+<text x="16" y="104" font-family="Helvetica, Arial, sans-serif" font-size="23" font-weight="700" fill="#333333" text-anchor="start">Register Your School</text>
+<text x="16" y="133" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#333333" text-anchor="start">One form. We verify your school and your staff role,</text>
+<text x="16" y="151" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#333333" text-anchor="start">typically within a few business days.</text>
+<text x="16" y="177" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#6E6E6E" text-anchor="start">School Name</text>
+<rect x="16" y="184" width="358" height="44" rx="8" fill="#FFFFFF" stroke="#BDBDBD" stroke-width="1.5"/>
+<text x="28" y="210" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#9A9A9A" text-anchor="start">e.g. Martin Luther King Jr. Senior High School</text>
+<text x="16" y="249" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#6E6E6E" text-anchor="start">Your Name</text>
+<rect x="16" y="256" width="358" height="44" rx="8" fill="#FFFFFF" stroke="#BDBDBD" stroke-width="1.5"/>
+<text x="28" y="282" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#9A9A9A" text-anchor="start">Full name</text>
+<text x="16" y="321" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#6E6E6E" text-anchor="start">Role</text>
+<rect x="16" y="328" width="358" height="44" rx="8" fill="#FFFFFF" stroke="#BDBDBD" stroke-width="1.5"/>
+<text x="28" y="354" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#9A9A9A" text-anchor="start">Coach, Teacher, Principal, Athletic Director...</text>
+<text x="16" y="393" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#6E6E6E" text-anchor="start">Work Email</text>
+<rect x="16" y="400" width="358" height="44" rx="8" fill="#FFFFFF" stroke="#BDBDBD" stroke-width="1.5"/>
+<text x="28" y="426" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#9A9A9A" text-anchor="start">you@yourschool.org</text>
+<text x="16" y="465" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#6E6E6E" text-anchor="start">Phone (optional)</text>
+<rect x="16" y="472" width="358" height="44" rx="8" fill="#FFFFFF" stroke="#BDBDBD" stroke-width="1.5"/>
+<text x="28" y="498" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#9A9A9A" text-anchor="start">(313) 555-0100</text>
+<text x="16" y="537" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#6E6E6E" text-anchor="start">Message (optional)</text>
+<rect x="16" y="544" width="358" height="44" rx="8" fill="#FFFFFF" stroke="#BDBDBD" stroke-width="1.5"/>
+<text x="28" y="570" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#9A9A9A" text-anchor="start">Anything we should know</text>
+<rect x="16" y="598" width="358" height="48" rx="10" fill="#4A4A4A"/>
+<text x="195" y="627" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Submit Registration</text>
+<rect x="16" y="656" width="358" height="61" rx="8" fill="#F2F2F2"/>
+<text x="26" y="675" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6E6E6E" text-anchor="start">After submitting: confirmation screen shows verification</text>
+<text x="26" y="690" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6E6E6E" text-anchor="start">state PENDING and what happens next. No need can be posted</text>
+<text x="26" y="705" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6E6E6E" text-anchor="start">until verification completes.</text>
+<rect x="0" y="727" width="390" height="54" rx="0" fill="#FFFFFF"/>
+<rect x="0" y="727" width="390" height="1" rx="0" fill="#BDBDBD"/>
+<circle cx="65" cy="743" r="8" fill="#E7E7E7"/>
+<text x="65" y="764" font-family="Helvetica, Arial, sans-serif" font-size="9" font-weight="400" fill="#9A9A9A" text-anchor="middle">Home</text>
+<circle cx="195" cy="743" r="8" fill="#E7E7E7"/>
+<text x="195" y="764" font-family="Helvetica, Arial, sans-serif" font-size="9" font-weight="400" fill="#9A9A9A" text-anchor="middle">Honor</text>
+<circle cx="325" cy="743" r="8" fill="#4A4A4A"/>
+<text x="325" y="764" font-family="Helvetica, Arial, sans-serif" font-size="9" font-weight="700" fill="#333333" text-anchor="middle">Schools</text>
+</svg>

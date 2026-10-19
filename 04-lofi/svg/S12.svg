@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="809" viewBox="0 0 390 809">
+<rect x="0" y="0" width="390" height="809" fill="#FFFFFF"/>
+<rect x="0.75" y="0.75" width="388.5" height="807.5" fill="none" stroke="#BDBDBD" stroke-width="1.5"/>
+<rect x="0" y="0" width="390" height="46" rx="0" fill="#FFFFFF"/>
+<rect x="0" y="45" width="390" height="1" rx="0" fill="#BDBDBD"/>
+<text x="16" y="26" font-family="Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#333333" text-anchor="start">AlumniUp</text>
+<text x="16" y="48" font-family="Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#333333" text-anchor="start">Portal</text>
+<rect x="308" y="11" width="24" height="24" rx="6" fill="#E7E7E7"/>
+<rect x="340" y="11" width="24" height="24" rx="6" fill="#E7E7E7"/>
+<text x="16" y="67" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6E6E6E" text-anchor="start">Signed in as Principal · King Jr. Senior High</text>
+<text x="16" y="104" font-family="Helvetica, Arial, sans-serif" font-size="23" font-weight="700" fill="#333333" text-anchor="start">Review Queue</text>
+<text x="16" y="133" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#333333" text-anchor="start">Needs from your staff wait here. Nothing goes public</text>
+<text x="16" y="151" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#333333" text-anchor="start">in your school's name without your approval.</text>
+<rect x="16" y="166" width="358" height="307" rx="12" fill="#FFFFFF" stroke="#BDBDBD" stroke-width="1.5"/>
+<rect x="28" y="178" width="334" height="100" rx="10" fill="#DCDCDC"/>
+<text x="195" y="231" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#6E6E6E" text-anchor="middle">PHOTO: STAGE</text>
+<text x="28" y="305" font-family="Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#333333" text-anchor="start">Performing Arts Stage Lighting</text>
+<text x="28" y="327" font-family="Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#333333" text-anchor="start">Upgrade</text>
+<text x="28" y="353" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6E6E6E" text-anchor="start">Posted by Teacher · Goal $5,500 · Submitted Oct 18</text>
+<text x="28" y="380" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#333333" text-anchor="start">Story preview: Our auditorium lighting system was</text>
+<text x="28" y="398" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#333333" text-anchor="start">installed in 1998 and is now failing...</text>
+<rect x="28" y="413" width="163" height="48" rx="10" fill="#4A4A4A"/>
+<text x="109.5" y="442" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Approve</text>
+<rect x="199" y="413" width="163" height="48" rx="10" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.5"/>
+<text x="280.5" y="442" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#4A4A4A" text-anchor="middle">Reject</text>
+<rect x="16" y="483" width="358" height="239" rx="12" fill="#FFFFFF" stroke="#BDBDBD" stroke-width="1.5"/>
+<rect x="28" y="495" width="334" height="100" rx="10" fill="#DCDCDC"/>
+<text x="195" y="548" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#6E6E6E" text-anchor="middle">PHOTO: GYM</text>
+<text x="28" y="622" font-family="Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#333333" text-anchor="start">Girls Basketball Uniforms</text>
+<text x="28" y="648" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6E6E6E" text-anchor="start">Posted by Coach · Goal $2,400 · Submitted Oct 19</text>
+<rect x="28" y="662" width="163" height="48" rx="10" fill="#4A4A4A"/>
+<text x="109.5" y="691" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Approve</text>
+<rect x="199" y="662" width="163" height="48" rx="10" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.5"/>
+<text x="280.5" y="691" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#4A4A4A" text-anchor="middle">Reject</text>
+<rect x="16" y="732" width="358" height="61" rx="8" fill="#F2F2F2"/>
+<text x="26" y="751" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6E6E6E" text-anchor="start">Rejecting requires a reason, which the poster sees.</text>
+<text x="26" y="766" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6E6E6E" text-anchor="start">Rejected needs return to Draft and are never public. Empty</text>
+<text x="26" y="781" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6E6E6E" text-anchor="start">queue state: "All caught up. Nothing is waiting on you."</text>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="753" viewBox="0 0 390 753">
+<rect x="0" y="0" width="390" height="753" fill="#FFFFFF"/>
+<rect x="0.75" y="0.75" width="388.5" height="751.5" fill="none" stroke="#BDBDBD" stroke-width="1.5"/>
+<rect x="0" y="0" width="390" height="46" rx="0" fill="#FFFFFF"/>
+<rect x="0" y="45" width="390" height="1" rx="0" fill="#BDBDBD"/>
+<text x="16" y="26" font-family="Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#333333" text-anchor="start">AlumniUp</text>
+<text x="16" y="48" font-family="Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#333333" text-anchor="start">Portal</text>
+<rect x="308" y="11" width="24" height="24" rx="6" fill="#E7E7E7"/>
+<rect x="340" y="11" width="24" height="24" rx="6" fill="#E7E7E7"/>
+<text x="16" y="66" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#9A9A9A" text-anchor="start">SCHOOL PORTAL · NEW NEED</text>
+<text x="16" y="102" font-family="Helvetica, Arial, sans-serif" font-size="23" font-weight="700" fill="#333333" text-anchor="start">Submit a Need</text>
+<rect x="16" y="118" width="358" height="130" rx="10" fill="#DCDCDC"/>
+<text x="195" y="186" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#6E6E6E" text-anchor="middle">TAP TO ADD PHOTO (REQUIRED)</text>
+<text x="16" y="269" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#6E6E6E" text-anchor="start">Title</text>
+<rect x="16" y="276" width="358" height="44" rx="8" fill="#FFFFFF" stroke="#BDBDBD" stroke-width="1.5"/>
+<text x="28" y="302" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#9A9A9A" text-anchor="start">e.g. Varsity Baseball Field Flood Repair</text>
+<text x="16" y="341" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#6E6E6E" text-anchor="start">Category</text>
+<rect x="16" y="348" width="358" height="44" rx="8" fill="#FFFFFF" stroke="#BDBDBD" stroke-width="1.5"/>
+<text x="28" y="374" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#9A9A9A" text-anchor="start">Sports ▾</text>
+<text x="16" y="413" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#6E6E6E" text-anchor="start">Goal Amount</text>
+<rect x="16" y="420" width="358" height="44" rx="8" fill="#FFFFFF" stroke="#BDBDBD" stroke-width="1.5"/>
+<text x="28" y="446" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#9A9A9A" text-anchor="start">$ 18,000</text>
+<text x="16" y="485" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#6E6E6E" text-anchor="start">Minimum to Begin (optional)</text>
+<rect x="16" y="492" width="358" height="44" rx="8" fill="#FFFFFF" stroke="#BDBDBD" stroke-width="1.5"/>
+<text x="28" y="518" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#9A9A9A" text-anchor="start">$ 8,500</text>
+<text x="16" y="557" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#6E6E6E" text-anchor="start">Your Story</text>
+<rect x="16" y="564" width="358" height="44" rx="8" fill="#FFFFFF" stroke="#BDBDBD" stroke-width="1.5"/>
+<text x="28" y="590" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#9A9A9A" text-anchor="start">What is needed, why it matters, what changes when</text>
+<text x="28" y="607" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#9A9A9A" text-anchor="start">it is funded...</text>
+<rect x="16" y="618" width="358" height="61" rx="8" fill="#F2F2F2"/>
+<text x="26" y="637" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6E6E6E" text-anchor="start">Autosaves as you type (school Wi-Fi drops happen). A need</text>
+<text x="26" y="652" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6E6E6E" text-anchor="start">cannot go live without a photo. Submitting sends it to your</text>
+<text x="26" y="667" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6E6E6E" text-anchor="start">administrator for review, not straight to public.</text>
+<rect x="16" y="689" width="175" height="48" rx="10" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.5"/>
+<text x="103.5" y="718" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#4A4A4A" text-anchor="middle">Save Draft</text>
+<rect x="199" y="689" width="175" height="48" rx="10" fill="#4A4A4A"/>
+<text x="286.5" y="718" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Submit for Review</text>
+</svg>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="907" viewBox="0 0 390 907">
+<rect x="0" y="0" width="390" height="907" fill="#FFFFFF"/>
+<rect x="0.75" y="0.75" width="388.5" height="905.5" fill="none" stroke="#BDBDBD" stroke-width="1.5"/>
+<text x="16" y="11" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6E6E6E" text-anchor="start">‹ Backdrop: need detail, dimmed (this is a sheet)</text>
+<rect x="16" y="25" width="358" height="110" rx="10" fill="#DCDCDC"/>
+<text x="195" y="83" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#6E6E6E" text-anchor="middle">PHOTO: BASEBALL FIELD</text>
+<text x="16" y="162" font-family="Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#333333" text-anchor="start">Varsity Baseball Field Flood Repair</text>
+<text x="16" y="188" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6E6E6E" text-anchor="start">King Jr. Senior High School · $3,200 of $18,000 raised</text>
+<text x="16" y="214" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#9A9A9A" text-anchor="start">AMOUNT</text>
+<rect x="16" y="227" width="114" height="48" rx="10" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.5"/>
+<text x="73" y="256" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#4A4A4A" text-anchor="middle">$25</text>
+<rect x="138" y="227" width="114" height="48" rx="10" fill="#4A4A4A"/>
+<text x="195" y="256" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">$50</text>
+<rect x="260" y="227" width="114" height="48" rx="10" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.5"/>
+<text x="317" y="256" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#4A4A4A" text-anchor="middle">$100</text>
+<rect x="16" y="285" width="114" height="48" rx="10" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.5"/>
+<text x="73" y="314" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#4A4A4A" text-anchor="middle">$250</text>
+<rect x="138" y="285" width="114" height="48" rx="10" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.5"/>
+<text x="195" y="314" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#4A4A4A" text-anchor="middle">$500</text>
+<rect x="260" y="285" width="114" height="48" rx="10" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.5"/>
+<text x="317" y="314" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#4A4A4A" text-anchor="middle">$1,000</text>
+<rect x="16" y="343" width="358" height="44" rx="8" fill="#FFFFFF" stroke="#BDBDBD" stroke-width="1.5"/>
+<text x="28" y="369" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#9A9A9A" text-anchor="start">Custom amount</text>
+<text x="16" y="407" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#9A9A9A" text-anchor="start">FREQUENCY</text>
+<rect x="16" y="420" width="175" height="40" rx="8" fill="#4A4A4A"/>
+<text x="103.5" y="443" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">One-time</text>
+<rect x="195" y="420" width="175" height="40" rx="8" fill="#FFFFFF" stroke="#BDBDBD" stroke-width="1.5"/>
+<text x="282.5" y="443" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#6E6E6E" text-anchor="middle">Monthly</text>
+<text x="16" y="480" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#9A9A9A" text-anchor="start">YOUR DETAILS</text>
+<rect x="16" y="493" width="358" height="44" rx="8" fill="#FFFFFF" stroke="#BDBDBD" stroke-width="1.5"/>
+<text x="28" y="519" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#9A9A9A" text-anchor="start">Name (optional)</text>
+<rect x="16" y="547" width="358" height="44" rx="8" fill="#FFFFFF" stroke="#BDBDBD" stroke-width="1.5"/>
+<text x="28" y="573" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#9A9A9A" text-anchor="start">Email (for your tax receipt)</text>
+<rect x="16" y="601" width="358" height="44" rx="8" fill="#FFFFFF" stroke="#BDBDBD" stroke-width="1.5"/>
+<text x="28" y="627" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#9A9A9A" text-anchor="start">Class year (e.g. 1998)</text>
+<text x="16" y="671" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#333333" text-anchor="start">Give anonymously</text>
+<rect x="324" y="655" width="50" height="28" rx="14" fill="#E7E7E7"/>
+<circle cx="338" cy="669" r="10" fill="#FFFFFF" stroke="#BDBDBD" stroke-width="1.5"/>
+<rect x="16" y="693" width="358" height="44" rx="8" fill="#FFFFFF" stroke="#BDBDBD" stroke-width="1.5"/>
+<text x="28" y="719" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#9A9A9A" text-anchor="start">Message for the Wall of Honor (optional)</text>
+<rect x="16" y="747" width="358" height="61" rx="8" fill="#F2F2F2"/>
+<text x="26" y="766" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6E6E6E" text-anchor="start">Tax-deductible through Childs Play Foundation, Inc.</text>
+<text x="26" y="781" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6E6E6E" text-anchor="start">501(c)(3). Your total is the one number shown on the button</text>
+<text x="26" y="796" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6E6E6E" text-anchor="start">below.</text>
+<rect x="16" y="818" width="358" height="48" rx="10" fill="#4A4A4A"/>
+<text x="195" y="847" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Donate $50</text>
+<text x="16" y="887" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6E6E6E" text-anchor="start">Secure checkout · Receipt emailed instantly</text>
+</svg>

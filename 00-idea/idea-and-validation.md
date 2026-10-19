@@ -170,3 +170,15 @@ per the playbook's recheck rule.
 
 Risha approves, changes, parks, or kills. On approval, Stage 1
 (personas) begins.
+
+## Addendum (October 19, 2026): verification of use
+
+Raised by the fiscal sponsor after approval. The trail proves a
+school received funds; the sponsor must also verify the funds were
+spent on the stated need. This is now a named v1 requirement: a
+school participation agreement signed before money moves, proof of
+use (invoices plus a completion photo) due within 30 days of
+receipt, an administrator countersignature, sponsor verification as
+the trail's final public state (USE VERIFIED), and tranche or
+direct-vendor payment options for large needs. Full mechanism:
+09-addendum-verification/verification-of-use.md.

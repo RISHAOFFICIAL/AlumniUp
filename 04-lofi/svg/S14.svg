@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="725" viewBox="0 0 390 725">
+<rect x="0" y="0" width="390" height="725" fill="#FFFFFF"/>
+<rect x="0.75" y="0.75" width="388.5" height="723.5" fill="none" stroke="#BDBDBD" stroke-width="1.5"/>
+<rect x="0" y="0" width="390" height="46" rx="0" fill="#FFFFFF"/>
+<rect x="0" y="45" width="390" height="1" rx="0" fill="#BDBDBD"/>
+<text x="16" y="26" font-family="Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#333333" text-anchor="start">AlumniUp Admin</text>
+<rect x="308" y="11" width="24" height="24" rx="6" fill="#E7E7E7"/>
+<rect x="340" y="11" width="24" height="24" rx="6" fill="#E7E7E7"/>
+<text x="16" y="67" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6E6E6E" text-anchor="start">Operator view · Risha (AlumniUp)</text>
+<text x="16" y="104" font-family="Helvetica, Arial, sans-serif" font-size="23" font-weight="700" fill="#333333" text-anchor="start">Platform Admin</text>
+<rect x="16" y="120" width="115.33333333333333" height="40" rx="8" fill="#4A4A4A"/>
+<text x="73.66666666666666" y="143" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">Verify</text>
+<rect x="135.33333333333331" y="120" width="115.33333333333333" height="40" rx="8" fill="#FFFFFF" stroke="#BDBDBD" stroke-width="1.5"/>
+<text x="192.99999999999997" y="143" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#6E6E6E" text-anchor="middle">Disburse</text>
+<rect x="254.66666666666666" y="120" width="115.33333333333333" height="40" rx="8" fill="#FFFFFF" stroke="#BDBDBD" stroke-width="1.5"/>
+<text x="312.3333333333333" y="143" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#6E6E6E" text-anchor="middle">Sponsors</text>
+<text x="16" y="180" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#9A9A9A" text-anchor="start">STAFF VERIFICATION QUEUE</text>
+<rect x="16" y="193" width="358" height="136" rx="12" fill="#FFFFFF" stroke="#BDBDBD" stroke-width="1.5"/>
+<circle cx="44" cy="221" r="16" fill="#E7E7E7"/>
+<text x="70" y="218" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#333333" text-anchor="start">Coach · King Jr. Senior High</text>
+<text x="70" y="233" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6E6E6E" text-anchor="start">Work email matches school domain ·</text>
+<text x="70" y="247" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6E6E6E" text-anchor="start">Applied Oct 19</text>
+<text x="362" y="220" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#333333" text-anchor="end">NEW</text>
+<rect x="28" y="258" width="334" height="1" rx="0" fill="#E4E4E4"/>
+<rect x="28" y="269" width="163" height="48" rx="10" fill="#4A4A4A"/>
+<text x="109.5" y="298" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Verify</text>
+<rect x="199" y="269" width="163" height="48" rx="10" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.5"/>
+<text x="280.5" y="298" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#4A4A4A" text-anchor="middle">Ask for Info</text>
+<rect x="16" y="339" width="358" height="136" rx="12" fill="#FFFFFF" stroke="#BDBDBD" stroke-width="1.5"/>
+<circle cx="44" cy="367" r="16" fill="#E7E7E7"/>
+<text x="70" y="364" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#333333" text-anchor="start">Teacher · Cass Technical HS</text>
+<text x="70" y="379" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6E6E6E" text-anchor="start">Confirmation call pending · Applied</text>
+<text x="70" y="393" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6E6E6E" text-anchor="start">Oct 18</text>
+<text x="362" y="366" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#333333" text-anchor="end">HELD</text>
+<rect x="28" y="404" width="334" height="1" rx="0" fill="#E4E4E4"/>
+<rect x="28" y="415" width="163" height="48" rx="10" fill="#4A4A4A"/>
+<text x="109.5" y="444" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Verify</text>
+<rect x="199" y="415" width="163" height="48" rx="10" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.5"/>
+<text x="280.5" y="444" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#4A4A4A" text-anchor="middle">Ask for Info</text>
+<text x="16" y="495" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#9A9A9A" text-anchor="start">DISBURSEMENTS (DISBURSE TAB)</text>
+<text x="16" y="521" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#333333" text-anchor="start">Debate Coach Stipend · King High</text>
+<text x="16" y="536" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6E6E6E" text-anchor="start">Funded Oct 10 · Record disbursement to move to</text>
+<text x="16" y="550" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6E6E6E" text-anchor="start">SENT</text>
+<text x="374" y="523" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#333333" text-anchor="end">$4,000</text>
+<rect x="16" y="561" width="358" height="1" rx="0" fill="#E4E4E4"/>
+<text x="16" y="582" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#9A9A9A" text-anchor="start">SPONSOR INQUIRIES (SPONSORS TAB)</text>
+<text x="16" y="608" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#333333" text-anchor="start">Company inquiry · Gold tier</text>
+<text x="16" y="623" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6E6E6E" text-anchor="start">Received Oct 19 · Acknowledged by email</text>
+<text x="374" y="610" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#333333" text-anchor="end">NEW</text>
+<rect x="16" y="637" width="358" height="1" rx="0" fill="#E4E4E4"/>
+<rect x="16" y="648" width="358" height="61" rx="8" fill="#F2F2F2"/>
+<text x="26" y="667" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6E6E6E" text-anchor="start">Every verification decision, disbursement, and DELAYED</text>
+<text x="26" y="682" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6E6E6E" text-anchor="start">marking is logged with date and operator. The trail may be</text>
+<text x="26" y="697" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6E6E6E" text-anchor="start">late; it may never be silent.</text>
+</svg>
