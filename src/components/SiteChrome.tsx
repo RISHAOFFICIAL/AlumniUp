@@ -87,7 +87,6 @@ export function SiteHeader() {
   return (
     <>
       <TrustBar />
-      <PreviewBanner />
       <Header />
     </>
   );
@@ -146,5 +145,10 @@ export function Footer() {
 }
 
 export function SiteFooter() {
-  return <Footer />;
+  return (
+    <>
+      <PreviewBanner />
+      <Footer />
+    </>
+  );
 }

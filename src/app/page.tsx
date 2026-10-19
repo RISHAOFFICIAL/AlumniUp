@@ -26,11 +26,20 @@ function Hero() {
   const featured = needs[0];
 
   return (
-    <section className="bg-navy text-cream overflow-hidden">
-      <div className="max-w-page mx-auto px-4 py-14 md:py-20">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+    <section className="relative bg-navy text-cream overflow-hidden">
+      {/* Desktop: full-bleed photo covering the right side */}
+      <div className="hidden md:block absolute inset-y-0 right-0 w-[46%]">
+        <img
+          src="/images/hero-students.webp"
+          alt="Detroit public school students"
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      <div className="relative max-w-page mx-auto px-4">
+        <div className="grid md:grid-cols-2 gap-12">
           {/* Left column: headline, copy, calls-to-action, stats */}
-          <div>
+          <div className="py-14 md:py-20">
             <p className="font-sans text-xs font-semibold uppercase tracking-[0.2em] text-gold">
               Detroit Public Schools · Alumni Giving
             </p>
@@ -63,14 +72,9 @@ function Hero() {
             </p>
           </div>
 
-          {/* Right column: photo with the featured need overlapping */}
-          <div className="relative">
-            <img
-              src="/images/hero-students.webp"
-              alt="Detroit public school students"
-              className="w-full h-64 md:h-[400px] object-cover rounded-2xl"
-            />
-            <div className="relative md:absolute md:left-5 md:right-5 md:-bottom-8 mt-4 md:mt-0">
+          {/* Right column (desktop): featured card straddling the photo's lower edge */}
+          <div className="relative hidden md:block">
+            <div className="absolute bottom-10 -left-8 right-2">
               {featured ? (
                 <FeaturedNeedCard need={featured} />
               ) : (
@@ -79,8 +83,23 @@ function Hero() {
             </div>
           </div>
         </div>
+
+        {/* Mobile: photo and featured card stacked under the copy */}
+        <div className="md:hidden pb-12">
+          <img
+            src="/images/hero-students.webp"
+            alt="Detroit public school students"
+            className="w-full h-56 object-cover rounded-2xl"
+          />
+          <div className="mt-4">
+            {featured ? (
+              <FeaturedNeedCard need={featured} />
+            ) : (
+              <HeroAsideFallback />
+            )}
+          </div>
+        </div>
       </div>
-      <div className="h-2 md:h-10" />
     </section>
   );
 }
