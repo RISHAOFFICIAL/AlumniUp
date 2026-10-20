@@ -235,6 +235,13 @@ export default function SubmitNeedPage() {
                     </option>
                   ))}
                 </select>
+                <p className="font-sans text-xs text-navy/60 mt-2">
+                  Don&rsquo;t see your school?{" "}
+                  <a href="/for-schools#register" className="text-gold font-semibold hover:underline">
+                    Register it first
+                  </a>{" "}
+                  and we will verify it, then you can post your need.
+                </p>
               </div>
 
               <div>

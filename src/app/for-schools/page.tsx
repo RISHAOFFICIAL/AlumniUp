@@ -165,7 +165,7 @@ export default function ForSchoolsPage() {
         </div>
 
         {/* Registration form */}
-        <div className="mt-16 max-w-xl mx-auto">
+        <div id="register" className="mt-16 max-w-xl mx-auto scroll-mt-28">
           <h2 className="font-serif text-2xl font-semibold text-navy text-center">Register Your School</h2>
 
           {status === "success" ? (
