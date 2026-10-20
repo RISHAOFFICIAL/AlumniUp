@@ -1,0 +1,247 @@
+[
+  {
+    "status": "PASS",
+    "area": "route",
+    "detail": "/ -> 200 title=\"AlumniUp | Supporting Detroit Public Schools Through Giving\""
+  },
+  {
+    "status": "PASS",
+    "area": "console",
+    "detail": "/: no console errors"
+  },
+  {
+    "status": "PASS",
+    "area": "route",
+    "detail": "/for-schools -> 200 title=\"AlumniUp for Schools | Bridging Detroit's Funding Gaps\""
+  },
+  {
+    "status": "PASS",
+    "area": "console",
+    "detail": "/for-schools: no console errors"
+  },
+  {
+    "status": "PASS",
+    "area": "route",
+    "detail": "/corporate-giving -> 200 title=\"Corporate Sponsorship for Detroit Schools | AlumniUp\""
+  },
+  {
+    "status": "PASS",
+    "area": "console",
+    "detail": "/corporate-giving: no console errors"
+  },
+  {
+    "status": "PASS",
+    "area": "route",
+    "detail": "/press -> 200 title=\"Press | AlumniUp\""
+  },
+  {
+    "status": "PASS",
+    "area": "console",
+    "detail": "/press: no console errors"
+  },
+  {
+    "status": "PASS",
+    "area": "route",
+    "detail": "/wall-of-honor -> 200 title=\"Wall of Honor | AlumniUp\""
+  },
+  {
+    "status": "PASS",
+    "area": "console",
+    "detail": "/wall-of-honor: no console errors"
+  },
+  {
+    "status": "PASS",
+    "area": "route",
+    "detail": "/login -> 200 title=\"Sign In | AlumniUp\""
+  },
+  {
+    "status": "PASS",
+    "area": "console",
+    "detail": "/login: no console errors"
+  },
+  {
+    "status": "PASS",
+    "area": "route",
+    "detail": "/submit-need -> 200 title=\"Submit a Funding Need | AlumniUp for Detroit School Staff\""
+  },
+  {
+    "status": "PASS",
+    "area": "console",
+    "detail": "/submit-need: no console errors"
+  },
+  {
+    "status": "PASS",
+    "area": "route",
+    "detail": "/portal -> 200 title=\"AlumniUp | Supporting Detroit Public Schools Through Giving\""
+  },
+  {
+    "status": "PASS",
+    "area": "console",
+    "detail": "/portal: no console errors"
+  },
+  {
+    "status": "FAIL",
+    "area": "route",
+    "detail": "/admin -> 307 title=\"AlumniUp | Supporting Detroit Public Schools Through Giving\""
+  },
+  {
+    "status": "PASS",
+    "area": "console",
+    "detail": "/admin: no console errors"
+  },
+  {
+    "status": "PASS",
+    "area": "link",
+    "detail": "/ -> 200"
+  },
+  {
+    "status": "PASS",
+    "area": "link",
+    "detail": "/#how-it-works -> 200"
+  },
+  {
+    "status": "PASS",
+    "area": "link",
+    "detail": "/for-schools -> 200"
+  },
+  {
+    "status": "PASS",
+    "area": "anchor-link",
+    "detail": "#"
+  },
+  {
+    "status": "PASS",
+    "area": "link",
+    "detail": "/press -> 200"
+  },
+  {
+    "status": "PASS",
+    "area": "link",
+    "detail": "/wall-of-honor -> 200"
+  },
+  {
+    "status": "PASS",
+    "area": "link",
+    "detail": "/corporate-giving -> 200"
+  },
+  {
+    "status": "PASS",
+    "area": "link",
+    "detail": "/submit-need -> 200"
+  },
+  {
+    "status": "PASS",
+    "area": "anchor-link",
+    "detail": "#needs"
+  },
+  {
+    "status": "PASS",
+    "area": "link",
+    "detail": "/admin/pending -> 200"
+  },
+  {
+    "status": "FAIL",
+    "area": "needs-feed",
+    "detail": "expected 5 Contribute buttons, found 3"
+  },
+  {
+    "status": "PASS",
+    "area": "filter",
+    "detail": "search with no match shows empty state"
+  },
+  {
+    "status": "PASS",
+    "area": "filter",
+    "detail": "category Arts filters to 1 card"
+  },
+  {
+    "status": "PASS",
+    "area": "donate-modal",
+    "detail": "opens from Contribute"
+  },
+  {
+    "status": "PASS",
+    "area": "donate-modal",
+    "detail": "guidance hint shows before valid input"
+  },
+  {
+    "status": "PASS",
+    "area": "donate-modal",
+    "detail": "invalid email keeps Donate disabled"
+  },
+  {
+    "status": "PASS",
+    "area": "donate-modal",
+    "detail": "preset $25 updates button to \"Donate $25\""
+  },
+  {
+    "status": "PASS",
+    "area": "donate-modal",
+    "detail": "custom amount 37 updates button to \"Donate $37\""
+  },
+  {
+    "status": "PASS",
+    "area": "donate-modal",
+    "detail": "monthly toggle clickable"
+  },
+  {
+    "status": "PASS",
+    "area": "donate-flow",
+    "detail": "mock donation completes to a thank-you state"
+  },
+  {
+    "status": "INFO",
+    "area": "share-modal",
+    "detail": "share dialog opened (marker visible: false)"
+  },
+  {
+    "status": "PASS",
+    "area": "submit-need",
+    "detail": "\"Register it first\" link present under school dropdown"
+  },
+  {
+    "status": "INFO",
+    "area": "submit-need",
+    "detail": "school dropdown options: 5 (incl. placeholder)"
+  },
+  {
+    "status": "INFO",
+    "area": "register-form",
+    "detail": "7 fields in registration form"
+  },
+  {
+    "status": "PASS",
+    "area": "wall-of-honor",
+    "detail": "honor entries render with class years"
+  },
+  {
+    "status": "PASS",
+    "area": "404",
+    "detail": "unknown URL returns 404"
+  },
+  {
+    "status": "PASS",
+    "area": "mobile",
+    "detail": "/: no horizontal overflow at 390px"
+  },
+  {
+    "status": "PASS",
+    "area": "mobile",
+    "detail": "/submit-need: no horizontal overflow at 390px"
+  },
+  {
+    "status": "PASS",
+    "area": "mobile",
+    "detail": "/for-schools: no horizontal overflow at 390px"
+  },
+  {
+    "status": "INFO",
+    "area": "api",
+    "detail": "POST /api/donations -> 501 (501 expected while Stripe unconfigured)"
+  },
+  {
+    "status": "INFO",
+    "area": "api",
+    "detail": "GET /api/needs -> 500"
+  }
+]
