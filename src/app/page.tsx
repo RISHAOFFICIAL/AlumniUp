@@ -77,11 +77,10 @@ function Hero() {
               </a>
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-10 gap-y-8 mt-12 border-t border-white/15 pt-7">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-10 gap-y-8 mt-12 border-t border-white/15 pt-7">
               <StatCard label="Raised So Far" value={formatCompactCurrency(stats.totalRaised)} />
               <StatCard label="Alumni Donors" value={formatCompactNumber(stats.donorCount)} />
               <StatCard label="Schools Live" value={String(stats.schoolCount)} />
-              <StatCard label="Goes to Schools" value="88%" />
             </div>
 
             <p className="text-xs text-cream/45 mt-6 font-sans">

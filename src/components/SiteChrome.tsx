@@ -11,7 +11,6 @@ export function TrustBar() {
       Fiscal Sponsor: <span className="text-gold-light font-semibold">{CPF_INFO.name}</span>
       {" · "}{CPF_INFO.classification} EIN {CPF_INFO.ein}
       {" · "}All donations tax-deductible
-      {" · "}<span className="text-gold-light font-semibold">88% of every gift goes to schools</span>
       {" · "}Detroit, MI
     </div>
   );
