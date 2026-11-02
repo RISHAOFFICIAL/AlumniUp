@@ -19,6 +19,23 @@ function formatCurrency(amount: number): string {
   }).format(amount);
 }
 
+// Compact hero-stat formatting so large numbers never collide with their
+// neighbors. Exact amounts still appear on the need cards and in the money
+// trail; the hero shows the compact form once values get big.
+function trimCompact(v: number): string {
+  return String(Math.round(v * 100) / 100);
+}
+
+function formatCompactCurrency(n: number): string {
+  if (n >= 1_000_000) return `$${trimCompact(n / 1_000_000)}M`;
+  return formatCurrency(n);
+}
+
+function formatCompactNumber(n: number): string {
+  if (n >= 10_000) return `${trimCompact(n / 1_000)}K`;
+  return String(n);
+}
+
 // ─── Hero ──────────────────────────────────────────────
 function Hero() {
   const stats = useDonationStats();
@@ -60,9 +77,9 @@ function Hero() {
               </a>
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-12 border-t border-white/15 pt-7">
-              <StatCard label="Raised So Far" value={formatCurrency(stats.totalRaised)} />
-              <StatCard label="Alumni Donors" value={String(stats.donorCount)} />
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-10 gap-y-8 mt-12 border-t border-white/15 pt-7">
+              <StatCard label="Raised So Far" value={formatCompactCurrency(stats.totalRaised)} />
+              <StatCard label="Alumni Donors" value={formatCompactNumber(stats.donorCount)} />
               <StatCard label="Schools Live" value={String(stats.schoolCount)} />
               <StatCard label="Goes to Schools" value="88%" />
             </div>
@@ -106,8 +123,8 @@ function Hero() {
 
 function StatCard({ label, value }: { label: string; value: string }) {
   return (
-    <div>
-      <p className="font-serif text-3xl md:text-4xl font-bold text-white">{value}</p>
+    <div className="min-w-0">
+      <p className="font-serif text-3xl md:text-4xl font-bold text-white tabular-nums whitespace-nowrap">{value}</p>
       <p className="font-sans text-[11px] uppercase tracking-wider text-cream/50 mt-1">{label}</p>
     </div>
   );

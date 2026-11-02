@@ -159,9 +159,6 @@ export default function ForSchoolsPage() {
               </ul>
             </div>
           </div>
-          <p className="font-sans text-sm text-navy/50 text-center mt-6">
-            Martin Luther King Jr. Senior High School — Free forever (Founding Partner).
-          </p>
         </div>
 
         {/* Registration form */}
