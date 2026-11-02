@@ -5,7 +5,7 @@
 // markup in src/app/page.tsx.
 
 export const FOUNDER = {
-  name: "Risha Alexis",
+  name: "Risha Smith",
   schoolFullName: "Martin Luther King Jr. Senior High School",
   schoolShortName: "King High",
 

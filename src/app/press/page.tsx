@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 const title = "Press | AlumniUp";
 const description =
-  "About AlumniUp, the Detroit school crowdfunding platform founded by King High alumna Risha Alexis and fiscally sponsored by Childs Play Foundation (501(c)(3)).";
+  "About AlumniUp, the Detroit school crowdfunding platform founded by King High alumna Risha Smith and fiscally sponsored by Childs Play Foundation (501(c)(3)).";
 
 export const metadata: Metadata = {
   title,
@@ -31,7 +31,7 @@ export default function PressPage() {
           <p className="font-sans text-navy/80 leading-relaxed mt-4">
             AlumniUp is a crowdfunding platform that connects Detroit public school alumni and corporate
             sponsors with verified funding needs posted by coaches, teachers, and administrators.
-            Founded in 2025 by Risha Alexis, a Martin Luther King Jr. Senior High School alumna,
+            Founded in 2025 by Risha Smith, a Martin Luther King Jr. Senior High School alumna,
             AlumniUp is fiscally sponsored by Childs Play Foundation, Inc. (501(c)(3) EIN 86-2707543),
             ensuring every donation is tax-deductible and every dollar is accounted for.
           </p>
@@ -40,7 +40,7 @@ export default function PressPage() {
         <section className="mt-12">
           <h2 className="font-serif text-2xl font-semibold text-navy">Founder Bio</h2>
           <p className="font-sans text-navy/80 leading-relaxed mt-4">
-            Risha Alexis is a Detroit-born engineer, cybersecurity professional, and proud alumna of
+            Risha Smith is a Detroit-born engineer, cybersecurity professional, and proud alumna of
             Martin Luther King Jr. Senior High School (King High). After building a career in technology
             and cybersecurity, she founded AlumniUp to address the chronic underfunding of Detroit public
             schools by directly connecting alumni with specific, verified funding needs. She is the
