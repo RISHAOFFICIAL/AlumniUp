@@ -141,7 +141,6 @@ export default function ForSchoolsPage() {
               <p className="font-sans text-sm text-navy/50 mt-1">Free Year 1 · First 7 schools</p>
               <ul className="font-sans text-sm text-navy/70 mt-4 space-y-2">
                 <li>✓ Verified need posting</li>
-                <li>✓ 88% of donations to your school via Childs Play Foundation</li>
                 <li>✓ School profile page</li>
                 <li>✓ Donor tax receipts</li>
                 <li>✓ Locked $99/yr founding rate</li>
@@ -153,7 +152,6 @@ export default function ForSchoolsPage() {
               <p className="font-sans text-sm text-navy/50 mt-1">Free Year 1</p>
               <ul className="font-sans text-sm text-navy/70 mt-4 space-y-2">
                 <li>✓ Verified need posting</li>
-                <li>✓ 88% of donations to your school via Childs Play Foundation</li>
                 <li>✓ School profile page</li>
                 <li>✓ Donor tax receipts</li>
               </ul>
