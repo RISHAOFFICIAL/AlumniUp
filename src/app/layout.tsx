@@ -17,7 +17,7 @@ const instrumentSans = Instrument_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://alumni-up.vercel.app"),
+  metadataBase: new URL("https://www.alumniupdetroit.org"),
   title: "AlumniUp | Supporting Detroit Public Schools Through Giving",
   description:
     "Connect with verified funding needs at Detroit public schools. Tax-deductible giving through fiscal sponsor Childs Play Foundation (501(c)(3)).",
@@ -83,9 +83,9 @@ export default function RootLayout({
               "@graph": [
                 {
                   "@type": "Organization",
-                  "@id": "https://alumni-up.vercel.app/#organization",
+                  "@id": "https://www.alumniupdetroit.org/#organization",
                   name: "AlumniUp",
-                  url: "https://alumni-up.vercel.app",
+                  url: "https://www.alumniupdetroit.org",
                   description:
                     "Crowdfunding platform connecting Detroit school alumni and corporate sponsors with verified funding needs at Detroit-area public schools.",
                   funder: {
@@ -98,10 +98,10 @@ export default function RootLayout({
                 },
                 {
                   "@type": "WebSite",
-                  "@id": "https://alumni-up.vercel.app/#website",
+                  "@id": "https://www.alumniupdetroit.org/#website",
                   name: "AlumniUp",
-                  url: "https://alumni-up.vercel.app",
-                  publisher: { "@id": "https://alumni-up.vercel.app/#organization" },
+                  url: "https://www.alumniupdetroit.org",
+                  publisher: { "@id": "https://www.alumniupdetroit.org/#organization" },
                 },
               ],
             }),

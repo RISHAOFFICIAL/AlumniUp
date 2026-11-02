@@ -5,7 +5,7 @@ import type { MetadataRoute } from "next";
  * are intentionally excluded from indexing.
  */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://alumni-up.vercel.app";
+  const baseUrl = "https://www.alumniupdetroit.org";
 
   const routes: { path: string; priority: number; changeFrequency: "weekly" | "monthly" }[] = [
     { path: "", priority: 1, changeFrequency: "weekly" },
