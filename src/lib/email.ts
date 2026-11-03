@@ -35,13 +35,13 @@ export interface NeedSubmission {
 }
 
 export async function notifySchoolRegistration(data: SchoolRegistration): Promise<void> {
-  // TODO(Resend): send internal notification to schools@alumniup.org and a
+  // TODO(Resend): send internal notification to schools@alumniupdetroit.org and a
   // confirmation to data.workEmail.
   console.log("[email:todo] school registration", data);
 }
 
 export async function notifySponsorInquiry(data: SponsorInquiry): Promise<void> {
-  // TODO(Resend): send internal notification to sponsors@alumniup.org and a
+  // TODO(Resend): send internal notification to sponsors@alumniupdetroit.org and a
   // confirmation to data.email.
   console.log("[email:todo] sponsor inquiry", data);
 }
@@ -50,6 +50,6 @@ export async function notifyNeedSubmission(data: NeedSubmission): Promise<void> 
   // TODO(Resend): two notifications:
   //   1. Confirmation to data.submittedByEmail — "we received your need; it is
   //      pending review and you'll hear from us once it is approved."
-  //   2. Admin alert to hello@alumniup.org — "a new need is awaiting approval."
+  //   2. Admin alert to hello@alumniupdetroit.org — "a new need is awaiting approval."
   console.log("[email:todo] need submission (staff confirmation + admin alert)", data);
 }

@@ -184,8 +184,8 @@ export const CPF_INFO = {
 } as const;
 
 export const CONTACT = {
-  hello: 'hello@alumniup.org',
-  schools: 'schools@alumniup.org',
-  sponsors: 'sponsors@alumniup.org',
-  press: 'press@alumniup.org',
+  hello: 'hello@alumniupdetroit.org',
+  schools: 'schools@alumniupdetroit.org',
+  sponsors: 'sponsors@alumniupdetroit.org',
+  press: 'press@alumniupdetroit.org',
 } as const;

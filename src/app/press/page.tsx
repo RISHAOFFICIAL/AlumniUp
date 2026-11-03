@@ -75,7 +75,7 @@ export default function PressPage() {
           <h2 className="font-serif text-2xl font-semibold text-navy">Press Contact</h2>
           <p className="font-sans text-navy/80 mt-4">
             For press inquiries, please contact:{" "}
-            <a href="mailto:press@alumniup.org" className="text-gold hover:underline">press@alumniup.org</a>
+            <a href="mailto:press@alumniupdetroit.org" className="text-gold hover:underline">press@alumniupdetroit.org</a>
           </p>
         </section>
       </div>
