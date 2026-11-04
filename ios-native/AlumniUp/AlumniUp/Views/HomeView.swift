@@ -117,7 +117,6 @@ struct HomeView: View {
             stat(Money.whole(MockData.totalRaised), "Raised so far")
             stat("\(MockData.alumniDonors)", "Alumni donors")
             stat("\(MockData.schools.count)", "Schools live")
-            stat("88%", "Goes to schools")
         }
         .padding(.horizontal, 20)
         .padding(.vertical, 18)
@@ -227,7 +226,6 @@ struct HomeView: View {
                     .font(displayFont(22))
                     .foregroundStyle(.white)
                 trustLine("Fiscal sponsor", "Childs Play Foundation, Inc., a registered 501(c)(3), EIN 86-2707543")
-                trustLine("88% to the school", "Fee structure published, always")
                 trustLine("Verified needs only", "Staff identity and school affiliation confirmed before posting")
                 trustLine("Tax receipts", "Issued for every gift, automatically")
             }
@@ -259,7 +257,7 @@ struct HomeView: View {
             Text("Why I built AlumniUp")
                 .font(displayFont(28))
                 .foregroundStyle(Heritage.navy)
-            Text("I am Risha Alexis, a graduate of Martin Luther King Jr. Senior High School. King High gave me the foundation to build a career in engineering and cybersecurity. But when I looked back, I saw coaches buying equipment out of their own pockets and programs struggling to survive.")
+            Text("I am Risha Smith, a graduate of Martin Luther King Jr. Senior High School. King High gave me the foundation to build a career in engineering and cybersecurity. But when I looked back, I saw coaches buying equipment out of their own pockets and programs struggling to survive.")
                 .font(.body)
                 .foregroundStyle(Heritage.ink)
                 .lineSpacing(4)

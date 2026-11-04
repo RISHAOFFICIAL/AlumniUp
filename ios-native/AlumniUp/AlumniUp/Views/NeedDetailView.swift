@@ -82,10 +82,7 @@ struct NeedDetailView: View {
 
     private var feeNote: some View {
         VStack(alignment: .leading, spacing: 4) {
-            Text("How your gift is split")
-                .font(.subheadline.weight(.bold))
-                .foregroundStyle(Heritage.green)
-            Text("88% goes to the school · 7% platform fee · 5% fiscal sponsorship. Donations are tax-deductible via Childs Play Foundation, Inc. (501(c)(3), EIN 86-2707543).")
+            Text("Donations are tax-deductible via Childs Play Foundation, Inc. (501(c)(3), EIN 86-2707543).")
                 .font(.caption)
                 .foregroundStyle(Heritage.muted)
                 .lineSpacing(3)
@@ -191,17 +188,10 @@ struct DonateSheet: View {
                         TextField("Optional message for the Wall of Honor", text: $message)
                             .textFieldStyle(.roundedBorder)
                     }
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text("88% of your \(Money.whole(effectiveAmount)) goes directly to the school.")
-                            .font(.subheadline.weight(.bold))
-                            .foregroundStyle(Heritage.green)
-                        Text("7% platform fee · 5% fiscal sponsorship. Tax-deductible via Childs Play Foundation, Inc. (501(c)(3)).")
-                            .font(.caption)
-                            .foregroundStyle(Heritage.muted)
-                    }
-                    .padding(14)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .background(Heritage.greenBg, in: RoundedRectangle(cornerRadius: 12))
+                    Text("Tax-deductible via Childs Play Foundation, Inc. (501(c)(3), EIN 86-2707543).")
+                        .font(.caption)
+                        .foregroundStyle(Heritage.muted)
+                        .padding(.vertical, 4)
                     GoldGlassButton(title: "Donate \(Money.whole(effectiveAmount))\(isMonthly ? " / month" : "")", systemImage: "heart.fill") {
                         confirmed = true
                     }

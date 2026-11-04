@@ -99,16 +99,13 @@ struct ForSchoolsView: View {
             tierCard(
                 name: "Founding Partner", price: 99, highlighted: true,
                 note: "Free Year 1 · First 7 schools",
-                features: ["Verified need posting", "88% of donations to your school via Childs Play Foundation", "School profile page", "Donor tax receipts", "Locked $99/yr founding rate"]
+                features: ["Verified need posting", "School profile page", "Donor tax receipts", "Locked $99/yr founding rate"]
             )
             tierCard(
                 name: "Standard", price: 129, highlighted: false,
                 note: "Free Year 1",
-                features: ["Verified need posting", "88% of donations to your school via Childs Play Foundation", "School profile page", "Donor tax receipts"]
+                features: ["Verified need posting", "School profile page", "Donor tax receipts"]
             )
-            Text("Martin Luther King Jr. Senior High School · Free forever (Founding Partner).")
-                .font(.caption)
-                .foregroundStyle(Heritage.muted)
         }
     }
 
