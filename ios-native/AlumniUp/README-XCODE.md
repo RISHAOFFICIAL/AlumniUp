@@ -13,16 +13,21 @@ functional layer per Apple's Human Interface Guidelines.
   Transparency panel, and the founder story.
 - **Need detail:** full story, funding bar, minimum-to-begin note,
   fee split, and the Donate flow.
-- **Donation sheet:** amount chips ($25 to $1,000 or custom),
-  one-time or monthly, donor details, anonymous option, Wall of
-  Honor message, and the 88% fee transparency box.
+- **Donation sheet:** amount chips ($25 to $1,000 or custom) and
+  one-time or monthly. The sheet does NOT collect the gift: tapping
+  "Continue to Secure Checkout" opens the need's page on
+  alumniupdetroit.org in the browser, where the donor pays through
+  the fiscal sponsor's Stripe hosted checkout (Apple charitable
+  giving rules: the app is not itself an approved nonprofit, so no
+  in-app donation collection). The chosen amount and frequency ride
+  along as a deep link so the web donate sheet opens preselected.
 - **Wall of Honor:** class year leaderboard and recognized supporters.
 - **For Schools:** audience cards, verification steps, Founding
   Partner ($99/yr) and Standard ($129/yr) pricing, registration form.
 
 Data is **sample data** (the same mock data as the web preview), and
-the Donate and Register flows end at confirmation screens. No payment
-is processed and nothing is submitted in this build.
+the Register flow ends at a confirmation screen. No payment is
+processed inside the app; giving happens on the website.
 
 ## Open it in Xcode (Risha's steps)
 

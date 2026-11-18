@@ -35,7 +35,7 @@ export default function BragModal({
   if (!open || !need) return null;
 
   const shareUrl =
-    typeof window !== "undefined" ? `${window.location.origin}/#needs` : "/#needs";
+    typeof window !== "undefined" ? `${window.location.origin}/needs/${need.id}` : `/needs/${need.id}`;
   const schoolName = need.school?.name ?? "a Detroit school";
   const shareText = `I'm supporting "${need.title}" at ${schoolName} on AlumniUp. Join me.`;
 

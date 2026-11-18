@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/admin", "/portal", "/login", "/api/"],
+      disallow: ["/admin", "/portal", "/login", "/my-donations", "/donate", "/api/"],
     },
     sitemap: "https://www.alumniupdetroit.org/sitemap.xml",
   };

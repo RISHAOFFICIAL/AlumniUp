@@ -33,6 +33,20 @@ struct Need: Identifiable, Hashable {
         guard goal > 0 else { return 0 }
         return min(Double(raised) / Double(goal), 1)
     }
+
+    /// The web need page this need opens in the browser to give.
+    /// Apple charitable giving rules: the app does not collect donations
+    /// in-app. The Donate action opens the fiscal sponsor's web checkout
+    /// (Stripe hosted) in Safari. The `donate=1` deep link opens the web
+    /// donate sheet with the amount preselected.
+    var webURL: URL {
+        URL(string: "https://www.alumniupdetroit.org/needs/\(id)")!
+    }
+
+    func webCheckoutURL(amount: Int, isMonthly: Bool = false) -> URL {
+        let monthly = isMonthly ? "&monthly=1" : ""
+        return URL(string: "https://www.alumniupdetroit.org/needs/\(id)?donate=1&amount=\(amount)\(monthly)")!
+    }
 }
 
 struct Supporter: Identifiable, Hashable {

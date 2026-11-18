@@ -50,6 +50,7 @@ export default function SubmitNeedPage() {
 
   const [attestStaff, setAttestStaff] = useState(false);
   const [attestNoStudentInfo, setAttestNoStudentInfo] = useState(false);
+  const [attestMediaRelease, setAttestMediaRelease] = useState(false);
 
   useEffect(() => {
     if (cooldown <= 0) return;
@@ -92,8 +93,8 @@ export default function SubmitNeedPage() {
     e.preventDefault();
     if (status === "submitting" || cooldown > 0) return;
 
-    if (!attestStaff || !attestNoStudentInfo) {
-      setErrorMsg("Please confirm both statements below before submitting.");
+    if (!attestStaff || !attestNoStudentInfo || !attestMediaRelease) {
+      setErrorMsg("Please confirm all three statements below before submitting.");
       setStatus("error");
       return;
     }
@@ -125,6 +126,7 @@ export default function SubmitNeedPage() {
         photoData,
         attestStaff,
         attestNoStudentInfo,
+        attestMediaRelease,
         website: form.website,
       };
 
@@ -417,6 +419,18 @@ export default function SubmitNeedPage() {
                     className="mt-0.5"
                   />
                   <span>This request does not include student names or images of students.</span>
+                </label>
+                <label className="flex items-start gap-3 font-sans text-sm text-navy/70">
+                  <input
+                    type="checkbox"
+                    required
+                    checked={attestMediaRelease}
+                    onChange={(e) => setAttestMediaRelease(e.target.checked)}
+                    className="mt-0.5"
+                  />
+                  <span>
+                    My school has the media releases required for everyone pictured in the photo.
+                  </span>
                 </label>
               </div>
 

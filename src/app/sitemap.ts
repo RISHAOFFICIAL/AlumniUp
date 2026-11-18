@@ -14,6 +14,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/wall-of-honor", priority: 0.8, changeFrequency: "weekly" },
     { path: "/submit-need", priority: 0.7, changeFrequency: "monthly" },
     { path: "/press", priority: 0.5, changeFrequency: "monthly" },
+    { path: "/privacy", priority: 0.4, changeFrequency: "monthly" },
+    { path: "/terms", priority: 0.4, changeFrequency: "monthly" },
+    { path: "/refund-policy", priority: 0.4, changeFrequency: "monthly" },
   ];
 
   return routes.map((route) => ({

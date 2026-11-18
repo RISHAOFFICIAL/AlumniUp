@@ -13,8 +13,10 @@ enum MockData {
     ]
 
     static let needs: [Need] = [
+        // IDs match the web app's mock UUIDs (src/lib/data/mock.ts) so the
+        // in-app Donate deep link opens the same need on the website.
         Need(
-            id: "baseball",
+            id: "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
             schoolName: "Martin Luther King Jr. Senior High School",
             title: "Varsity Baseball Field Flood Repair",
             category: "Sports",
@@ -26,7 +28,7 @@ enum MockData {
             minimumToBegin: 8500
         ),
         Need(
-            id: "lighting",
+            id: "bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb",
             schoolName: "Martin Luther King Jr. Senior High School",
             title: "Performing Arts Stage Lighting Upgrade",
             category: "Arts",
@@ -38,7 +40,7 @@ enum MockData {
             minimumToBegin: nil
         ),
         Need(
-            id: "debate",
+            id: "cccccccc-cccc-4ccc-8ccc-cccccccccccc",
             schoolName: "Martin Luther King Jr. Senior High School",
             title: "Debate Team Coach Stipend",
             category: "Program Support",

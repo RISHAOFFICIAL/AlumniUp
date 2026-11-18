@@ -12,15 +12,18 @@ import {
   mockGetAllSchools,
   mockGetDisbursements,
   mockGetDonations,
+  mockGetNeed,
   mockGetSchool,
-  mockGetSchoolDonations,
   mockGetSchools,
   mockGetSponsors,
 } from "@/lib/data/mock";
 import type {
+  DonationChoice,
   Need,
+  ProofPacket,
   Role,
   School,
+  TrailEntry,
   UserProfile,
   WallOfHonorEntry,
   ClassYearRank,
@@ -30,6 +33,7 @@ import type {
 } from "@/types";
 import { useEffect, useState } from "react";
 import { useMockStore } from "@/store/mock";
+import { trailStatusForNeed } from "@/lib/trail";
 
 const USE_MOCK =
   (process.env.NEXT_PUBLIC_DATA_SOURCE ?? "mock") === "mock";
@@ -614,8 +618,11 @@ export function useAdminSponsors() {
 
 /**
  * All of a school's needs (any status) for the school portal.
+ * Mock mode reads the Zustand store so trail transitions made in the
+ * portal (receipt confirmation, proof filing) show up immediately.
  */
 export function useSchoolNeeds(schoolId: string) {
+  const mockNeeds = useMockStore((s) => s.needs);
   const [needs, setNeeds] = useState<Need[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -625,7 +632,6 @@ export function useSchoolNeeds(schoolId: string) {
       return;
     }
     if (USE_MOCK) {
-      setNeeds(mockGetAllNeedsForSchool(schoolId));
       setLoading(false);
       return;
     }
@@ -641,14 +647,23 @@ export function useSchoolNeeds(schoolId: string) {
       });
   }, [schoolId]);
 
+  if (USE_MOCK) {
+    const all = mockGetAllNeedsForSchool(schoolId);
+    // Overlay live store state (trail transitions, donations) on the seed rows.
+    const byId = new Map(mockNeeds.map((n) => [n.id, n]));
+    const merged = all.map((n) => byId.get(n.id) ?? n);
+    return { needs: merged, loading: false };
+  }
+
   return { needs, loading };
 }
 
 /**
  * Donation activity scoped to one school (school portal). Only display-safe
  * fields are selected — donor_email is never returned to the UI.
- */
-export function useSchoolDonations(schoolId: string) {
+ */export function useSchoolDonations(schoolId: string) {
+  const mockDonations = useMockStore((s) => s.donations);
+  const mockNeeds = useMockStore((s) => s.needs);
   const [donations, setDonations] = useState<DonationRow[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -658,7 +673,6 @@ export function useSchoolDonations(schoolId: string) {
       return;
     }
     if (USE_MOCK) {
-      setDonations(mockGetSchoolDonations(schoolId));
       setLoading(false);
       return;
     }
@@ -681,5 +695,279 @@ export function useSchoolDonations(schoolId: string) {
       });
   }, [schoolId]);
 
+  if (USE_MOCK) {
+    const schoolNeedIds = new Set(
+      mockNeeds.filter((n) => n.school_id === schoolId).map((n) => n.id)
+    );
+    const rows: DonationRow[] = mockDonations
+      .filter((d) => schoolNeedIds.has(d.need_id))
+      .map((d) => ({
+        ...d,
+        need_title: mockNeeds.find((n) => n.id === d.need_id)?.title ?? "—",
+      }))
+      .sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
+    return { donations: rows, loading: false };
+  }
+
   return { donations, loading };
 }
+
+// ─────────────────────────────────────────────────────────────
+// Public money trail hooks
+// ─────────────────────────────────────────────────────────────
+
+/**
+ * One need by id, with its public trail attached (S3 need detail).
+ * Mock mode reads the Zustand store so trail transitions made in the
+ * portal or admin show up immediately.
+ */
+export function useNeed(needId: string) {
+  const mockNeeds = useMockStore((s) => s.needs);
+  const mockTrail = useMockStore((s) => s.trailEntries);
+  const [need, setNeed] = useState<Need | null>(null);
+  const [loading, setLoading] = useState(!USE_MOCK);
+
+  useEffect(() => {
+    if (USE_MOCK || !needId) {
+      setLoading(false);
+      return;
+    }
+    let cancelled = false;
+    Promise.all([
+      supabase.from("needs").select("*, school:schools(*)").eq("id", needId).single(),
+      supabase
+        .from("trail_entries")
+        .select("*")
+        .eq("need_id", needId)
+        .order("created_at", { ascending: true }),
+    ]).then(([{ data: n }, { data: trail }]) => {
+      if (cancelled) return;
+      if (!n) {
+        setNeed(null);
+      } else {
+        setNeed({ ...(n as Need), trail: (trail as TrailEntry[]) ?? [] });
+      }
+      setLoading(false);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [needId]);
+
+  if (USE_MOCK) {
+    const found = mockNeeds.find((n) => n.id === needId) ?? mockGetNeed(needId);
+    if (!found) return { need: null, loading: false };
+    const trail = mockTrail
+      .filter((t) => t.need_id === needId)
+      .sort((a, b) => new Date(a.created_at).getTime() - new Date(b.created_at).getTime());
+    return { need: { ...found, trail }, loading: false };
+  }
+
+  return { need, loading };
+}
+
+/**
+ * Dated trail entries for one need, oldest first.
+ */
+export function useTrail(needId: string) {
+  const mockTrail = useMockStore((s) => s.trailEntries);
+  const [entries, setEntries] = useState<TrailEntry[]>([]);
+  const [loading, setLoading] = useState(!USE_MOCK);
+
+  useEffect(() => {
+    if (USE_MOCK || !needId) {
+      setLoading(false);
+      return;
+    }
+    supabase
+      .from("trail_entries")
+      .select("*")
+      .eq("need_id", needId)
+      .order("created_at", { ascending: true })
+      .then(({ data }) => {
+        setEntries((data as TrailEntry[]) ?? []);
+        setLoading(false);
+      });
+  }, [needId]);
+
+  if (USE_MOCK) {
+    return {
+      entries: mockTrail
+        .filter((t) => t.need_id === needId)
+        .sort((a, b) => new Date(a.created_at).getTime() - new Date(b.created_at).getTime()),
+      loading: false,
+    };
+  }
+
+  return { entries, loading };
+}
+
+/**
+ * The signed-in donor's own gift history (S7 My Donations). Mock mode
+ * shows the sample gifts as one demo donor's history.
+ */
+export function useMyDonations() {
+  const mockDonations = useMockStore((s) => s.donations);
+  const mockNeeds = useMockStore((s) => s.needs);
+  const mockChoices = useMockStore((s) => s.donationChoices);
+  const { user, loading: authLoading } = useAuth();
+  const [donations, setDonations] = useState<DonationRow[]>([]);
+  const [loading, setLoading] = useState(!USE_MOCK);
+
+  useEffect(() => {
+    if (USE_MOCK) return;
+    if (authLoading) return;
+    if (!user) {
+      setDonations([]);
+      setLoading(false);
+      return;
+    }
+    supabase
+      .from("donations")
+      .select("*, need:needs(title, trail_status, status, school_id), choice:donation_choices(*)")
+      .eq("user_id", user.id)
+      .order("created_at", { ascending: false })
+      .then(({ data }) => {
+        const rows = ((data as any[]) || []).map((d) => ({
+          ...d,
+          need_title: d.need?.title ?? "—",
+          need_trail_status: d.need?.trail_status ?? null,
+          need_school_id: d.need?.school_id ?? null,
+          choice: Array.isArray(d.choice) ? d.choice[0] ?? null : d.choice ?? null,
+        })) as DonationRow[];
+        setDonations(rows);
+        setLoading(false);
+      });
+  }, [user, authLoading]);
+
+  if (USE_MOCK) {
+    const rows: DonationRow[] = mockDonations
+      .map((d) => {
+        const need = mockNeeds.find((n) => n.id === d.need_id);
+        return {
+          ...d,
+          need_title: need?.title ?? "—",
+          need_trail_status: need ? trailStatusForNeed(need) : null,
+          need_school_id: need?.school_id ?? null,
+          choice: mockChoices.find((c) => c.donation_id === d.id) ?? null,
+        };
+      })
+      .sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
+    return { donations: rows, loading: false, signedIn: true };
+  }
+
+  return { donations, loading: loading || authLoading, signedIn: !!user };
+}
+
+/**
+ * The proof-of-use packet for one need, if one exists.
+ */
+export function useProofPacket(needId: string) {
+  const mockPackets = useMockStore((s) => s.proofPackets);
+  const [packet, setPacket] = useState<ProofPacket | null>(null);
+  const [loading, setLoading] = useState(!USE_MOCK);
+
+  useEffect(() => {
+    if (USE_MOCK || !needId) {
+      setLoading(false);
+      return;
+    }
+    supabase
+      .from("proof_packets")
+      .select("*")
+      .eq("need_id", needId)
+      .order("created_at", { ascending: false })
+      .limit(1)
+      .single()
+      .then(({ data }) => {
+        setPacket((data as ProofPacket) ?? null);
+        setLoading(false);
+      });
+  }, [needId]);
+
+  if (USE_MOCK) {
+    return {
+      packet: mockPackets.find((p) => p.need_id === needId) ?? null,
+      loading: false,
+    };
+  }
+
+  return { packet, loading };
+}
+
+/**
+ * Proof packets awaiting sponsor review (S14 proof queue).
+ */
+export function useProofQueue() {
+  const mockPackets = useMockStore((s) => s.proofPackets);
+  const mockNeeds = useMockStore((s) => s.needs);
+  const [queue, setQueue] = useState<
+    (ProofPacket & { need_title: string; school_name: string })[]
+  >([]);
+  const [loading, setLoading] = useState(!USE_MOCK);
+
+  useEffect(() => {
+    if (USE_MOCK) return;
+    supabase
+      .from("proof_packets")
+      .select("*, need:needs(title, school:schools(name))")
+      .order("created_at", { ascending: false })
+      .then(({ data }) => {
+        const rows = ((data as any[]) || []).map((p) => ({
+          ...p,
+          need_title: p.need?.title ?? "—",
+          school_name: p.need?.school?.name ?? "—",
+        }));
+        setQueue(rows);
+        setLoading(false);
+      });
+  }, []);
+
+  if (USE_MOCK) {
+    const rows = mockPackets.map((p) => {
+      const need = mockNeeds.find((n) => n.id === p.need_id);
+      return {
+        ...p,
+        need_title: need?.title ?? "Unknown need",
+        school_name: need?.school?.name ?? "Unknown school",
+      };
+    });
+    return { queue: rows, loading: false };
+  }
+
+  return { queue, loading };
+}
+
+/**
+ * All needs for the operator trail view (S14), any status.
+ */
+export function useAllNeeds() {
+  const mockNeeds = useMockStore((s) => s.needs);
+  const [needs, setNeeds] = useState<Need[]>([]);
+  const [loading, setLoading] = useState(!USE_MOCK);
+
+  useEffect(() => {
+    if (USE_MOCK) return;
+    supabase
+      .from("needs")
+      .select("*, school:schools(*)")
+      .order("created_at", { ascending: false })
+      .then(({ data }) => {
+        setNeeds((data as Need[]) ?? []);
+        setLoading(false);
+      });
+  }, []);
+
+  if (USE_MOCK) {
+    return {
+      needs: [...mockNeeds].sort(
+        (a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
+      ),
+      loading: false,
+    };
+  }
+
+  return { needs, loading };
+}
+
+export type { DonationChoice };

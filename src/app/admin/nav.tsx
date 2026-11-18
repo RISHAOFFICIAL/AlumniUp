@@ -5,10 +5,12 @@ import { usePathname } from "next/navigation";
 
 const TABS = [
   { href: "/admin/pending", label: "Pending Needs" },
+  { href: "/admin/needs", label: "Needs & Trail" },
+  { href: "/admin/disbursements", label: "Disbursements" },
+  { href: "/admin/proof", label: "Proof Queue" },
   { href: "/admin/donations", label: "Donations" },
   { href: "/admin/schools", label: "Schools" },
   { href: "/admin/sponsors", label: "Sponsors" },
-  { href: "/admin/disbursements", label: "Disbursements" },
 ];
 
 export default function AdminNav() {

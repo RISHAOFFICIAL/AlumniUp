@@ -19,6 +19,9 @@ import type {
   Sponsor,
   DonationRow,
   DisbursementRow,
+  TrailEntry,
+  ProofPacket,
+  DonationChoice,
 } from "@/types";
 
 // Fixed UUIDs (stable keys for joins; production uses uuid_generate_v4()).
@@ -30,6 +33,9 @@ const RENAISSANCE_ID = "44444444-4444-4444-8444-444444444444";
 const NEED_BASEBALL_ID = "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa";
 const NEED_LIGHTING_ID = "bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb";
 const NEED_DEBATE_ID = "cccccccc-cccc-4ccc-8ccc-cccccccccccc";
+const NEED_LIBRARY_ID = "dddddddd-dddd-4ddd-8ddd-dddddddddddd";
+const NEED_TRACK_ID = "eeeeeeee-eeee-4eee-8eee-eeeeeeeeeeee";
+const NEED_ROBOTICS_ID = "ffffffff-ffff-4fff-8fff-ffffffffffff";
 
 // ─────────────────────────────────────────────────────────────
 // Schools (seed rows)
@@ -150,6 +156,17 @@ export const MOCK_NEEDS: Need[] = [
     created_at: "2025-01-10T00:00:00.000Z",
     updated_at: "2025-01-15T00:00:00.000Z",
     school: kingSchool,
+    trail_status: "live",
+    funded_at: null,
+    sent_at: null,
+    received_at: null,
+    received_by: null,
+    proof_due_at: null,
+    delayed_reason: null,
+    delay_updated_at: null,
+    cancelled_reason: null,
+    disbursement_structure: null,
+    attested_media_release: true,
   },
   {
     id: NEED_LIGHTING_ID,
@@ -174,6 +191,17 @@ export const MOCK_NEEDS: Need[] = [
     created_at: "2025-01-12T00:00:00.000Z",
     updated_at: "2025-01-16T00:00:00.000Z",
     school: kingSchool,
+    trail_status: "live",
+    funded_at: null,
+    sent_at: null,
+    received_at: null,
+    received_by: null,
+    proof_due_at: null,
+    delayed_reason: null,
+    delay_updated_at: null,
+    cancelled_reason: null,
+    disbursement_structure: null,
+    attested_media_release: true,
   },
   {
     id: NEED_DEBATE_ID,
@@ -198,6 +226,127 @@ export const MOCK_NEEDS: Need[] = [
     created_at: "2025-01-14T00:00:00.000Z",
     updated_at: "2025-01-18T00:00:00.000Z",
     school: kingSchool,
+    trail_status: "live",
+    funded_at: null,
+    sent_at: null,
+    received_at: null,
+    received_by: null,
+    proof_due_at: null,
+    delayed_reason: null,
+    delay_updated_at: null,
+    cancelled_reason: null,
+    disbursement_structure: null,
+    attested_media_release: true,
+  },
+  // ── Completed trail demo: every state from LIVE to USE VERIFIED ──
+  {
+    id: NEED_LIBRARY_ID,
+    school_id: KING_ID,
+    title: "Library Reading Nook Renovation",
+    description:
+      "The library reading nook got new seating, shelving, and lighting so students have a quiet place to read between classes. Funded, sent, received, and verified in full.",
+    category: "Academics",
+    urgency: "low",
+    goal_amount: 3000,
+    minimum_amount: null,
+    raised_amount: 3000,
+    backer_count: 18,
+    submitted_by_name: "Ms. A. Brooks",
+    submitted_by_email: null,
+    submitted_by_title: "Librarian",
+    submitted_by_phone: null,
+    photo_url: null,
+    status: "funded",
+    approved_at: "2025-01-08T00:00:00.000Z",
+    approved_by: null,
+    created_at: "2025-01-05T00:00:00.000Z",
+    updated_at: "2025-03-20T00:00:00.000Z",
+    school: kingSchool,
+    trail_status: "use_verified",
+    funded_at: "2025-02-01T00:00:00.000Z",
+    sent_at: "2025-02-10T00:00:00.000Z",
+    received_at: "2025-02-14T00:00:00.000Z",
+    received_by: "Principal R. Hayes",
+    proof_due_at: "2025-03-16T00:00:00.000Z",
+    delayed_reason: null,
+    delay_updated_at: null,
+    cancelled_reason: null,
+    disbursement_structure: "single",
+    attested_media_release: true,
+  },
+  // ── Delayed trail demo: funded, then publicly delayed with a reason ──
+  {
+    id: NEED_TRACK_ID,
+    school_id: KING_ID,
+    title: "Track Team Timing Equipment",
+    description:
+      "Electronic timing gates for the track team, so home meets run on real times instead of stopwatches. Funded in February; the vendor shipment is delayed.",
+    category: "Sports",
+    urgency: "med",
+    goal_amount: 6500,
+    minimum_amount: null,
+    raised_amount: 6500,
+    backer_count: 21,
+    submitted_by_name: "Coach L. Morgan",
+    submitted_by_email: null,
+    submitted_by_title: "Track Coach",
+    submitted_by_phone: null,
+    photo_url: null,
+    status: "funded",
+    approved_at: "2025-01-20T00:00:00.000Z",
+    approved_by: null,
+    created_at: "2025-01-17T00:00:00.000Z",
+    updated_at: "2025-03-12T00:00:00.000Z",
+    school: kingSchool,
+    trail_status: "delayed",
+    funded_at: "2025-02-18T00:00:00.000Z",
+    sent_at: null,
+    received_at: null,
+    received_by: null,
+    proof_due_at: null,
+    delayed_reason: "The timing equipment vendor pushed the shipment date. The sponsor is holding the funds until the new ship date is confirmed.",
+    delay_updated_at: "2025-03-12T00:00:00.000Z",
+    cancelled_reason: null,
+    disbursement_structure: "direct_vendor",
+    attested_media_release: true,
+  },
+  // ── Cancelled trail demo: withdrawn before disbursement; donors
+  // choose a refund or a redirect. Not in the public feed (closed),
+  // but the need page and My Donations still show it. ──
+  {
+    id: NEED_ROBOTICS_ID,
+    school_id: KING_ID,
+    title: "Robotics Club Competition Entry",
+    description:
+      "Entry fees and travel for the robotics club's spring competition. The competition was cancelled by its organizer, so the need was withdrawn before any funds were sent.",
+    category: "Academics",
+    urgency: "low",
+    goal_amount: 2200,
+    minimum_amount: null,
+    raised_amount: 450,
+    backer_count: 3,
+    submitted_by_name: "Mr. J. Okafor",
+    submitted_by_email: null,
+    submitted_by_title: "Science Teacher",
+    submitted_by_phone: null,
+    photo_url: null,
+    status: "closed",
+    approved_at: "2025-01-22T00:00:00.000Z",
+    approved_by: null,
+    created_at: "2025-01-19T00:00:00.000Z",
+    updated_at: "2025-03-15T00:00:00.000Z",
+    school: kingSchool,
+    trail_status: "cancelled",
+    funded_at: null,
+    sent_at: null,
+    received_at: null,
+    received_by: null,
+    proof_due_at: null,
+    delayed_reason: null,
+    delay_updated_at: null,
+    cancelled_reason: "The competition organizer cancelled the spring event, so the club no longer needs the entry fees.",
+    disbursement_structure: null,
+    attested_media_release: true,
   },
 ];
 
@@ -483,6 +632,7 @@ export const MOCK_DONATIONS: DonationRow[] = [
     message: null,
     donor_email: null,
     stripe_payment_intent_id: null,
+    stripe_checkout_session_id: null,
     stripe_subscription_id: null,
     is_recurring: false,
     status: "completed",
@@ -500,6 +650,7 @@ export const MOCK_DONATIONS: DonationRow[] = [
     message: "Go Crusaders!",
     donor_email: null,
     stripe_payment_intent_id: null,
+    stripe_checkout_session_id: null,
     stripe_subscription_id: null,
     is_recurring: false,
     status: "completed",
@@ -517,6 +668,7 @@ export const MOCK_DONATIONS: DonationRow[] = [
     message: null,
     donor_email: null,
     stripe_payment_intent_id: null,
+    stripe_checkout_session_id: null,
     stripe_subscription_id: null,
     is_recurring: false,
     status: "completed",
@@ -534,11 +686,30 @@ export const MOCK_DONATIONS: DonationRow[] = [
     message: null,
     donor_email: null,
     stripe_payment_intent_id: null,
+    stripe_checkout_session_id: null,
     stripe_subscription_id: null,
     is_recurring: true,
     status: "pending",
     tax_receipt_sent: false,
     created_at: "2025-03-12T11:00:00.000Z",
+  },
+  {
+    id: "10101010-1010-4010-8010-101010101005",
+    need_id: NEED_ROBOTICS_ID,
+    need_title: "Robotics Club Competition Entry",
+    user_id: null,
+    amount: 150,
+    is_anonymous: false,
+    display_name: "Dana Washington '11",
+    message: null,
+    donor_email: null,
+    stripe_payment_intent_id: null,
+    stripe_checkout_session_id: null,
+    stripe_subscription_id: null,
+    is_recurring: false,
+    status: "completed",
+    tax_receipt_sent: true,
+    created_at: "2025-02-25T10:15:00.000Z",
   },
 ];
 
@@ -675,4 +846,286 @@ export function mockGetSchoolDonations(schoolId: string): DonationRow[] {
     .sort(
       (a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
     );
+}
+
+// ─────────────────────────────────────────────────────────────
+// Public money trail (mock seed rows)
+// ─────────────────────────────────────────────────────────────
+// Dated entries for every seed need, mirroring the trail_entries
+// table in supabase/migrations/20261118_money_trail.sql. No need ever
+// shows a blank money state (Stage 2 story 2).
+export const MOCK_TRAIL_ENTRIES: TrailEntry[] = [
+  // Baseball (live)
+  {
+    id: "t1-baseball-posted",
+    need_id: NEED_BASEBALL_ID,
+    event_type: "posted",
+    from_status: "draft",
+    to_status: "in_review",
+    note: "Need posted for review.",
+    actor_role: "school_staff",
+    created_at: "2025-01-10T00:00:00.000Z",
+  },
+  {
+    id: "t2-baseball-approved",
+    need_id: NEED_BASEBALL_ID,
+    event_type: "approved",
+    from_status: "in_review",
+    to_status: "live",
+    note: "Approved by the school and live for donations.",
+    actor_role: "school_admin",
+    created_at: "2025-01-15T00:00:00.000Z",
+  },
+  // Lighting (live)
+  {
+    id: "t1-lighting-posted",
+    need_id: NEED_LIGHTING_ID,
+    event_type: "posted",
+    from_status: "draft",
+    to_status: "in_review",
+    note: "Need posted for review.",
+    actor_role: "school_staff",
+    created_at: "2025-01-12T00:00:00.000Z",
+  },
+  {
+    id: "t2-lighting-approved",
+    need_id: NEED_LIGHTING_ID,
+    event_type: "approved",
+    from_status: "in_review",
+    to_status: "live",
+    note: "Approved by the school and live for donations.",
+    actor_role: "school_admin",
+    created_at: "2025-01-16T00:00:00.000Z",
+  },
+  // Debate (live)
+  {
+    id: "t1-debate-posted",
+    need_id: NEED_DEBATE_ID,
+    event_type: "posted",
+    from_status: "draft",
+    to_status: "in_review",
+    note: "Need posted for review.",
+    actor_role: "school_staff",
+    created_at: "2025-01-14T00:00:00.000Z",
+  },
+  {
+    id: "t2-debate-approved",
+    need_id: NEED_DEBATE_ID,
+    event_type: "approved",
+    from_status: "in_review",
+    to_status: "live",
+    note: "Approved by the school and live for donations.",
+    actor_role: "school_admin",
+    created_at: "2025-01-18T00:00:00.000Z",
+  },
+  // Library (full trail: live to use verified)
+  {
+    id: "t1-library-posted",
+    need_id: NEED_LIBRARY_ID,
+    event_type: "posted",
+    from_status: "draft",
+    to_status: "in_review",
+    note: "Need posted for review.",
+    actor_role: "school_staff",
+    created_at: "2025-01-05T00:00:00.000Z",
+  },
+  {
+    id: "t2-library-approved",
+    need_id: NEED_LIBRARY_ID,
+    event_type: "approved",
+    from_status: "in_review",
+    to_status: "live",
+    note: "Approved by the school and live for donations.",
+    actor_role: "school_admin",
+    created_at: "2025-01-08T00:00:00.000Z",
+  },
+  {
+    id: "t3-library-funded",
+    need_id: NEED_LIBRARY_ID,
+    event_type: "funded",
+    from_status: "live",
+    to_status: "funded",
+    note: "Goal of $3,000 reached by 18 donors.",
+    actor_role: "system",
+    created_at: "2025-02-01T00:00:00.000Z",
+  },
+  {
+    id: "t4-library-disbursed",
+    need_id: NEED_LIBRARY_ID,
+    event_type: "disbursed",
+    from_status: "funded",
+    to_status: "sent",
+    note: "Single payment sent through Childs Play Foundation, Inc.",
+    actor_role: "platform_admin",
+    created_at: "2025-02-10T00:00:00.000Z",
+  },
+  {
+    id: "t5-library-received",
+    need_id: NEED_LIBRARY_ID,
+    event_type: "received",
+    from_status: "sent",
+    to_status: "received",
+    note: "Confirmed by Principal R. Hayes. Proof of use due Mar 16, 2025.",
+    actor_role: "school_admin",
+    created_at: "2025-02-14T00:00:00.000Z",
+  },
+  {
+    id: "t6-library-proof",
+    need_id: NEED_LIBRARY_ID,
+    event_type: "proof_submitted",
+    from_status: "received",
+    to_status: "awaiting_proof",
+    note: "Proof of use submitted: invoices and completion photo, $2,940 spent.",
+    actor_role: "school_staff",
+    created_at: "2025-03-10T00:00:00.000Z",
+  },
+  {
+    id: "t7-library-verified",
+    need_id: NEED_LIBRARY_ID,
+    event_type: "proof_verified",
+    from_status: "awaiting_proof",
+    to_status: "use_verified",
+    note: "Fiscal sponsor verified the funds were spent as stated. $60 unspent, returned.",
+    actor_role: "cpf_admin",
+    created_at: "2025-03-20T00:00:00.000Z",
+  },
+  // Track (funded, then delayed)
+  {
+    id: "t1-track-posted",
+    need_id: NEED_TRACK_ID,
+    event_type: "posted",
+    from_status: "draft",
+    to_status: "in_review",
+    note: "Need posted for review.",
+    actor_role: "school_staff",
+    created_at: "2025-01-17T00:00:00.000Z",
+  },
+  {
+    id: "t2-track-approved",
+    need_id: NEED_TRACK_ID,
+    event_type: "approved",
+    from_status: "in_review",
+    to_status: "live",
+    note: "Approved by the school and live for donations.",
+    actor_role: "school_admin",
+    created_at: "2025-01-20T00:00:00.000Z",
+  },
+  {
+    id: "t3-track-funded",
+    need_id: NEED_TRACK_ID,
+    event_type: "funded",
+    from_status: "live",
+    to_status: "funded",
+    note: "Goal of $6,500 reached by 21 donors.",
+    actor_role: "system",
+    created_at: "2025-02-18T00:00:00.000Z",
+  },
+  {
+    id: "t4-track-delayed",
+    need_id: NEED_TRACK_ID,
+    event_type: "delayed",
+    from_status: "funded",
+    to_status: "delayed",
+    note: "The timing equipment vendor pushed the shipment date. The sponsor is holding the funds until the new ship date is confirmed.",
+    actor_role: "platform_admin",
+    created_at: "2025-03-12T00:00:00.000Z",
+  },
+  // Robotics (cancelled before disbursement)
+  {
+    id: "t1-robotics-posted",
+    need_id: NEED_ROBOTICS_ID,
+    event_type: "posted",
+    from_status: "draft",
+    to_status: "in_review",
+    note: "Need posted for review.",
+    actor_role: "school_staff",
+    created_at: "2025-01-19T00:00:00.000Z",
+  },
+  {
+    id: "t2-robotics-approved",
+    need_id: NEED_ROBOTICS_ID,
+    event_type: "approved",
+    from_status: "in_review",
+    to_status: "live",
+    note: "Approved by the school and live for donations.",
+    actor_role: "school_admin",
+    created_at: "2025-01-22T00:00:00.000Z",
+  },
+  {
+    id: "t3-robotics-cancelled",
+    need_id: NEED_ROBOTICS_ID,
+    event_type: "cancelled",
+    from_status: "live",
+    to_status: "cancelled",
+    note: "The competition organizer cancelled the spring event, so the club no longer needs the entry fees. Donors choose a refund or a redirect.",
+    actor_role: "school_admin",
+    created_at: "2025-03-15T00:00:00.000Z",
+  },
+];
+
+export function mockGetTrail(needId: string): TrailEntry[] {
+  return MOCK_TRAIL_ENTRIES.filter((t) => t.need_id === needId).sort(
+    (a, b) => new Date(a.created_at).getTime() - new Date(b.created_at).getTime()
+  );
+}
+
+export function mockGetNeed(needId: string): Need | null {
+  const need =
+    MOCK_NEEDS.find((n) => n.id === needId) ??
+    MOCK_PENDING_NEEDS.find((n) => n.id === needId) ??
+    null;
+  if (!need) return null;
+  return { ...need, trail: mockGetTrail(needId) };
+}
+
+// ─────────────────────────────────────────────────────────────
+// Proof-of-use packets (mock seed rows)
+// ─────────────────────────────────────────────────────────────
+export const MOCK_PROOF_PACKETS: ProofPacket[] = [
+  {
+    id: "pp-library-1",
+    need_id: NEED_LIBRARY_ID,
+    final_amount_spent: 2940,
+    invoices_note: "Invoices for seating, shelving, and lighting attached.",
+    completion_photo_url: null,
+    attested_by: "Principal R. Hayes",
+    attested_at: "2025-03-10T00:00:00.000Z",
+    status: "verified",
+    review_notes: "Verified Mar 20, 2025. $60 unspent, returned to the sponsor.",
+    created_at: "2025-03-10T00:00:00.000Z",
+    updated_at: "2025-03-20T00:00:00.000Z",
+  },
+];
+
+export function mockGetProofPacket(needId: string): ProofPacket | null {
+  return MOCK_PROOF_PACKETS.find((p) => p.need_id === needId) ?? null;
+}
+
+export function mockGetProofQueue(): (ProofPacket & { need_title: string; school_name: string })[] {
+  return MOCK_PROOF_PACKETS.map((p) => {
+    const need = MOCK_NEEDS.find((n) => n.id === p.need_id);
+    return {
+      ...p,
+      need_title: need?.title ?? "Unknown need",
+      school_name: need?.school?.name ?? "Unknown school",
+    };
+  }).sort(
+    (a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
+  );
+}
+
+// ─────────────────────────────────────────────────────────────
+// My Donations (mock demo donor)
+// ─────────────────────────────────────────────────────────────
+// In mock mode there is no auth, so My Donations shows the sample
+// gifts as one demo donor's history. In live mode the page fetches
+// the signed-in donor's own rows from Supabase.
+export function mockGetMyDonations(): DonationRow[] {
+  return mockGetDonations();
+}
+
+export const MOCK_DONATION_CHOICES: DonationChoice[] = [];
+
+export function mockGetDonationChoice(donationId: string): DonationChoice | null {
+  return MOCK_DONATION_CHOICES.find((c) => c.donation_id === donationId) ?? null;
 }

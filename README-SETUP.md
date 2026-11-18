@@ -8,7 +8,10 @@ and fill in the values below. **Never commit `.env.local`.**
 
 Create a project at https://supabase.com, then run `supabase/schema.sql` in the
 SQL editor (Dashboard → SQL Editor → New query → paste → Run). This creates all
-tables, RLS policies, triggers, and seed data.
+tables, RLS policies, triggers, and seed data. Then run
+`supabase/migrations/20261118_money_trail.sql` the same way to add the public
+money trail (trail status columns, `trail_entries`, `proof_packets`,
+`donation_choices`).
 
 | Variable | Where to get it | Notes |
 |---|---|---|
@@ -25,15 +28,23 @@ Providers** (Email is on by default).
 only see their own school's data" row-level-security rule; without it there is
 no way to map a staff account to a school. Donors have `school_id = NULL`.
 
-## 2. Stripe (donations / subscriptions / Connect)
+## 2. Stripe (donations / subscriptions)
 
 Create an account at https://stripe.com and start in **test mode**.
+Checkout is Stripe hosted: donors pay on Stripe's page and return to
+`/donate/success`. The webhook records the gift and sends the tax receipt.
 
 | Variable | Where to get it | Notes |
 |---|---|---|
 | `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` | Dashboard → Developers → API keys → Publishable key (`pk_test_…`) | Safe for browser |
 | `STRIPE_SECRET_KEY` | Dashboard → Developers → API keys → Secret key (`sk_test_…`) | **Secret — server-side only** |
 | `STRIPE_WEBHOOK_SECRET` | `stripe listen --forward-to localhost:3000/api/webhooks/stripe` prints `whsec_…` (or Dashboard → Developers → Webhooks) | Verifies webhook signatures |
+
+Webhook events the app handles: `checkout.session.completed`,
+`invoice.payment_succeeded` (monthly gifts), `charge.refunded`,
+`customer.subscription.deleted`. Test locally with `stripe listen` and a
+test card (4242 4242 4242 4242). Live mode needs the fiscal sponsor's
+Stripe readiness confirmed first.
 
 ## 3. Email (Resend or SendGrid)
 
@@ -43,13 +54,16 @@ Use **Resend** (primary) or **SendGrid** for transactional email.
 |---|---|---|
 | `RESEND_API_KEY` | https://resend.com → API Keys | Primary provider |
 | `SENDGRID_API_KEY` | https://app.sendgrid.com → Settings → API Keys | Optional fallback |
-| `EMAIL_FROM` | Your choice | e.g. `noreply@alumniup.org` (verify domain/sender first) |
+| `EMAIL_FROM` | Your choice | e.g. `AlumniUp <noreply@alumniupdetroit.org>` (verify the alumniupdetroit.org domain in Resend first, SPF and DKIM) |
+
+Without `RESEND_API_KEY`, email sends log to the server console and forms
+still work. Receipt and trail templates live in `src/lib/email/templates.ts`.
 
 ## 4. Site
 
 | Variable | Value | Notes |
 |---|---|---|
-| `NEXT_PUBLIC_SITE_URL` | `http://localhost:3000` (dev) / `https://alumniup.org` (prod) | Used in links & redirects |
+| `NEXT_PUBLIC_SITE_URL` | `http://localhost:3000` (dev) / `https://www.alumniupdetroit.org` (prod) | Used in links & redirects |
 | `NEXT_PUBLIC_APP_NAME` | `AlumniUp` | App display name |
 
 ## Quick start
@@ -69,7 +83,7 @@ npm run start   # serve the production build
 
 ## Contact for credentials
 
-The following are owned by the AlumniUp team / founder (Risha Alexis) and must
+The following are owned by the AlumniUp team / founder (Risha Smith) and must
 be provided to complete integration:
 
 - Supabase project URL + anon key + service_role key

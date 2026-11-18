@@ -2,11 +2,13 @@
 
 import { useNeeds, useDonationStats, useWallOfHonor, useTopSchools } from "@/hooks";
 import type { Need, School } from "@/types";
-import { CATEGORIES, CONTACT, CPF_INFO, URGENCY_LABELS } from "@/types";
+import { CATEGORIES, CONTACT, CPF_INFO, TRAIL_STATUS_LABELS, URGENCY_LABELS } from "@/types";
+import { acceptsDonations, trailStatusForNeed } from "@/lib/trail";
 import { FOUNDER } from "@/lib/content/founder";
 import BragModal from "@/components/BragModal";
 import DonationModal from "@/components/DonationModal";
 import { SiteHeader, SiteFooter } from "@/components/SiteChrome";
+import { TrailStatusBadge } from "@/components/MoneyTrail";
 import { useState } from "react";
 
 // Utility
@@ -273,6 +275,8 @@ function photoForNeed(need: Need): string {
 
 function NeedCard({ need }: { need: Need }) {
   const percentFunded = Math.min(Math.round((need.raised_amount / need.goal_amount) * 100), 100);
+  const trailStatus = trailStatusForNeed(need);
+  const canDonate = acceptsDonations(trailStatus);
   const isFunded = need.status === "funded" || percentFunded >= 100;
   const [shareOpen, setShareOpen] = useState(false);
   const [donateOpen, setDonateOpen] = useState(false);
@@ -290,7 +294,14 @@ function NeedCard({ need }: { need: Need }) {
       </div>
 
       <div className="p-5 flex flex-col flex-1">
-        <h3 className="font-serif text-xl font-semibold text-navy leading-snug">{need.title}</h3>
+        <div className="flex items-start justify-between gap-3">
+          <h3 className="font-serif text-xl font-semibold text-navy leading-snug">
+            <a href={`/needs/${need.id}`} className="hover:text-gold">
+              {need.title}
+            </a>
+          </h3>
+          <TrailStatusBadge status={trailStatus} />
+        </div>
         <p className="font-sans text-xs text-navy/50 mt-1.5">
           {need.school?.name}
           {need.submitted_by_name ? ` · Posted by ${need.submitted_by_name}` : ""}
@@ -312,6 +323,11 @@ function NeedCard({ need }: { need: Need }) {
               Can begin at {formatCurrency(need.minimum_amount)} funded
             </p>
           )}
+          {trailStatus === "delayed" && need.delayed_reason && (
+            <p className="text-xs font-sans text-red-700 mt-2 line-clamp-2">
+              Delayed: {need.delayed_reason}
+            </p>
+          )}
 
           <div className="flex items-center gap-3 mt-4">
             <div className="flex items-center shrink-0">
@@ -325,9 +341,9 @@ function NeedCard({ need }: { need: Need }) {
             <button
               className="btn-gold flex-1 text-sm py-2.5"
               onClick={() => setDonateOpen(true)}
-              disabled={isFunded}
+              disabled={!canDonate}
             >
-              {isFunded ? "Fully Funded" : "Contribute"}
+              {canDonate ? "Contribute" : TRAIL_STATUS_LABELS[trailStatus]}
             </button>
             <button
               className="btn-ghost text-sm px-3 py-2.5"
@@ -339,6 +355,9 @@ function NeedCard({ need }: { need: Need }) {
               </svg>
             </button>
           </div>
+          <a href={`/needs/${need.id}`} className="inline-block font-sans text-xs text-gold hover:underline mt-3">
+            View the money trail →
+          </a>
         </div>
       </div>
 

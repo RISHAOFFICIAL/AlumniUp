@@ -20,7 +20,7 @@ export function PreviewBanner() {
   if (!IS_MOCK) return null;
   return (
     <div className="bg-gold text-navy text-xs text-center py-1.5 px-4 font-sans">
-      Preview — sample data for demonstration. No real donations have occurred.
+      Preview: sample data for demonstration. No real donations have occurred.
     </div>
   );
 }
@@ -40,10 +40,10 @@ export function Header() {
         <nav className="hidden md:flex items-center gap-6 font-sans text-sm">
           <a href="/#how-it-works" className="hover:text-gold transition-colors">How It Works</a>
           <a href="/for-schools" className="hover:text-gold transition-colors">For Schools</a>
-          <a href="#" className="hover:text-gold transition-colors">My Donations</a>
+          <a href="/my-donations" className="hover:text-gold transition-colors">My Donations</a>
           <a href="/press" className="hover:text-gold transition-colors">Press</a>
           <a href="/wall-of-honor" className="hover:text-gold transition-colors">Wall of Honor</a>
-          <a href="#" className="hover:text-gold transition-colors">Contact</a>
+          <a href={`mailto:${CONTACT.support}`} className="hover:text-gold transition-colors">Contact</a>
         </nav>
 
         <div className="flex items-center gap-3">
@@ -70,10 +70,10 @@ export function Header() {
           <nav className="flex flex-col gap-3 font-sans text-sm">
             <a href="/#how-it-works" className="py-2">How It Works</a>
             <a href="/for-schools" className="py-2">For Schools</a>
-            <a href="#" className="py-2">My Donations</a>
+            <a href="/my-donations" className="py-2">My Donations</a>
             <a href="/press" className="py-2">Press</a>
             <a href="/wall-of-honor" className="py-2">Wall of Honor</a>
-            <a href="#" className="py-2">Contact</a>
+            <a href={`mailto:${CONTACT.support}`} className="py-2">Contact</a>
             <a href="/corporate-giving" className="py-2">Corporate Giving</a>
           </nav>
         </div>
@@ -120,13 +120,15 @@ export function Footer() {
               <li><a href={`mailto:${CONTACT.hello}`} className="hover:text-gold">{CONTACT.hello}</a></li>
               <li><a href={`mailto:${CONTACT.schools}`} className="hover:text-gold">{CONTACT.schools}</a></li>
               <li><a href={`mailto:${CONTACT.sponsors}`} className="hover:text-gold">{CONTACT.sponsors}</a></li>
+              <li><a href={`mailto:${CONTACT.support}`} className="hover:text-gold">{CONTACT.support}</a></li>
             </ul>
           </div>
           <div>
             <h4 className="font-sans text-sm font-semibold mb-3">Legal</h4>
             <ul className="font-sans text-xs text-white/60 space-y-2">
-              <li>Terms of Service</li>
-              <li>Privacy Policy</li>
+              <li><a href="/terms" className="hover:text-gold">Terms of Service</a></li>
+              <li><a href="/privacy" className="hover:text-gold">Privacy Policy</a></li>
+              <li><a href="/refund-policy" className="hover:text-gold">Refund Policy</a></li>
               <li>
                 <a href="/admin/pending" className="text-white/30 hover:text-white/60">Admin</a>
               </li>

@@ -6,6 +6,15 @@ Process: Risha's App Building Playbook, Stage 7.
 Copy is ready to paste; policies are written in plain language an
 engineer and a reviewer can both execute.
 
+DOMAIN CORRECTION (Nov 18, 2026): this pack was written before the
+domain was bought. alumniup.org belongs to another organization
+(University of Phayao alumni, Thailand). The live domain is
+alumniupdetroit.org; all emails are @alumniupdetroit.org
+(support@alumniupdetroit.org, privacy@alumniupdetroit.org). The
+published policy pages (/privacy, /terms, /refund-policy) already
+use the correct domain. The alumniup.org references below are
+stale and kept only as the approved-copy record.
+
 ## Design QA (final pass against Stage 5)
 
 - Every hi-fi screen traces to its approved lo-fi frame, same

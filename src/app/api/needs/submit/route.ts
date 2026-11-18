@@ -30,6 +30,9 @@ const needSchema = z.object({
   attestNoStudentInfo: z
     .boolean()
     .refine((v) => v === true, "You must confirm no student names or images are included."),
+  attestMediaRelease: z
+    .boolean()
+    .refine((v) => v === true, "You must confirm your school has the media releases required for everyone pictured."),
   website: z.string().trim().max(100).default(""), // honeypot
 });
 
@@ -83,7 +86,7 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    const { error } = await supabase.from("needs").insert({
+    const { data: inserted, error } = await supabase.from("needs").insert({
       school_id: data.schoolId,
       title: data.title,
       description: data.description,
@@ -97,9 +100,23 @@ export async function POST(request: NextRequest) {
       submitted_by_phone: data.submittedByPhone || null,
       photo_url: photoUrl,
       status: "pending",
-    });
+      trail_status: "in_review",
+      attested_media_release: data.attestMediaRelease,
+    }).select("id").single();
     if (error) {
       return NextResponse.json({ error: error.message }, { status: 500 });
+    }
+
+    // First trail entry: the need exists, in review, not public yet.
+    if (inserted) {
+      await supabase.from("trail_entries").insert({
+        need_id: inserted.id,
+        event_type: "posted",
+        from_status: "draft",
+        to_status: "in_review",
+        note: "Need posted for review.",
+        actor_role: "school_staff",
+      });
     }
 
     await notifyNeedSubmission({

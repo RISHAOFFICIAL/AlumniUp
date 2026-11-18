@@ -2,9 +2,10 @@
 //
 // Single interface for the checkout flow. In mock mode it records the donation
 // into the Zustand mock store (so progress / Wall of Honor update) and returns
-// a simulated success. In Supabase/Stripe mode it POSTs to the server route
-// that owns Stripe. The UI never talks to Stripe directly — this is the one
-// place to swap in a real payment provider (web + React Native).
+// a simulated success. In live mode it POSTs to /api/checkout, which creates
+// a Stripe hosted Checkout session, and redirects the donor to Stripe (Stage 3
+// S5). The UI never talks to Stripe directly — this is the one place to swap
+// in a real payment provider (web + React Native).
 
 import { useMockStore } from "@/store/mock";
 
@@ -25,6 +26,8 @@ export interface DonationResult {
   success: boolean;
   donationId?: string;
   paymentIntentId?: string;
+  checkoutUrl?: string;
+  redirected?: boolean;
   error?: string;
 }
 
@@ -51,7 +54,7 @@ export async function submitDonation(
     };
   }
 
-  const res = await fetch("/api/donations", {
+  const res = await fetch("/api/checkout", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(input),
@@ -61,5 +64,15 @@ export async function submitDonation(
   if (!res.ok) {
     return { success: false, error: data?.error ?? "Checkout failed." };
   }
-  return data as DonationResult;
+
+  // Stripe hosted checkout: the donor pays on Stripe's page, then returns
+  // to /donate/success. The webhook records the gift.
+  if (typeof data?.url === "string") {
+    if (typeof window !== "undefined") {
+      window.location.href = data.url;
+    }
+    return { success: true, checkoutUrl: data.url, redirected: true };
+  }
+
+  return { success: false, error: "Checkout could not start. Please try again." };
 }

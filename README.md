@@ -8,9 +8,24 @@ A crowdfunding platform connecting Detroit school alumni and corporate sponsors 
 
 - **Frontend:** Next.js 14 (App Router), Tailwind CSS, shadcn/ui
 - **Backend:** Supabase (PostgreSQL, Auth, Storage, RLS)
-- **Payments:** Stripe (Payment Element, Subscriptions, Connect)
-- **Email:** SendGrid / Resend
-- **Hosting:** Vercel (planned)
+- **Payments:** Stripe hosted Checkout (test mode first; see
+  `README-SETUP.md` for keys and the webhook). The webhook
+  (`/api/webhooks/stripe`) records gifts and sends tax receipts
+  through Resend naming Childs Play Foundation, Inc. (EIN 86-2707543).
+- **Email:** Resend (primary) / SendGrid fallback
+- **Hosting:** Vercel (live at alumniupdetroit.org)
+
+## Public money trail
+
+Every need moves through LIVE → FUNDED → SENT → RECEIVED → AWAITING
+PROOF → USE VERIFIED, with DELAYED, CANCELLED, PROOF OVERDUE, and
+UNFUNDED AT CLOSE as public exception states. Every status change
+writes a dated entry to the need's public trail. The state machine
+lives in `src/lib/trail.ts`, the Supabase mirror in
+`supabase/migrations/20261118_money_trail.sql`, and the mock seed
+trails in `src/lib/data/mock.ts`. Surfaces: the need page
+(`/needs/[id]`), My Donations (`/my-donations`), the school portal,
+and the admin trail, disbursement, and proof pages.
 
 ## Getting Started
 
@@ -30,6 +45,9 @@ The full database schema is in `supabase/schema.sql`. It includes:
 - `wall_of_honor` — Public donor recognition
 - `sponsors` — Corporate sponsorship tracking
 - `disbursements` — Fund disbursement tracking to schools
+- `trail_entries` — Dated public money-trail entries (migration `20261118_money_trail.sql`)
+- `proof_packets` — Proof-of-use packets (30-day rule after receipt)
+- `donation_choices` — Donor refund-or-redirect choices on cancelled needs
 
 ## Project Structure
 

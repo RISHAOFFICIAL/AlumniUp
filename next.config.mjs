@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['localhost', 'alumniup.org'],
+    domains: ['localhost', 'www.alumniupdetroit.org'],
   },
   // Expose the public Supabase config to the client bundle. The anon key is
   // public by design (RLS-limited); the service-role key is intentionally NOT

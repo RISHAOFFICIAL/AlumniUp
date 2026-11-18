@@ -34,11 +34,15 @@ export default function DonationModal({
   open,
   onClose,
   onShare,
+  initialAmount,
+  initialFrequency,
 }: {
   need: Need | null;
   open: boolean;
   onClose: () => void;
   onShare?: (need: Need) => void;
+  initialAmount?: number;
+  initialFrequency?: Frequency;
 }) {
   const [amount, setAmount] = useState<number>(50);
   const [customAmount, setCustomAmount] = useState("");
@@ -47,7 +51,7 @@ export default function DonationModal({
   const [email, setEmail] = useState("");
   const [anonymous, setAnonymous] = useState(false);
   const [message, setMessage] = useState("");
-  const [status, setStatus] = useState<"form" | "processing" | "success">("form");
+  const [status, setStatus] = useState<"form" | "processing" | "redirecting" | "success">("form");
   const [error, setError] = useState<string | null>(null);
   const [result, setResult] = useState<DonationResult | null>(null);
 
@@ -57,15 +61,21 @@ export default function DonationModal({
       setStatus("form");
       setError(null);
       setResult(null);
-      setAmount(50);
-      setCustomAmount("");
-      setFrequency("once");
+      if (initialAmount && Number.isFinite(initialAmount) && initialAmount > 0) {
+        const preset = DONATION_PRESETS.includes(initialAmount as (typeof DONATION_PRESETS)[number]);
+        setAmount(preset ? initialAmount : 50);
+        setCustomAmount(preset ? "" : String(initialAmount));
+      } else {
+        setAmount(50);
+        setCustomAmount("");
+      }
+      setFrequency(initialFrequency ?? "once");
       setName("");
       setEmail("");
       setAnonymous(false);
       setMessage("");
     }
-  }, [open, need?.id]);
+  }, [open, need?.id, initialAmount, initialFrequency]);
 
   // Close on Escape.
   useEffect(() => {
@@ -102,6 +112,11 @@ export default function DonationModal({
     });
 
     if (res.success) {
+      if (res.redirected) {
+        // Stripe hosted checkout: the donor is leaving for Stripe's page.
+        setStatus("redirecting");
+        return;
+      }
       setResult(res);
       setStatus("success");
     } else {
@@ -148,6 +163,14 @@ export default function DonationModal({
             onShare={() => onShare?.(need)}
             onClose={onClose}
           />
+        ) : status === "redirecting" ? (
+          <div className="text-center py-8">
+            <h3 className="font-serif text-2xl font-semibold text-navy">Taking you to secure checkout</h3>
+            <p className="font-sans text-sm text-navy/70 mt-3 leading-relaxed">
+              You are being redirected to Stripe, our payment processor, to complete your gift safely.
+              AlumniUp never sees your card details.
+            </p>
+          </div>
         ) : (
           <>
             <div className="relative h-32 -mx-6 -mt-6 md:-mx-8 md:-mt-8 mb-5 overflow-hidden rounded-t-2xl">
@@ -279,6 +302,15 @@ export default function DonationModal({
                 Your total is the amount on the button below, and your receipt is emailed instantly.
                 You can follow this gift publicly until the school confirms it arrived.
               </p>
+              <p className="mt-2">
+                By giving you agree to our{" "}
+                <a href="/terms" target="_blank" rel="noopener noreferrer" className="text-gold hover:underline">Terms of Service</a>
+                {" "}and{" "}
+                <a href="/refund-policy" target="_blank" rel="noopener noreferrer" className="text-gold hover:underline">Refund Policy</a>
+                . Read our{" "}
+                <a href="/privacy" target="_blank" rel="noopener noreferrer" className="text-gold hover:underline">Privacy Policy</a>
+                .
+              </p>
             </div>
 
             {error && (
@@ -353,7 +385,7 @@ function SuccessState({
 
       {isMock && (
         <p className="bg-cream rounded-md p-3 mt-4 font-sans text-xs text-navy/70">
-          Preview — no real payment was processed.
+          Preview: no real payment was processed.
         </p>
       )}
 

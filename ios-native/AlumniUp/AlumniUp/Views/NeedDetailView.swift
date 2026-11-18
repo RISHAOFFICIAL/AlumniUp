@@ -94,21 +94,23 @@ struct NeedDetailView: View {
 }
 
 /// Donation sheet, mirroring the approved Heritage Premium modal:
-/// the need's photo on top, amount chips, one-time or monthly,
-/// donor details, the honest fee box, and one strong gold button.
-/// This build is a preview: tapping Donate shows a confirmation
-/// and no payment is processed.
+/// the need's photo on top, amount chips, one-time or monthly, and one
+/// strong gold button.
+///
+/// Apple charitable giving rules: this app does not collect donations
+/// in-app. The button opens the fiscal sponsor's web checkout (Stripe
+/// hosted) in the browser, where the gift is made to Childs Play
+/// Foundation, Inc. (501(c)(3), EIN 86-2707543). The chosen amount rides
+/// along as a deep link so the web donate sheet opens preselected.
+/// No payment is processed inside this app, and no fake confirmation
+/// is shown here.
 struct DonateSheet: View {
     let need: Need
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.openURL) private var openURL
     @State private var amount: Int = 50
     @State private var customAmount: String = ""
     @State private var isMonthly = false
-    @State private var name: String = ""
-    @State private var email: String = ""
-    @State private var isAnonymous = false
-    @State private var message: String = ""
-    @State private var confirmed = false
 
     private let amounts = [25, 50, 100, 250, 500, 1000]
 
@@ -118,14 +120,6 @@ struct DonateSheet: View {
     }
 
     var body: some View {
-        if confirmed {
-            confirmedView
-        } else {
-            form
-        }
-    }
-
-    private var form: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 0) {
                 ZStack(alignment: .bottomLeading) {
@@ -175,25 +169,16 @@ struct DonateSheet: View {
                             freqButton("Monthly", selected: isMonthly) { isMonthly = true }
                         }
                     }
-                    VStack(alignment: .leading, spacing: 10) {
-                        fieldLabel("Your Details")
-                        TextField("Name (optional)", text: $name)
-                            .textFieldStyle(.roundedBorder)
-                        TextField("Email (required for tax receipt)", text: $email)
-                            .textFieldStyle(.roundedBorder)
-                            .keyboardType(.emailAddress)
-                            .textInputAutocapitalization(.never)
-                        Toggle("Give anonymously", isOn: $isAnonymous)
-                            .font(.subheadline)
-                        TextField("Optional message for the Wall of Honor", text: $message)
-                            .textFieldStyle(.roundedBorder)
-                    }
                     Text("Tax-deductible via Childs Play Foundation, Inc. (501(c)(3), EIN 86-2707543).")
                         .font(.caption)
                         .foregroundStyle(Heritage.muted)
                         .padding(.vertical, 4)
-                    GoldGlassButton(title: "Donate \(Money.whole(effectiveAmount))\(isMonthly ? " / month" : "")", systemImage: "heart.fill") {
-                        confirmed = true
+                    Text("Your gift is completed on our secure website, in your browser. Your tax receipt is emailed instantly.")
+                        .font(.caption)
+                        .foregroundStyle(Heritage.muted)
+                    GoldGlassButton(title: "Continue to Secure Checkout", systemImage: "arrow.up.forward.app.fill") {
+                        openURL(need.webCheckoutURL(amount: effectiveAmount, isMonthly: isMonthly))
+                        dismiss()
                     }
                     Label("Secure checkout by Stripe · Tax receipt emailed instantly", systemImage: "lock.fill")
                         .font(.caption2)
@@ -202,34 +187,6 @@ struct DonateSheet: View {
                 }
                 .padding(20)
             }
-        }
-        .background(Heritage.paper)
-    }
-
-    private var confirmedView: some View {
-        VStack(spacing: 16) {
-            Spacer()
-            Image(systemName: "checkmark.seal.fill")
-                .font(.system(size: 64))
-                .foregroundStyle(Heritage.green)
-            Text("Thank you.")
-                .font(displayFont(32))
-                .foregroundStyle(Heritage.navy)
-            Text("In the live app, this is where your \(Money.whole(effectiveAmount))\(isMonthly ? " monthly" : "") gift to \(need.schoolName) would be confirmed and your tax receipt sent.")
-                .font(.body)
-                .foregroundStyle(Heritage.muted)
-                .multilineTextAlignment(.center)
-                .padding(.horizontal, 32)
-            Text("This preview build does not process payments.")
-                .font(.caption.weight(.semibold))
-                .foregroundStyle(Heritage.gold)
-                .padding(.horizontal, 12)
-                .padding(.vertical, 6)
-                .background(Heritage.gold.opacity(0.12), in: Capsule())
-            GoldGlassButton(title: "Done") { dismiss() }
-                .padding(.horizontal, 40)
-                .padding(.top, 8)
-            Spacer()
         }
         .background(Heritage.paper)
     }
